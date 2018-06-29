@@ -1,0 +1,73 @@
+{
+	"FILES_BASE_PATH": "c://wamp64/www/dollarlib/",
+	
+	"LANGUAGES": "/app/language/",
+	"DEFAULT_LANGUAGE": "en",
+	
+	"LAYOUT": "/app/layout/",
+	"DEFAULT_LAYOUT": "home",
+	
+	"DATABASE":
+	{
+		"SERVER": "localhost",
+		"DATABASE": "",
+		"USER": "root",
+		"PASSWORD": ""
+	},	
+	
+	"REGISTER":
+	{
+		"EXCEPTIONS": "",
+		"FOLDERS": "app/;vendor/"
+	},
+	
+	"ROUTES":
+	{
+		"DEFAULT": "home",
+		"404": "notfound",
+		"about": "about",
+		"ceilings": "ceilings",
+		"commercial": "commercial",
+		"contact": "contact",
+		"home": "home",
+		"kids": "kids",
+		"residential": "residential",
+		"signs": "signs",
+		"login": 
+		{
+			"action": "login",
+			"enter": 
+			{
+				"action": "enter"
+			}
+		},
+		"logout": {
+			"action": "logout"
+		},
+		"seo": { 
+			"action": "seo",
+			"enforce": "enforce"
+		},
+		"list": {
+			"action": "listImages",
+			"enforce": "enforce"
+		},
+		"upload": {
+			"action": "upload",
+			"enforce": "enforce",
+			"save": "uploadSave"
+		},
+		"ajax": {
+			"action": "ajax",
+			"admin": {
+				"enforce": "enforce",
+				"getlist": "getList",
+				"remove": "remove",
+				"edit": "edit"
+			},
+			"instagram": "instagram"
+		}
+	},
+	
+	"MAINTENANCE" : ""
+}
