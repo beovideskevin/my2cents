@@ -25,14 +25,6 @@
 	{
 		"DEFAULT": "home",
 		"404": "notfound",
-		"about": "about",
-		"ceilings": "ceilings",
-		"commercial": "commercial",
-		"contact": "contact",
-		"home": "home",
-		"kids": "kids",
-		"residential": "residential",
-		"signs": "signs",
 		"login": 
 		{
 			"action": "login",
@@ -44,28 +36,12 @@
 		"logout": {
 			"action": "logout"
 		},
-		"seo": { 
-			"action": "seo",
-			"enforce": "enforce"
-		},
-		"list": {
-			"action": "listImages",
-			"enforce": "enforce"
-		},
-		"upload": {
-			"action": "upload",
-			"enforce": "enforce",
-			"save": "uploadSave"
-		},
 		"ajax": {
 			"action": "ajax",
 			"admin": {
 				"enforce": "enforce",
-				"getlist": "getList",
-				"remove": "remove",
-				"edit": "edit"
-			},
-			"instagram": "instagram"
+				"getlist": "getList"
+			}
 		}
 	},
 	

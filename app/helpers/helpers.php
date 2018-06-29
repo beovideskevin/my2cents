@@ -10,6 +10,13 @@ function enforce() {
 /**
  * Log out
  */
+function login () {
+	
+}
+
+/**
+ * Log out
+ */
 function logout () {
 	
 }
