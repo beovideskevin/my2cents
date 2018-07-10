@@ -12,8 +12,7 @@ require_once('$_.php');
 
 $_("init");
 
-
-function index ($args) 
+function index ($args)
 {
 	global $_;
 	
@@ -24,7 +23,7 @@ function index ($args)
 	$_("render", $results);
 }
 
-function ajax($args) 
+function ajax ($args) 
 {
 	die("ajax");
 }

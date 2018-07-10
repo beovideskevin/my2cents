@@ -32,12 +32,13 @@
 			"action": "login"
 		},
 		
-		"logout": {
-			"action": "logout"
-		},
+		"logout": "logout",
 		
 		"ajax": {
-			"action": "ajax"
+			"action": "ajax",
+			"admin": {
+				"enforce": "enforce"
+			}
 		},
 		
 		"example1": "doThis",
