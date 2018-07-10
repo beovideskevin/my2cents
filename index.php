@@ -1,37 +1,30 @@
 <?php
 
+// JUST FOR DEBUGGING
+// error_reporting (E_ALL);
+
+// JUST FOR THE LOCALHOST	
+// date_default_timezone_set('America/Los_Angeles');
+
 session_start();
 
 require_once('$_.php');
 
-// JUST FOR TESTING	
-date_default_timezone_set('America/Los_Angeles');
+$_("init");
 
-// THE MAIN MVC CLASS
-class MVC extends Controller {
-	/*
-	* Set the language from the REQUEST
-	*/
-	public static function preProcess() {
-		// if (! empty($_REQUEST['lan']) && in_array($_REQUEST['lan'], ['en', 'es'])) 
-		//	$_SESSION['LANGUAGE_IN_USE'] = $_REQUEST['lan'];
-	}
+
+function index ($args) 
+{
+	global $_;
+	
+	$res = $_("assoc: SELECT COUNT(*) as c FROM counter WHERE `date` > '?' AND `ip` like '?'", ['2015-1-1 12:00:00', '77.%']);
+	
+	$results = ["OUTPUT" => $res["c"]];
+	
+	$_("render", $results);
 }
 
-// PREVIOUS PROCESSING
-MVC::preProcess();
-
-// LOAD THE CONFIGURATION
-MVC::config('../config.json');
-
-// ROUTE THE PAGE
-MVC::route();
-
-// CHECK IF THE LAYOUT IS ENABLED
-if (View::isEnabled()) {
-	// APPLY THE VALUES TO THE LAYOUT
-	View::applyLayout();
-
-	// SHOW THE RESULT
-	View::echoLayout();
+function ajax($args) 
+{
+	die("ajax");
 }

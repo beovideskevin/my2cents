@@ -11,7 +11,7 @@
 	
 	<!-- Document Title
 	============================================= -->
-	<title>BuckHead Murals | <:TITLE/> | <:SEO_TITLE/></title>
+	<title><:TITLE/> | <:SEO_TITLE/></title>
 	
 	<!-- Mobile Specific Metas
 	============================================= -->
@@ -27,13 +27,13 @@
   
 	<!-- Stylesheets
 	============================================= -->
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="/layout/css/normalize.css">
+	<link rel="stylesheet" href="/layout/css/skeleton.css">
 
 	<!-- Custom Stylesheet
 	============================================= -->
 	<style>
-		
+		<:MAIN_STYLE/>
 	</style>
 	
 </head>
@@ -45,6 +45,7 @@
 		<div class="row">
 			<div class="one-half column" style="margin-top: 25%">
 				<h4><:HELLO/></h4>
+				<:OUTPUT/>
 			</div>
 		</div>
 	</div>
@@ -54,8 +55,10 @@
 	
 	<!-- Custom Javascript
 	============================================= -->
+	
+	<script src="/layout/js/jquery-3.3.1.min.js"></script>
 	<script>
-		
+		<:MAIN_SCRIPT/>
 	</script>
 </body>
 </html>
