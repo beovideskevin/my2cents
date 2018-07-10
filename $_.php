@@ -265,9 +265,9 @@ class MVClass extends QueryClass
 		
 		$other_files = [];
 
-		$exceptions[] = '$_';
-		$exceptions[] = '2cents';
-		$exceptions[] = 'index.php';
+		if (! in_array('$_', $exceptions)) {
+			$exceptions[] = '$_';
+		}
 					
 		$files = scandir($folder);
 		foreach ($files as $f) {
@@ -489,7 +489,8 @@ $_ = function ($query = '', $options = [], $extras = '') {
 		
 		//
 		case 'register:':
-			$options = $query;
+			$query_obj->reginclude(FILES_BASE_PATH . ($query[0] != '/' ? '/' : '') . $query, []);
+			break;
 		
 		case 'register': 
 			$query_obj->register($options);
