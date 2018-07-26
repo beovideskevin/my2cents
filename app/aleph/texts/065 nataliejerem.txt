@@ -1,0 +1,140 @@
+Una conversación entre Jonah Peretti, director de R&D y de los estudios de Postgrado en Eyebeam, y la diseñadora de ingeniería y tecnoartista Natalie Jeremijenko. 
+ 
+ 
+
+Parte I; El ingeniero como artista.
+
+Eyebeam es una organización no lucrativa establecida en 1996 para apoyar y proveer acceso a artistas, estudiantes, y el publico en general en el campo del arte y la tecnología. Eyebeam esta creando una división de investigación y desarrollo, y yo recientemente he tenido una extendida conversación con el mas nuevo miembro de nuestro comité de asesoramiento en R&D, la ingeniera de diseño y tecnoartista Natalie Jeremijenko (http://cat.nyu.edu/Natalie/). Ella se encuentra en una posición única para hablar del papel de la innovación técnica en el contexto del mundo del arte. Su trabajo ha sido exhibido en instituciones artísticas de gran importancia, incluyendo el Solomon R. Guggenheim, el museo Whitney de Arte Americano, y el museo de Arte Moderno de Nueva York. Además ha desarrollado proyectos tecnológicos en los más importantes laboratorios de investigación, incluyendo Xerox PARC, el programa para diseño de ingeniería de Stanford, y el centro para tecnologías avanzadas de la universidad de Nueva York. Actualmente tiene un puesto en el centro para tecnologías avanzadas de NYU en la universidad de Yale, donde esta creando un estudio de diseño de producto y un laboratorio para la incubación de exposiciones.
+
++++
+
+JP: ¿Cuál es el enfoque del nuevo laboratorio que estas construyendo en Yale?
+
+NJ: A mi nueva iniciativa en Yale la llamo estrictamente el laboratorio de diseño de producto, ya que no quiero llamarlo “digital media”, o “tecnologías de la información y sociedad”, o “Arte y tecnología” o algo así porque, por supuesto, TODA tecnología de la información implica diseño social, bien implícita, o explícitamente, y los proyectos podrían implicar, o no, a las instituciones de Arte. Según esta interpretación, el arte es otra forma de cultura material con sus propias normas de producción, formas de propiedad, etc.
+
+Mi programa está enfocado sobre el potencial transformativo de las nuevas tecnologías, y sobre la comprensión de cómo funcionan estas tecnologías. Nos encontramos en el campo del comercio de la ingeniería a partir de cultura material en el más pragmático ámbito del trabajo de crear cosas. Llamando a esto “diseño de producto” estoy haciendo una afirmación desde mi terreno.
+
+JP: Pero, ¿no es la teoría crítica muy importante para tu trabajo?
+
+NJ: Si, esto sigue siendo esencial para mi enfoque. Pero la teoría crítica social y la etnografía, o los modos de análisis tecnográficos son generadores reales de nuevos diseños, de nuevas tecnologías. Por contraste el procedimiento en el diseño de producto, es entendido en este país como algo que comienza normalmente con la creación de una lista de errores. Pasas muy poco tiempo generando ideas interesantes, y entonces se habla de estos diseñadotes como “solucionadores de problemas”. Tu diseño necesita preexistir pero hay muy poca comprensión sobre si estas resolviendo el problema correcto o es este criticismo el generador de posibilidades, ideas y productos.
+
+Estoy interesada en la tecnología siempre que sea cómplice de los cambios sociales. Esto es así obviamente porque la mayor parte de nosotros trabaja con tecnología, o esta interesado en el campo. Este es el frente donde las cosas están cambiando hacia previsibles o imprevisibles vías. Pretendo hacer a los diseños responsables del tipo de cambio que fomentan.
+
+JP: En relación con el laboratorio de diseño de producto, ¿has mencionado también que estáis creando un laboratorio para “incubar exposiciones”?
+
+NJ: Lo que tienen las exposiciones es que necesitan ser incubadas un poco. Mediante la incubación de exposiciones en mi laboratorio en Yale puedo conseguir gente interdisciplinaria; expertos en teoría política, historiadores, críticos, incluso ingenieros, para comentar, para generar el discurso antes de que la exposición se mueva a los espacios reales de exhibición en Nueva York.
+
+El laboratorio para la incubación de exposiciones es a la vez almacén y exhibición. Es una cosa mostrar a los estudiantes una foto de algo en una conferencia, pero es otra bien distinta convivir con ello durante tres meses, tenerlo ahí, para referencia, para observarlo, para examinarlo. En mi laboratorio estoy creando una cultura de objeto, una cultura material. 
+
+JP: ¿Cuáles son algunas de las exposiciones que estáis incubando actualmente?
+
+NJ: Una de ellas es un proyecto llamado Scale, que consiste en curetear o comisionar una serie de trabajos que cabrían dentro de unos pocos centímetros –no modelos a escala de obras de arte, sino piezas realmente diseñadas para ese tamaño-. Por ejemplo. Paul Di Marinis trabaja con mapas de amplitud sonora. Tiene una bonita y divertida pieza llamada El pelo púbico de Edison. Parece un pelo, pero es realmente el mapa de la amplitud modulada de su voz durante una de las primeras grabaciones.
+
+JP: También has mencionado una exposición sobre armas de calle.
+
+NJ: Cierto. Hay una exhibición llamada armas de calle que analiza la cultura material para habitar espacio publico. Incluye de todo, desde monopatines, a teléfonos celulares, a diseños de ruedas de bicicleta que estampan eslóganes, o tuberías de pvc con mangos para crear barreras de gente que la policía no puede romper. Esta particular exhibición está enfocada hacia el activismo y la carrera armamentística entre los activistas y el estado. Una carrera armamentística para la imaginación publica en la que un lado está luchado con crecientes estrategias militares, y el otro está contraatacando con juguetonas e irreverentes estrategias mediogénicas.
+
+JP: ¿Qué otras cosas están empezando a incubarse?
+
+NJ: La Network Modeling exhibit -exhibición Modelos de Red- va a observar caminos interdisciplinarios cuya complejidad es prevista e imaginada. Hay muchas y diferentes opciones sobre como representar esta complejidad. Hay modelos de red en el software, y modelos de red teórico sociales. Ponerlos cara a cara es una de las formas para examinar que aspectos de las distintas partes prevalecen. Particularmente, cuando yuxtaponemos representaciones exactas de la misma red examinando en que lugares los nodos importantes, vértices y conexiones convergen y divergen.
+
+JP: ¿Va alguna parte de tu investigación en el diseño de juguetes a terminar convirtiéndose en exposición?
+
+NJ: Si, en lo concerniente a la investigación en el diseño de juguetes, he introducido pequeñas cámaras y micrófonos en juguetes interactivos. Lo que sucede es que la cámara se enciende y graba unos pocos segundos de video siempre que el niño interactúa con el juguete. Esto contrasta con los estudios de usuario, donde pones a un niño y a un juguete en un laboratorio durante una hora o dos y observas que están haciendo. Estoy dispuesta a poner esos juguetes en hogares reales para capturar semanas y meses de interacción. Esto es lo que yo llamo el periodo de tiempo de aprendizaje.
+
+También estoy incubando una exposición que podría incluir el material videográfico que he recopilado desde el punto de vista de los juguetes, cosa que es realmente interesante y divertida de observar. Puedes mirar desde el punto de vista de Furby o Arthur.
+
+JP: ¿Hay algunas otras exposiciones en proceso de creación que quieras mencionar?
+
+NJ: Por supuesto. Los mecanismos de exhibición de la información dirigirán el interface mecánico de la propia información, incluyendo todo, desde LPs a cultura scratch. Hay muchos mecanismos fascinantes que crean el engaño de la posibilidad de una información “inmaterial”, y los artistas también han reinterpretado esto. Por ejemplo, Bernie Lubell hizo un ordenador, con todas las puertas lógicas, etc.al margen de la clásica estructura binaria.
+
+JP: También eso suena como si estas orientando las exposiciones desde tu trabajo como ingeniera. Estas trabajando en el diseño de juguetes o en el de armas de calle como problemas de ingeniería, pero, además, como una forma de producción artística. En tu vida profesional, ¿estas encontrando un numero creciente de gente que sopesa esas dos identidades y que no saben como llamarse a sí mismos, sí artistas, o ingenieros?
+
+NJ: Esta confusión de identidad es en verdad muy interesante. En los laboratorios de investigación, actualmente evito la palabra artista porque significa que eres excéntrico y marginal. Si alguien me llama creativa sé que usualmente es un insulto. Significa que tu trabajo no plantea ningún problema, y que no es importante.
+
+JP: Chris Csikszentmihalyi en MIT tiene el problema opuesto. Cuando dice que es el único artista en el media lab, muchos de los profesores se ofenden. Piensan en sí mismos como artistas.
+
+NJ: Bien, actualmente, Interval tiene el mismo problema: ingenieros y diseñadores que visten de negro, llevan el pelo largo y que se llaman a sí mismos artistas, pero que no exiben obras de arte. Son financiados por diferentes instituciones, como empresas capitalistas, y exhibidos en muy diferentes contextos, principalmente para poner en evidencia el estatus de la empresa.. Llamarse a sí mismos artistas fue primeramente un camino para no tomar responsabilidades de cara a los demás ingenieros.
+
+JP: Y mientras tanto tu estás exponiendo, y sin llamarte a ti misma artista.
+
+NJ: Bien, esto es algo extraño. Todos nosotros tenemos tendencia a usar cualquier titulo que nos resulte útil.
+
+JP: Lo peor es si una persona se presenta a sí misma como artista cuando esta hablando con ingenieros, o como ingeniero cuando esta hablando con artistas. Por este camino la persona no tiene que hacerse responsable de ambos grupos. Muchos de nosotros hemos jugado a este juego en el MIT Media Lab. Pero el mejor trabajo, que no es nada usual, es aquel que hace contribuciones reales dentro de múltiples comunidades; arte, ciencia, y tecnología.
+
+Parte II; El artista como Productor de conocimiento.
+
+JP: recientemente has dado una charla en el MIT titulada, “El artista como productor de conocimiento”.
+
+NJ: Si, en la era de la información, “Que es información” viene determinado por las ciencias puras, la economía, o la educación. Generalmente no es reconocido que los artistas también puedan producir conocimiento, o incluso llevar a cabo proyectos reales.
+
+JP: Entonces,  ¿has producido algo real mientras has estado trabajando como artista?
+
+NJ: Bien... [risas] ...las ideas se vuelven realidad cuando son lo suficientemente persuasivas como para que otra gente las considere también importantes. Obviamente, tengo esto muy en cuenta, y en mi propio trabajo trato de emplear algunas de las más persuasivas estrategias de representación que son habitualmente usadas en las ciencias naturales. Esta es una de las razones por las cuales empleo empirismo o representaciones empíricas.
+
+JP: ¿Pero eso produce cosas reales o tan solo hace a la gente pensar en la representación científica de una forma mas critica?
+
+NJ: En mi propio trabajo, esta distinción es difícil de hacer. Los textos que he estado haciendo sobre el “One Tree proyect”... ¿Conoces el “One..”, el de los árboles clonados?
+
+JP: Si.(www.onetrees.org)
+
+NJ: Bien. Obviamente el proyecto es una demostración muy sencilla.
+
+JP: ¿Una demostración de que la genética no determina el destino, de que continúan habiendo diferencias entre los árboles incluso habiendo sido clonados?.
+
+NJ: Si. Pero el problema que he tenido exhibiendo el “One Tree proyect” fue muy tonto; Los clones estaban alineados uno junto al otro, y todo aquel que venia, se sentía engañado al ver que aquellos árboles no parecían iguales. Parecían pensar “...fraude de artista”.
+
+JP: Claro, como si te hubieras olvidado de la ciencia, o algo así. 
+
+NJ: Si. Es más fácil cuestionar los conocimientos científicos del artista, que entender esta tremendamente simple demostración y el desafió que supone para el equivocado concepto popular sobre el control genético de los organismos. Si el medio ha sido exactamente el mismo, y los genes han sido exactamente los mismos, entonces quizá el control de los genes hoy en día sea muchísimo mas parcial de lo que aparenta de acuerdo con el modo en el que la imaginación popular ha sido informada.
+
+Si miras un rió, no asumes inmediatamente que hay una unidad central de proceso o un algoritmo genético que controla la estructura de sus ramificaciones, aun cuando todo el mundo puede darse cuenta de que la forma del río y la estructura de ramificación de los árboles es muy semejante. Aun así asumimos que uno de ellos esta controlado completamente por los genes y otro no. Queda muchísimo trabajo por hacer en el estudio de cómo los genes ejercen control –a parte de lo que concierne al medio y al cuidado-. Cuando aspiraba a ser neurocientífica, pensaba que hay algún factor que es atenuado, o de algún modo influenciado por la naturaleza externa. Antes que entender que el medio externo es tan importante para el desarrollo como lo es el renombrado “libro de la vida”, el código, o el procesador central. 
+
+JP: Bien, déjame preguntarte, ¿estas haciendo eso, "atrapar la idea sobre la marcha", o el “One Tree proyect” en estos momentos te esta el ayudando a verificar a posteriori que el sistema funciona?
+
+NJ: Las dos cosas. Por supuesto que las dos cosas. Esta es un proyecto que esta en proceso. Los árboles están comenzando a ser plantados en pares a lo largo del área de la Bahía de San Francisco. Tenemos muchos años para responder a esta pregunta. Pero, entendiendo este proyecto como una sencilla demostración, la gente  debería hacerse esta pregunta, ¿Pero, por que son distintos?”.
+
+Como responden no esta completamente en mis manos. De cualquier modo, es interesante que las únicas personas que no ven que son diferentes son los críticos de arte. En ninguno de los artículos han comentado nada sobre las diferencias. Yo estuve haciendo hincapié en que esos árboles, genéticamente idénticos, y que crecieron en condiciones idénticas, eran distintos.
+
+JP: ¡Pobres críticos de arte!. Se hacen críticos porque no saben nada de ciencia, y ahora tienen que escribir sobre tus exposiciones.
+
+NJ: Bueno, esto solo es una cosa mas que comentar. Pero tenemos que observar el particular contexto de las instituciones. Los críticos se equivocan porque, prensa en mano, son orientados por los comisarios.
+
+En esta exposición los comisarios fueron investidos en un tipo particular de celebración corporativa con esta idea de que la revolución tecnológica ya ha sucedido. De ahí que la exposición se titulara Paradise NOW!
+
+JP: Entonces, ¿el “One Tree” ha estado ofreciendo un ejemplo contrario a esta visión?
+
+NJ: Si. La evidencia material que demuestra casi inequívocamente que los genes no controlan de un modo absoluto.
+
+NJ: Esto me hace pensar en los informes de los experimentos con burbujas de aire de Boile. Solía poner un pájaro dentro de la burbuja de cristal, y los caballeros del mundo de la ciencia miraban como el aire era evacuado causando la muerte al pájaro. Era al mismo tiempo un espectáculo dramático y una prueba de la existencia del vacío. Pero a pesar de su apariencia estética y dramática, nunca fue visto como arte.
+
+NJ: La gente realmente cercana a mi trabajo no tienen tendencia a hacer critica de arte, y, hoy por hoy, esto es un problema a la hora de exhibir.
+
+JP: Si, pero tu trabajo ha sido expuesto en el Whitney, en el MoMA, en el Guggenheim...
+
+NJ: Pero la cuestión es que es lo que ocurre cuando es expuesto. Como en el caso de “One Tree proyect”, si hubiera sido documentado de otro modo, habría activado otra clase de discurso publico. Solía frustrarme que una cuestión tan simple pudiera ser entendida erróneamente. Pero en ese momento tienes que reflexionar sobre el contexto político. Observa por ejemplo Suicide Box -la caja del suicidio- en la bienal del Whitney.
+
+JP: ¿Que expusiste?, ¿exhibiste video?
+
+NJ: Fue video. Aquí esta el material capturado por una estación Silicon Graphics de alta tecnología con software propio que fue un infierno construir, situar, instalar, y mantener en mitad de ninguna parte para tomar las fotos. Pero los comisarios del Whithney escribieron: “Fotografías simuladas de los suicidios del Golden Gate”. Enseguida dieron por supuesto que no eran reales, que no eran de verdad. Entonces todo este trabajo de recopilación empírica de evidencias sobre este actual y trágico fenómeno social, fue completamente destruido. Las preguntas que podrían tener los espectadores sobre como entender esas imágenes fueron anuladas. No me consultaron. No me preguntaron ¿es real?. Fue inmediatamente asumido que no, y podrían no serlo, en gran medida por que están hechas por un artista.
+
+Los dos casos;  “One Tree proyect” y “Suicide Box”, son una fuerte e in ambigua evidencia de algo que fue radicalmente reconfigurado desde el contexto del comisariado. Puedes ver en ambos casos que el empirismo esta subyugado a la institución social en que es presentado.
+
+JP: Hemos hablado un poco sobre el estatuto del artista individual como productor de conocimiento, pero estoy interesado en saber tus ideas sobre los colectivos de tecnoartistas. ¿Qué piensas sobre las organizaciones underground, como “The Bureau of inverse technology”–agencia de tecnologias inversas-, “The Institute for AppliedAutonomy”-el instituto para la Autonomía Aplicada-, “Etoy”, o “RTMark”, quienes ocultan la identidad de sus miembros y en algunas ocasiones intentan hacerse pasar por otros para lograr fines políticos?. ¿Qué te parece todo esto como estrategia?
+
+NJ: Obviamente, he reflexionado mucho sobre este tema. Llamo a este fenómeno “Arte corporativo” desde que reproduce frentes burocráticos. Creo que cada organización es muy distinta; RTMark involucra a gente engañándola, pero lo hace con fines claramente “culturales”. La gente de RTMark usa nombres falsos, y emplea la identidad de otros. Pero Etoy, por ejemplo, se parece mas al fenómeno de las bandas de rock -visten la misma ropa, y producen identidad de grupo-. The Bureau camufla la agencia al nivel de que es la organización, y que es lo que hace, con objetivo de confundirla con otras organizaciones y corporaciones. Los roles están predeterminados,así que yo me quedo en "ingeniero de The Bureau of Inverse Technology”***
+
+JP: Bien, esto es otra burla contra la pasiva voz que es usada en ciencia e investigación.
+
+NJ: Así es. Porque la cultura tecnológica es producida a partir de esta dispersión de responsabilidades. ¿Quién esta hoy en día produciéndola? ¿Quién puede decir quien esta actualmente escribiendo el código del sistema operativo de Microsoft? Nadie puede hacerse responsable, es como “bien... yo hice el interface de usuario”, o “yo hice la estructura de las bases de datos”. Es esta condición de la responsabilidad difusa, la cuestión más crucial para entender y quizás intervenir en la tecnocultura.
+
+En The Bureau, la autoría conceptual se deja colgada, lo cual ha estado confundiendo a la gente. Ahí esta el problema: “¿es real?”, “¿ es simulado?”, “¿qué tipo de organización podría grabar los suicidios del Golden Gate?”, “¿me están engañando?”. Pero es precisamente aquí donde surge la duda que nos hace cuestionar la autoría conceptual de las corporaciones burocráticas.
+
+JP: La otra cuestión sobre estas organizaciones es que muchos de sus miembros trabajan en el gobierno, o en laboratorios de investigación de las universidades. ¿Crees que los colectivos underground de tecno artistas, son precisamente una parodia de ese gran homologo que marca las pautas en su terreno o crees que ellos constituyen el lugar donde la producción de conocimiento real pueda suceder?
+
+NJ: Hay una producción real de cultura joven y de cultura alternativa, y a su cabeza va este “Arte corporativo”. No son simplemente juegos irónicos y sin sentido, están organizando actividades humanas reales, por ejemplo, nosotros dos estamos aquí sentados hablando de ellos. Bureau ha durado el doble que la corporación Interval Research. Los colectivos son tan reales como parece.
+
+JP: Gracias Natalie, ha sido un placer hablar con tigo. 
+
+[ Traducción: Gabriel de la Cruz ]
+Original publicado en Rhizome 

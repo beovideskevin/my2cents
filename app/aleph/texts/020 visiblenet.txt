@@ -1,0 +1,116 @@
+«Perdidos en el cluster del data»: ser visible en Internet   
+Lourdes Cilleruelo. upbcigul@lg.ehu.es  
+ 
+
+Desde la concepción clásica, y como alternativa a festivales, exposiciones y demás eventos, Internet puede ser considerado como un medio de difusión sin igual. Desde él es posible acceder a una información actualizada y al “alcance de todos”. Sin embargo, paradójicamente el exceso de datos ha generado una devaluación de los mismos y, en consecuencia, una necesidad apremiante de filtrar y seleccionar la información. Es otra de las contradicciones intrínsecas en la Red de redes, nos hallamosirreversiblemente «perdidos en el cluster[1] del data[2]». 
+
+Partiendo de la premisa "estar en línea significa estar distribuido", sería deducible pensar que el problema de la distribución, que se le planteaba al creador tradicional, ha desaparecido y con él la figura del mediador entre su obra y el público. Aunque, sin duda, éste se presenta como el gran legado de Internet, debido al exceso de información surge un nuevo reto: ser visible en la Red. El artista de Internet además de ofrecer un producto interesante, debe conseguir atraer al usuario a sus páginas. De hecho, este medio está generando un sistema propio de artistas, comisarios, críticos, etc. que hacen uso de nuevas estrategias y canales de distribución. La cuestión es: ¿de qué herramientas disponen estos para lograr ser visibles en la Red?; ¿cómo consiguen llamar la atención dentro de esa amalgama rizomática de data?. Para responder a esta pregunta, proponemos tres modelos básicos de visibilidad en la Red: por una parte, las comunidades virtuales, enclavadas dentro de una línea más tradicional; y por otra, el dominio y los motores buscadores, como tácticas innovadoras y específicas de Internet. 
+
+Las comunidades virtuales como canales de distribución
+
+Al hablar de estrategias de visibilidad se hace necesario mencionar las comunidades virtuales. Éstas desarrollan tres cometidos fundamentales cada uno de los cuales con una función específica: como plataformas artísticas, previa selección, ofrecen espacio electrónico gratuito a los artistas; como comisarios del net.art, realizan exposiciones o eventos temporales; y, como pensadores, construyen un discurso crítico sobre los nuevos media. Por todo ello, se puede afirmar que las comunidades artísticas ejercen un papel nada desdeñable como filtradores de arte, comisarios y jueces del arte de Internet. En definitiva, se podría decir que éstas son las que de alguna forma filtran, seleccionan y promocionan el arte de Internet.
+
+En una relación puramente simbiótica los artistas se cobijan en las comunidades artísticas para darse a conocer y promocionarse, mientras que éstas, simultáneamente, se alimentan de la creatividad de aquéllos como reclamo para sus visitantes. Un ejemplo concreto sería la sección «splash» de Rhizome: mientras que artistas y diseñadores ayudan a mantener diariamente una imagen viva y renovada de Rhizome, este espacio, además de convertirse en un medio publicitario para las páginas de aquéllos, representa una puerta de acceso a sus servidores. 
+
+Otra estrategia, que se desarrolla dentro de las comunidades virtuales, es la irrupción en el discurso de la corriente general como modo de atraer a la comunidad a las páginas personales. Concretamente, nos referimos al spam y al disturbio entendidos como dos formas de llamar la atención y por tanto de distribución. El máximo exponente de esta acción es el/a artista Antiorp, quien no utiliza los medios tradicionales de promoción para su obra, la cual, resulta esquiva. La mayoría de estos provocadores, como Antiorp, proceden de la lista experimental 7-11. En opinión de Tilman Baumgaertel, estas acciones contienen algo de “arte de datos dadá” -dada-data.art-.
+
+El dominio como estrategia de distribución
+
+El sistema de dominios es el método utilizado para administrar e identificar hosts o máquinas anfitrionas en una red, así como sus afiliaciones y propósitos. Por norma general, los nombres de los dominios constan de tres partes: la primera se reserva para señalar el recurso Internet (FTP, WWW,...); la segunda al nombre de la compañía o grupo al que pertenece...; y la tercera y última designa el país o categoría[3] de éste. Actualmente la compañía Network Solutions mantiene el monopolio de la administración de los dominios de alto nivel de la red Internet. Este sistema centralizado ha sido criticado enormemente por la comunidad. El artista Paul Garrin mediante su proyecto "name.space" presenta una red alternativa basada en un esquema de direcciones y dominios democrática y flexible. No obstante, hay quien opina que no se trata sino de un proyecto comercial encubierto.
+
+La posesión de un nombre de dominio de alto nivel es vital en lo que respecta a ser visible en la red. En lo que se refiere al plano artístico, su relevancia subyace en ser un factor indispensable para conseguir un arte independiente y una personalidad propia. El grupo Jodi y Alexei Shulgin[4] coinciden en señalar la importancia del dominio: además de proporcionar al artista un grado de identidad y visibilidad, le permite obtener una cierta autonomía, y así, no estar subyugado a intereses políticos o comerciales: tener un dominio propio significa ser libre, independiente. 
+
+En la práctica artística, los creadores adquieren un dominio adecuado que les identifica y les proporciona la identidad deseada en el ciberespacio, y en el cual albergar toda su obra. Dentro de la corriente más clásica, el esquema más utilizado ha sido: «recurso.artista.identificación/obra/archivo.html» como es el caso del dominio www.vuk.org, de Vuk Cosic o www.jodi.org del grupo Jodi. Aquellas obras que adquieren una importancia sustancial, llegan incluso a adoptar una dirección propia de alto nivel, como www.grammatron.org que adquiere el nombre de la obra "Grammatron" de Mark Amerika; o mediafilter.org, del proyecto "Mediafilter", de Paul Garrin. En ambos ejemplos, la fórmula anterior se convierte en: «recurso.proyecto.identificación». Por el contrario, en aquellas situaciones en las que los artistas no disponen de un dominio de alto nivel, la disposición quedaría de la siguiente manera: «recurso.proveedor.identificación/artista/obra/archivo.htm». Este último modelo es seguido por todos los proyectos del dominio irational.org. A modo de ejemplo el proyecto de Heath Bunting, "Visitor's Guide to London" se encuentra hospedado en la dirección www.irational.org/London.
+
+Paralelamente al crecimiento de la Red, se ha desarrollado una mayor sensibilidad hacia el alcance e importancia del papel del dominio en torno a la visibilidad en Internet, creándose nuevas estrategias en torno a éste. Dada la gran importancia que ha adquirido el World Wide Web y, puesto que casi toda la producción artística en Internet utiliza este recurso, las 3W distintivas de éste han sido sustituidas progresivamente por el proyecto artístico seguido del dominio de su anfitrión y de la identificación: «proyecto.anfitrión.identificación». Un ejemplo concreto lo encontramos en los proyectos alojados en el Walker Art Center: siguiendo este esquema en las direcciones phoneme.walkerart.org y adaweb.walkerart.org, se pueden encontrar la famosa obra "Phon:e:me" de Mark America y la comunidad artística äda'web, respectivamente.
+
+Los espacios artísticos han desarrollado una estrategia para aquellos proyectos, cuya visibilidad es limitada por no disponer de un dominio de alto nivel, que además les confiere una imagen nueva cada vez que un usuario visita sus páginas. Nos referimos a espacios que, como äda'web, han añadido un algoritmo aleatorio que permite redireccionar al usuario a diferentes proyectos albergados en él. Artistas como Jodi o Superbad, aunque de una forma controlada, adoptan también esta táctica para redirigir directamente a sus visitantes a las innovaciones de su servidor. En ambos casos, estas estrategias fortuitas o no cumplen una doble función: por una parte, renovar la imagen de la homepage, y así evitar que el visitante se sienta invadido por la monotonía; y en segundo lugar, dinamizar las visitas en sus páginas.
+
+En cuanto a su nomenclatura, los dominios de alto nivel deben ser apelativos o frases fáciles de recordar: la elección de un nombre atractivo de dominio puede llegar incluso a garantizar el éxito o fracaso de una página web. El mejor ejemplo sobre su trascendencia lo ostenta hell.com. A principios del año 2000 Hit.domains.com, una de las más importantes empresas de compraventa de dominios en Internet, sacó a subasta hell.com con un precio de salida de 8 millones de dólares[5]. Hell.com, originariamente un servidor sin información, recibía, gracias a la frecuencia con la que se teclea "infierno" -hell en inglés- en los motores buscadores, más de un millón de visitantes al mes. 
+
+En los inicios de Internet, cuando todavía las grandes marcas comerciales no habían extendido sus tentáculos comerciales hacia ella, hubo quien se dedicó a registrar nombres de las grandes corporaciones. Heath Bunting en su "Own, Be Owned Or Remain Invisible", habla sobre la visibilidad e invisibilidad impresa en el nombre de dominio. Bunting a través de un texto sobre sí mismo escrito por James Flint titulado "On a mission" (1998), en el que enlaza cada palabra de éste con el dominio comercial del mismo nombre, pone de manifiesto dicha posesión de dominios. Cualquier nombre que se nos pueda ocurrir, ya está registrado en la Red: la disputa por los nombres de dominio era sólo cuestión de tiempo.
+
+En la escena artística, la lucha más descarnada y con más repercusión sobre los nombres de dominios fue recientemente protagonizada por la compañía de juguetes eToys y el grupo hacker etoy. La compañía denunció al grupo artístico por la utilización de su dominio etoy.com. eToys acusaba a éste de robo de identidad, puesto que dada la similitud de los términos, muchos clientes en la confusión accedían a las páginas del grupo activista. Etoy, por su parte, inició una ofensiva de denuncia contra la clausura impuesta a su sitio web. El apoyo a la causa de etoy se hizo sentir en numerosos sites artísticos como en RTMark o en Mouchette, de cuya homepage, en diciembre de 1999, colgaba un banner* en el que se podía leer «etoys.com big greedy bully assholes»[6]. 
+
+Los search-engines como canales distribuidores
+
+En la actualidad, existen multitud de search-engines o motores buscadores. No obstante su funcionamiento su funcionamiento no es el mismo. En concreto, se puede destacar la labor emprendida por Google, cuyo método de búsqueda, a diferencia de otros buscadores, está basado en la propia estructura de Internet de hiperenlaces. El incremento y proliferación de estas herramientas, ha originado el nacimiento de un concepto innovador de exploración parasitaria en la web, basada en motores de búsqueda que a su vez indagan en otros, por lo que han recibido el nombre de 'metabuscadores' (Copernico, Metacrawler...). Su función consiste en ofrecer al usuario un compendio de los resultados de todos ellos, evitándole esa tediosa tarea.
+
+¿Influyen las search-engine en la distribución del net.art? y, de ser así ¿de qué manera y en que grado?. La respuesta, es sin ninguna duda, afirmativa. El código HTML lleva etiquetas que ayudan a los search-engines a localizar la información solicitada por el usuario. Los motores buscadores intervienen como verdaderos portales conceptuales, no sólo permitiendo el acceso a la información sino también dificultando su acceso. Bunting en 1997, en la entrevista "Just stand around on the streets"[7] realizada por Tilman Baumgaërtel afirmaba que el tema de la visibilidad e invisibilidad en la Red ya no radicaba en el dominio como en años anteriores, sino en los motores buscadores. 
+
+Este cambio de protagonismo animó al activista Heath Bunting a encaminar todos sus esfuerzos al desarrollo de tretas de programación para hacer sus páginas más sensitivas a los motores buscadores. El artista logró resultados sorprendentes. Consiguió que al introducir marcas como Marks & Spencer, Nike o Adidas en los principales buscadores como Lycos, InfoSeek, Hotbot, excite, WebCrawler o AltaVista, en los 10 primeros lugares apareciesen sus páginas de irational.org, acompañadas del mensaje «URL FOR RENT». En general, las páginas web de irational.org están diseñadas para ser muy sensibles a los mecanismos de búsqueda de Internet. Más recientemente, y en la misma línea que Bunting, el artista británico que trabaja bajo el nombre Service2000 lanzó una serie de sites cuyos dominios se parecían notablemente a las más renombradas galerías de Londres. Este autor asegura que. introduciendo términos como Anthony Doffay, Sadie Coles o Saatchi Gallery en buscadores como AltaVista o Compuserve, en un elevado porcentaje sus dominios http://www.anthonydoffay.co.uk, http://www.sadiecoles.co.ukhttp://www.saatchigallery.org.ukconsiguen puntuación más alta que los sites originales[8].
+
+Además de su función meramente distribuidora, el recurso de los motores buscadores ha estado siempre presente en la obras de los artistas. El proyecto “The hijack project” de etoy utiliza las máquinas buscadoras para elegir sus víctimas; “Airworld”, para buscar materia prima; Stelarc en su performance “Parasite”, para generar un input telemático, óptico y acústico. Sin embargo, en esta línea, uno de los ejemplos más interesantes y específicos es el protagonizado por el grupo Mongrel en su obra titulada “Natural selection”[9]. Este proyecto tiene apariencia y funciona supuestamente como un buscador rutinario, pero con alguna variante: si el término de búsqueda contiene algún rasgo racista (negrata, blanco...) el usuario es reconducido a las páginas preparadas por Mongrel. 
+
+“Welcome to Natural Selection - a new kind of search engine. No other search engine has the power to give you what you really want! Why? As you use the web, Natural Selection initialises complex data analysis tools to construct personalised preferences from your local memory. At first, the results of these searches may make Natural Selection seem surprisingly 'Psychic'. No data is harmed in the process and all excess information is used solely to enhance your surfing experience.”[10]
+
+ 
+
+ 
+
+websites:
+
+http://www.rhizome.org
+http://www.7-11.org
+http://Name.space.xs2.net
+http://www.vuk.org
+http://www.jodi.org
+http://www.grammatron.org
+http://mediafilter.org
+http://www.irational.org/London
+http://www.walkerart.org 
+http://phoneme.walkerart.org
+http://adaweb.walkerart.org
+http://www.superbad.com
+http://www.hell.com
+http://hit.domains.com
+http://www.irational.org/_readme.html
+http://rtmark.com/
+http://www.mouchette.org
+http://www.toywar.com/
+http://www.etoys.com
+http://www.google.com
+http://www.copernico.com
+http://www.metacrawler.com
+http://www.lycos.com
+http://www.infoseek.com
+http://www.hotbot.com
+http://www.excite.com
+http://www.webcrawler.com
+http://www.irational.org/heath/v.realty
+http://www.altavista.com
+http://www.compuserve.com
+http://www.anthonydoffay.co.uk
+http://www.sadiecoles.co.uk
+http://www.saatchigallery.org.uk
+http://www.hijack.org
+http://www.airworld.net
+http://www.merlin.com.au/stelarc/
+http://www.mongrel.org.uk 
+ 
+
+ 
+
+
+--------------------------------------------------------------------------------
+
+[1] Grupo de sectores de disco, unidad de almacenaje de datos en el disco.
+
+[2] Palabra plural procedente del latín que significa los datos. Con este término algunos autores se refieren a la información digital. Imágenes, texto, sonido o cualquier tipo de documento en el ordenador, no son más que datos numéricos codificados en el sistema binario 0/1.
+
+[3] Por poner algún ejemplo la etiqueta ".edu" se reserva a las universidades, ".org" a las organizaciones, ".com" a las compañías... 
+
+[4] BOSMA, Josephine (jesis@xs4all.nl): "Por un net-art independiente. Una charla con Jodi y Alexei Shulgin". En Aleph-pensamiento, http://www.aleph-arts.org/pens/indep.htm. Originariamente publicado en la lista de distribución Nettime, http://www.nettime.org, 06/07/97.
+
+[5] Para más información sobre la venta del dominio hell.com véase http://News.excite.com/news/bw/00435/fl-hitdomains.com
+
+[6] "etoys.com gran estúpido matón avaro". Este texto podía leerse en su homepage el 13/12/99.
+
+[7]BAUMGAERTEL, Tilman: "Just stand around on the streets". En Nettime, 20 Agosto de 1997. Entrevista con Heath Bunting realizada con motivo de la inauguración de la Documenta X. http://www.nettime.org/nettime.w3archive/199708/msg00098.html 
+
+[8]Para más información véase FULLER, Matthew: "Interview with SERVICE 2000". En Rhizome Digest: 6.30.00. 
+
+[9] Para más información véase FULLER, Mathew: En Rhizome Digest: 3.1.99.
+
+[10]“Bienvenido a Selección Natural -una nueva clase de motor de búsqueda. Ningún otro motor de búsqueda tiene el poder de darte lo que tu quieres. ¿Por qué?. Tal y como usas la web, Selección Natural inicia herramientas de análisis de datos complejos para construir preferencias personalizadas de tu memoria local. Al principio, la Selección Natural puede hacer que los resultados de estas búsquedas parezcan que tengan sorprendentemente poderes psíquicos. No se daña ningún dato en el proceso y el exceso de información se utiliza solamente para aumentar tu experiencia de navegación.”
+ 

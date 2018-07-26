@@ -1,0 +1,98 @@
+No artistas, sólo espectadores.   
+por Tilman Baumgaertel  
+ 
+
+Una entrevista con el grupo de artistas 0100101110101101.ORG que se hicieron famosos por mirrorizar a-legalmente websites de arte.
+
+"Me puedes llamar Cero y a ella Uno o viceversa". Los italianos que se esconden tras el website 0100101110101101.ORG <http://www.0100101110101101.ORG> no quieren revelar sus verdaderos nombres, su edad o cualquier otra información privada. De todos modos, no podrían camuflar que provienen de Bolonia. Aparte de eso, Cero y Uno tienen que conformarse con ser información adicional ya que su trabajo no tiene nada de individualismo artístico. Algún día, alguien podría continuar su trabajo utilizando su mismo nombre, un nombre que ni siquiera sus propios creadores pueden memorizar.
+
+Por pura comodidad, estos recién llegados a la escena Net.Art se denominan a sí mismos como "cero uno punto org". En festivales y otros eventos artísticos suelen aparecer como una pareja, a veces como tres personas - una mujer con uno o dos hombres, todos de apariencia veinteañera vestidos de negro fundamentalmente, uno de ellos con un corte de pelo que parece que viajase en un ascensor en caída.
+
+El secretismo alrededor de sus nombres no es un modo de hacerse publicidad sino que pertenece a cierta práctica artística influida por métodos situacionistas y , sobre todo, por los Neoístas, adaptando sus presupuestos a Internet. Aunque nieguen firmemente haber utilizado el pseudónimo Luther Blissett antes de comenzar sus actividades en la red, su trabajo en la net guarda gran parecido con actividades realizadas bajo este pseudónimo neoísta durante estos últimos años en Italia- también originadas en Bolonia.
+
+Se hicieron famosos instantáneamente en la comunidad net.artística por su 'robo' a la galería de net.art Hell.com <http://www.hell.com> que descargaron durante todo un fin de semana para subirla a su site y donde permanece hasta hoy en día. Mientras tanto su site contenía otra galería de net.art "Art.teleportacia" de Olia Lialina y versiones o remezclas de otros famosos net.art-sites.
+
+Esta entrevista fue realizada en Octubre durante el zac99 <http://www.i-lab.org> en el Musee d’Art Moderne de Paris.
+
+ 
+
+ 
+
+?: Os disteis a conocer en la escena Net por hacer una copia del site de arte Hell.com y subirlo a vuestro site. Contadme lo que hicisteis exactamente...
+
+0100101110101101.ORG: Estamos subscritos a la lista de correo Rhizome. Allí oímos que se abriría una puerta durante 48 horas a Hell.com para visitar la exposición "surface". Sólo estaba abierta para los subscriptores de Rhizome y necesitabas un password para tener acceso. Nunca habíamos visto Hell.com pero habíamos oído hablar de ella y sabíamos que era el mayor museo de net.art.
+
+Entonces, durante esas 48 horas de apertura nos descargamos todo el material del site. No resultó tan simple como parece, nos llevó 26 horas. Después lo pusimos en nuestro website y enviamos un e-mail, símplemente con nuestra URL repetida cientos de veces, a distintas listas de correo y periódicos.
+
+?: ¿Obtuvisteis algún tipo de reacción de Hell.com?
+
+0100101110101101.ORG: Sí, tan sólo dos horas después nos llegó un e-mail de Hell.com, a nosotros y a la compañía que alberga nuestro site en Canada, diciendo que estabamos violando el copyright de todos los artistas y del mismo Hell.com y que teníamos que quitarlo inmediatamente. Nos acusaban bajo la ley internacional del copyright...o no se qué. No hicimos nada, lo dejamos ahí y ahí sigue.
+
+Todo el mundo estuvo hablando de esta acción durante semanas, así que se creó todo un dabate público que fue un gran reclamo publicitario tanto para nosotros como para ellos. Tuvimos un enorme número de visitas de toda la gente que había querido ver Hell.com y no había podido.
+
+?: Pero, tal vez si tienes un site cerrado al público no quieras toda esa publicidad. No estoy muy seguro de cómo podrían ser ejecutadas esas leyes internacionales que mencionáis, por cierto. Quizá podrían hacer que vuestro proveedor echase abajo vuestra página, pero pienso que estáis jugando con la ventaja de tratar con artistas americanos que no se pueden permitir contratar un grupo de abogados para demandaros en Europa. Si hubiéseis hecho lo mismo con el site de la CNN, os hubieran demandado a los diez minutos y habríais quitado el site sin pestañear.
+
+0100101110101101.ORG: Siempre se puede ser más radical de lo que se es. Pero seguramente eso seria interpretado como una acción política explícita, un ataque contra algo. Pero nosotros no estamos en contra de nada. No somos unos anarquistas que quieren echar abajo el web art. Símplemente, trabajamos con lo que encontramos e intentamos propagar nuestras ideas.
+
+El asunto de Hell.com ya no nos interesa para nada. Sólo tuvimos dos días y al final, cuando lo vimos, nos parecio tan feo que nos pillamos un cabreo. ¡Si hubiéramos sabido que era tan malo no lo habríamos copiado! Sólo es una exposición de diseño. No hay ninguna idea detrás, ningún contenido. Comparto absolutamente la idea Duchampiana de un arte no retiniano. Presentamos nuestro trabajo sin ordenadores, si ayer no hubiese habido un proyector para mostrar nuestro trabajo, no habríamos tenido ningún problema ya que nuestro trabajo no es estético sino ético, está basado en contenidos.
+
+?: Entonces, ¿Cuál es la idea de este "robo"? ¿Acceder a un sistema en un principio cerrado, sólo abierto a una autoproclamada élite, para después hacerlo accesible a todo el mundo?
+
+0100101110101101.ORG: Sí, primero estaba la sensación de que Hell.com era exactamente lo opuesto a lo que creemos que la red podría y debería ser, pero esta idea no es realmente nuestra. Esto es lo que hace un hacker. La diferencia entre nosotros y los hackers (en el popular y malentendido sentido de la palabra) es que nosotros intentamos mostrar que nuestra clase de activismo es congénita al ciberespacio, ya no tienes que ser un "hacker" porque hemos entrado en la época de la guerra de la infomación. Las eras del Hardware y del Software se han acabado, ya no necesitas ser un "hacker" porque existen las herramientas necesarias para transmitir tus ideas sin necesidad de habilidades técnicas.
+
+?: ¿Entonces, por qué esa fijación con el arte? ¿Por qué no hacer la misma operación con el website de la CNN, por ejemplo?
+
+0100101110101101.ORG: Si coges dos objetos corrientes, como estas dos sillas por ejemplo, y las pones juntas, haces arte. Si coges dos cuadros de esas sillas y los pones juntos, es otra cosa, se llame meta-arte, anti-arte o activismo. En la red sucede lo mismo. Lo que nos interesa no es la creación de arte, sino la discusión y subversión del arte. ¿Deberíamos de llamarlo "artivismo"?
+
+?: ¿ Entonces, estaríais de acuerdo con que lo que hacéis sólo es de interés, o sólo llega a tener sentido porque actuáis en el seno del sistema artístico?
+
+0100101110101101.ORG: Si haces lo que nosotros hacemos con una obra de arte, la operación tiene un valor en sí misma. Si trabajas con contenidos que no son arte, se torna más dificil distinguir la operación de su contenido. Si robas el site de la CNN, estás actuando en contra de la CNN. Hay muchos grupos dedicados a esta clase de hacktivismo, piensa por ejemplo en RTMark y Mongrel, están haciendo cosas geniales. Nosotros no estamos interesados en desarrollar este tipo de hacktivismo. Trabajamos sobre otro tipo de contradicciones como originalidad y reproducción, autoría y red, copyright y plagio. No neceitas ser explícitamente político para hacer algo político.
+
+?: Entonces repito, ¿estáis de acuerdo con que estas acciones de recontextualización sólo tienen sentido como práctica artística?
+
+0100101110101101.ORG: Sí. Al principio era importante para nosotros aclarar estas ideas, porque son los supuestos básicos de nuestro modo de pensar. Ahora podemos cambiar de dirección y trabajar con otro material. El New York Times dijo que iba en contra de la comercialización de net.art, pero no era nuestra intención en absoluto.
+
+?: Pero de las únicas piezas vuestras de las que se habló era de las copias de Hell.com y Art.Teleportacia de Olia Lialina, y ambas tienen algo que ver con la comercialización del net.art.
+
+0100101110101101.ORG: Cuando copiamos Hell.com aún no era un site "pay-per-view", sólo estaba protegida por el copyright y por un password. De todos modos, antes de Hell.com y después de Art.Teleportacia, hicimos un montón de 'clones' de los sites de otra gente, hacíamos híbridos de páginas de otros artistas que no tenían nada que ver con la "comercialización".
+
+?: ¿En qué se diferencia vuestra operación de, por ejemplo, la Mona Lisa que Duchamp fotografía y sobre la que dibuja un bigote. Y de otras acciones de apropiación y reapropiación que han tenido lugar en todo el siglo veinte y especialmente en los 80 y 90 con artistas como Sherrie Levine, por ejemplo?
+
+0100101110101101.ORG: Esa es una buena pregunta. En la red puedes realizar este tipo de acciones libremente, sin destruir el original, porque no hay original; no es que nos preocupen demasiado los originales, en absoluto- de hecho nuestros trabajos off-line han ido en contra de esa idea de "original"- pero los paradigmas del mundo real están ya tan enraizados que nunca cambiarás nada, siempre serás el enésimo anti-artista. En cambio, en la red sientes que puedes cambiar algo, tienes poder de influencia. Esta discusión en torno a la originalidad ya no tiene ningún sentido en la red, Duchamp lo hizo sólo con reproducciones de obras de arte, nosotros lo hacemos con los propios trabajos ya que la copia en la red es exactamente idéntica al original. Todo el mundo puede utilizar la información en la red. Cuando clonamos a Jodi, no destruimos su trabajo, lo reutilizamos.
+
+?: ¿Se han quejado alguna vez de vosotros?
+
+0100101110101101.ORG: No. Deben de estar mosqueados por deconstruir su site. Por ejemplo, en el site de Jodi hay un índice, pero está oculto, así que resulta muy dificil navegar por él, te pierdes clickando y clickando todo el tiempo. Nosotros cogimos el índice y lo pusimos en la página principal, así que puedes ver exactamente dónde están todas sus partes y secciones. Cuando copias un site, aprendes un montón de cosas acerca de sus autores. Puedes ver cuál es su orden jerárquico y cronológico. Es muy interesante.
+
+?: ¿Así que lo que estáis diciendo es que lo que hacéis es basicamente aprender cómo ser net.artistas copiando los sites de otra gente?
+
+0100101110101101.ORG: No, los utilizamos interactivamente. No creemos que símplemente hacer un click en un website sea una interacción. Eso es hacer lo que se supone que has de hacer. No es que la obra sea "interactiva", es el espectador el que puede usarla interactivamente. Interacción es cuando utilizas algo de un modo no contemplado por el autor.
+
+?: Pero de todos modos, esa es la naturaleza de la red. Cualquiera puede mirar en el código fuente de un website y ver cómo se ha construido, y no necesitan la ayuda de ningún flamante artista...
+
+0100101110101101.ORG: Nosotros no hemos inventado nada, sólo lo hemos hecho explícito. Además tampoco reclamamos ningún tipo de copyright por nuestro trabajo. Cualquiera puede descargarse todo un site. Sólo necesitas un software y no te tienes que preocupar de ningún copyright. Nuestra idea es que existe un modo diferente de aproximarse a las obras. Puedes elegir tu actitud o lo que quieres hacer con la pieza. No estás obligado a sólo mirarla. Existen herramientas para hacer algo más. 
+
+Una cosa que puedes hacer es clonarlas. puedes modificarlas, añadir cosas, ponerlas en diferente orden, incluso destruirlas, puedes hacer lo que te de la gana con ellas. Nos encantaría poder ver más ejemplos de este tipo de interacción en la red. Porque el net.art que se está desarrollando actualmente sigue las mismas pautas que la escena artística normal. Sigues teniendo artistas con nombres y apellidos, biografías y obras, y son genios, y eso le da un plus de valor a lo que hacen.
+
+?: Por lo que yo conozco, jamás he oído a un/a net.artista llamarse a sí mismo/a genio en absoluto...
+
+0100101110101101.ORG: Pero lo serán dentro de treinta años. A Jodi se le llamará el Leonardo del Net.art y Antiorp será el Van Gogh y Vuk el Warhol...Nadie piensa que uno mismo sea un genio. Quizá dentro de treinta años si lo siguen oyendo una y otra vez, al final empiecen a pensar: "Bueno, quizá sí que sea un verdadero genio."
+
+La cuestión es que ni en la red ni en el mundo real hay "genios" inspirados por la musa, tan sólo hay un enorme, inagotable intercambio de información e influencias. El "conocimiento" es sólo un gran plagio. Incluso en el "mundo real" hay un montón de gente trabajando sobre estos temas, como Piero Cannata con Miguel Angel y Pollock, o Aleksander Brener que pintó un nuevo cuadro sobre uno de Malevich...
+
+?: ...y acabó con la posibilidad de que la gente pueda ver el "Cuadrado Negro" de Malevich.
+
+0100101110101101.ORG: Bien, puedes verlo en catálogos.
+
+?: Brener es considerado como el Anti-Cristo del arte contemporáneo. ¿Dónde os situaríais a vosotros mismos?
+
+0100101110101101.ORG: No nos consideramos "artistas" sino "espectadores". No estamos en contra del arte, no somos anti-artistas. Ya hemos visto lo que sucedió con el Dada o el Surrealismo y el resto de vanguardias históricas, no importa si te autodenominas artista o anti-artista, lo único que nos preocupa son los "contenidos".
+
+?: Así que también podríais dejar lo que estáis haciendo ya que de todas formas algún día será recuperado...
+
+0100101110101101.ORG: Esa obsesión por "ser recuperado" es una paranoia Situacionista. Si nadie da una mierda por lo que haces, es más probable que sea, más que por ser "demasiado radical", porque realmente no tengas nada que decir. Pero bueno, si a lo que te refieres con ser recuperado es que vas a hacerte rico, ¡esperamos que alguien nos recupere!
+
+[ Traducción: David García Casado ]
+
+  
+ 

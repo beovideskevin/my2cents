@@ -1,0 +1,156 @@
+::Online communities::   
+José Luis Brea 
+
+
+
+ 
+
+"A estos sistemas centrados, los autores oponen sistemas acentrados, redes de autómatas finitos donde la comunicación se hace de un vecino a cualquier otro, donde todos los individuos son intercambiables, se definen únicamente por un estado en tal momento, de manera que las operaciones locales se coordinen y que el resultado final se sincronice independientemente de una instancia central" 
+
+Deleuze-Guattari, Rizoma 
+
+"Estas singularidades, sin embargo, comunican sólo en el espacio vacío del ejemplo, sin estar ligadas por propiedad alguna común, por identidad alguna. Están expropiadas de toda identidad para apropiarse de la pertenencia misma, del signo E. Tricksters o haraganes, ayudantes o toons, esos son los ejemplares de la comunidad que viene"
+
+G. Agamben, La comunidad que viene 
+
+
+Presencia y participación han sido definidas como las cualidades por excelencia del trabajo artístico en la red. Independientemente, en efecto, de las determinaciones técnicas o lingüísticas que puedan caracterizar al medio, lo específicamente propio del web art es su modo de socializarse. Quiero decir, la peculiar panoplia de estrategias de recepción que articula. Nada diferencia tanto al web art de otras prácticas como el hecho de que su modo de recepción, su manera de alcanzar al espectador, reclama otras pautas de "consumo cultural", de lectura o recepción, que aquellos a las que éste (el espectador, ahora usuario) está habituado.
+
+En tanto, en efecto, estos hábitos no coinciden con los modos de recepción convencionales de las prácticas artísticas -relacionados con su presentación espacializada y objetualmente condicionada- incluso podemos cuestionar la adecuación de definirlas como tales prácticas artísticas.
+
+No me refiero -obviamente- a la resistencia de las instituciones artísticas contra estas nuevas prácticas (una resistencia medida, lacerantemente medida), sino más bien al contrario: a la resistencia que estas prácticas, por sus cualidades específicas, ejercen contra la institución-arte.
+
+Acaso explorar ese potencial haya sido una de sus mayores virtudes -en los años primeros de lo que ahora ya podemos describir como su período heróico.
+
+
+#
+
+
+Cuando se habla de participación en cuestiones artísticas parece necesario extremar las cautelas. Es muy posible que el límite de participación posible en una obra como tal se sitúe ya en el propio acto de recepción, de lectura -toda lectura es un proceso alucinatorio, decía Benjamin. Quiero decir que, como dejara hace ya tiempo bien establecido Duchamp, ninguna obra efectúa otra cosa que un cierto coeficiente de artisticidad, y es siempre el espectador el encargado de cumplimentar el proceso. Diríamos que "la expectación" en sí misma, en el proceso creativo, es ya un acto participativo -o digamos más precisamente que cuando no hay tal acto participativo no hay de hecho experiencia propiamente artística.
+
+Pero esto es una cosa: y otra bien distinta pretender que por clikar aquí o allá, por conseguir ciertos resultados a partir de ciertas actuaciones, se logra un grado de participación añadido. La mayoría de las veces es lo contrario -y lo que suele ocurrir es que un larvado despotismo tecnológico intenta pasar enmascarado bajo un torbellino de falsarias promesas de democraticidad.
+
+
+#
+
+
+Podríamos dar por bueno un cierto síntoma para hablar, con propiedad, de participación: que el efecto de nuestra acción no se produzca únicamente en la superficie del interfaz, en la pantalla total, sino que provenga de otro sujeto de conocimiento, situado al otro lado de nuestra actuación, de nuestra práctica. Quiero decir: que no hay interacción verdadera -o es una interacción carente en sí misma de todo interés- cuando el diálogo que abre la obra culmina en la propia obra. No hay participación genuina cuando el interfaz articula una interacción sujeto-máquina, o, valga decir, sujeto-obra. Una auténtica participación solo comienza cuando el interfaz abre a una interacción sujeto-sujeto (digamos: sujeto-máquina-sujeto), cuando al otro lado de nuestra acción expresiva, significante, encontramos todavía a un sujeto capaz de interpretación.
+
+Por poner un ejemplo: que en el please change beliefs de Jenny Holzer empieza a haber interacción sólo en el momento en el que nuestras intervenciones como usuarios son accesibles, y transformables a su vez, por terceros. Si la obra nos diera la posibilidad de incrustar modificaciones, pero no quedaran disponibles a la vista de terceros, entonces tendríamos que hablar de otra cosa -pero nunca de participación.
+
+
+#
+
+
+Pienso ahora, por un momento, en la conocida primera sentencia colaborativa, esa larga salmodia de escritura que, como un largo sutra, se extiende a lo largo de una multiplicidad interminable de anónimos que han añadido su fragmento propio. Es precisamente la mudez a la que cada fragmento se somete mutuamente la que hace que allí no haya acto participativo alguno, sino esa especie de concelebración vacía que es propia de las ceremonias en que la construcción de comunidad se salda en negación de las singularidades. No hay nada que leer en esa larga sentencia, nadie participa en nada. La larga cadena prolonga un acto de expropiación en que cada sujeto es traicionado, apartado de sí y sacrificado al altar de esta nadería. Nadie podría seriamente querer leerla, es una invocación participativa, pero más bien en la nadificación del discurso, del proceso comunicativo. Es la alabanza loca del aislamiento, del hecho de que las máquinas, permitiéndonos compartir el espacio significante -nos impiden en cambio encontrarnos, comunicarnos, en el plano del significado …
+
+
+#
+
+
+Volvamos ahora, aunque sea por un momento, al primero de los rasgos: la presencia -uno que hemos rápidamente olvidado. No podríamos hablar aquí de presencia en los términos espaciales tradicionales -no se trata del clásico estar presente a la obra que reclama el contenido aurático, todavía aurático, de la forma tradicional de la experiencia artística, ese estar frente a la obra, compartiendo el mismo lugar en el espacio y el tiempo, su aquí y ahora.
+
+Es obvio que esta vez no puede tratarse de la misma presencia, toda vez que lo que caracteriza la presencia de la obra en la red es su des-localización, el estar distribuida en una ubicuidad de lugares diseminados, diversos. Como mucho hay una telepresencia, que hace que quienes no comparten un espacio común, que quienes habitan lugares distintos, puedan sin embargo comunicar, compartir. Esa presencia compartida es ahora y ante todo una economía del tiempo, no del lugar. Tiene que ver con el simultáneo habitar "en el presente", como cuando decimos que uno es hijo de su tiempo.
+
+La forma de presencia más característica de la relación con el trabajo en la red tiene que ver con este contacto "en tiempo real". Si lo propio de la relación con la obra "convencional" se aparecía como el encuentro con un tiempo pasado en un lugar-aquí, lo propio del encuentro presencial con la obra en la red es coincidir en un tiempo-ahora -fuera de cualquier "lugar- aquí" definido.
+
+
+#
+
+
+Por supuesto, las consecuencias que todo esto conlleva para la forma dominante de organización de los procesos de la "expectación" son importantísimas -me refiero a las consecuencias que se derivan para los dispositivos espacializados de recepción y presentación de la obra: museos, galerías, espacios abiertos … siempre lugares, ya sean institucionales o alternativos, privados o públicos.
+
+Como es obvio, esas consecuencias tienen mucho que ver con aquella lógica de la reproducción técnica cuyo análisis inició Benjamin. Para lo que aquí nos interesa, por supuesto importa subrayar que el modo de la experiencia de la obra a través de la web abandona la exigencia presencial -o, digamos, admite como forma válida la mera telepresencia ante su información distribuida, diseminada mediante la reproducción técnica. Pero lo más importante, bajo nuestro punto de vista, es el hecho de que la forma en que esta presencia es exigida ahora tiene únicamente que ver con un compartir el tiempo, con un "estar en línea".
+
+Es por eso que resultan tan patéticos los intentos -que vienen realizando las instituciones- de presentar los trabajos hechos para la web en contextos de exposición espacializados. Todo lo contrario: en ellos el espectador difícilísimamente puede conectar, entrar en presencia. Y justamente poque no dispone de lo que necesita para que la obra ante sus ojos devenga presente: esta vez no es ya un lugar, sino más bien un tiempo. Y en esos lugares (museos, galerías, espacios…), el espectador justamente de lo que no dispone es de tiempo …
+
+
+#
+
+
+La ley de los nuevos media es la ley del tiempo real: por supuesto, se trata de una ficción -no existe nada parecido a la realidad, tampoco cuando hablamos del tiempo. El lema de la CNN -"está pasando, lo estás viendo"- preside esta ambición dolosa del new media de acariciar el tiempo del acontecimiento. Pero ellos saben bien la trampa que ahí se abre: no es la "rapidez de la noticia" lo que nos aleja del tiempo real del acontecimiento, sino más bien una distancia metafísica; la que separa al espectáculo del transcurrir real del existente, del dasein, del estar ahí.
+
+Seguramente, lo más interesante de todo el trabajo que los new media pueden desarrollar en relación al potencial de conquista del tiempo del acontecimiento -aquél salvífico jetzeit que imaginara Benjamin como pequeña puerta mesiánica abierta a las políticas del nihilismo activo- pasa justamente por la vinculación de lo que significa la presencia, como participación de un tiempo de comunidad, en términos ahora estrictamente temporales, desespacializados. Una comunidad online es, por necesidad, una comunidad u-tópica, des-espacializada.
+
+Y sus cualidades están necesariamente asociadas al objeto propio de su intercambio -que ya no es la representación estática, objetualmente condicionada, sino más bien la imagen-movimiento, como testimonio específico del acontecer (no es extraño que algunas de las mejores realizaciones de este darse de la imagen-movimiento tengan que ver con el cine-performance, con el cine de experiencia), de nuestro darnos en el tiempo, como economías de lo pasajero, de lo transitorio.
+
+#
+
+
+Una comunidad online no puede parecerse, por tanto, a aquella cyber-cittá que imagina Paul Virilio (esa ciudad que habitaríamos como "espectadores de un mismo tele-diario" a escala planetaria). Tampoco a aquel sueño prematuro de los primeros utopistas de la red, esa especie de nueva ciudad de la democracia-directa-electrónica. Una comunidad online no es otra cosa que un territorio de presencia y participación, un dominio virtual (lo digo también en el sentido web: una dns específica, como quien dice) en el que se comparte la construcción del discurso a través del diálogo coparticipado, una tentativa de recuperación del sueño ilustrado de la esfera pública -como dominio de la interacción dialógica colegiada.
+
+¿Su límite -el límite de esta bellísima fantasía? Sin dudarlo: aquella comunidad de productores de medios que imaginara Brecht. Un dominio o una modalidad de la circulación pública de la información, del discurso y las prácticas de producción simbólica, en la que todos los participantes intervienene al mismo título. Quiero decir: en la que no hay dos lados, en de los emisores y el de los receptores, sino una desubicación recíproca, una dispersión excéntrica y desjerarquizada (un rizoma) en el que todos los receptores son también, y a su vez, emisores -cuando menos potencialmente. 
+
+Es esto lo que distingue al medio de comunicación de masas -verticalizado: con los informadores falseando el mundo a un lado y los "consumidores" pasivos y anulados al otro- de una comunidad online, que únicamente construye su relato, su narrativa específica, en la colegiación circulante del diálogo.
+
+#
+
+
+¿Hay ejemplos de esto -o acaso hablamos de algo que no ha sucedido jamás, que solo es pensable como límite, como utopía? En cierta forma, por supuesto, es así. Pero aunque sea reconociendo esa imposibilidad de plena realización cumplida, es preciso que ofrezcamos algunos ejemplos que hayan podido aproximarse, al menos en asíntota.
+
+El primero de los que propongo es todo un género, el de los foros de debate mantenidos mediante lista de e-correo. Los casos paradigmáticos son aquí nettime en Europa y Rhizome en América, pero determinadas iniciativas puntuales como las promovidas por Blast o el Hybrid Workspace durante la documenta X demostraron el enorme potencial de recursos que de cara a la apertura de una esfera pública reflexiva y crítica poseen estos instrumentos. Que esos potenciales se realicen o no depende también de las circunstancias históricas y sociales en que se desenvuelven, obviamente, y en ese sentido me gustaría manifestar una simpatía especial por dos casos concretos de este tipo de foros: el primero es la lista 7-11, una lista que es ella misma concebida como una especie de obra de arte, una especie de cadáver exquisito de e-mail-art, en la que el contenido de lo debatido interesa mucho menos que la propia puesta en circulación inter(e hiper)textual de las más variadas y audaces exploraciones gramatológicas, las más delirantes disposiciones (post)escriturales, grafomaquínicas. El segundo, muy distinto en cuanto a sus objetivos, la pequeña lista de noticias y debate de los net.artistas de la exEuropa del Este, Syndicate, y muy en particular el activísimo papel que esa lista representó durante el bombardeo por la OTAN de Kosovo y el apoyo prestado a B-92, la emisora independiente de Belgrado, que gracias a ese apoyo (y el de otras listas y grupos de activismo medial y postmedial por supuesto) consiguió durante un tiempo mantener una información independiente sobre un evento histórico sobre el que una única multinacional de la información distorsionada mantenía un monopolio inaceptable.
+
+#
+
+
+La sentada virtual sería un segundo ejemplo de estas tentativas de utilizar los potenciales de los nuevos media para construir esfera púbica, para favorecer la participación activa de la sociedad civil en la conducción colectiva de los asuntos políticos. El caso concreto al que resulta oligado hacer referencia es el del Floodnet desarrollado por el Teatro de la Resistencia Electrónica, como instrumento de protesta civil (se trata de un software que, a modo de sentada electrónica, bloquea el acceso a un lugar, en este caso el website frente al que se protesta) que permite a los ciudadanos manifestar su desacuerdo con cualesquiera políticas. El floodnet fue inicialmente utilizado contra el Pentágono, la bolsa de Frankfurt y el gobierno mexicano (en una celebrada acción de protesta electrónica que, convocada durante el festival Ars Electrónica del 99, reunió a cerca de 20000 usuarios) pero su incidencia real es siempre muy limitada y su repercusión efectiva en términos de creación de opinión pública depende siempre de la resonancia que tenga en los medios de masas -que siempre manipularán, de nuevo, la información al respecto.
+
+Su límite radica, por tanto, en su incapacidad para generar una auténtica esfera pública si entendemos ésta como espacio de circulación del diálogo. La eficacia de estos instrumentos apuntan más al bloqueo de la circulación del discurso (al sabotaje incluso, se acercan ciertamente a las tácticas del hacktivismo, aunque a veces sólo en modo simulado) que a la generación de espacios en que ésta se haga incondicionadamente posible.
+
+
+#
+
+
+Cuando hablamos de comunidades online, es obligada la referencia al "colectivismo" de las autorías, a la gran cantidad de "grupos" que, en base a presupuestos comunitaristas, desarrollan un trabajo de producción simbólica, inmaterial, eludiendo los tradicionales presupuestos del "autor"-genio, del individuo egregio.
+
+Existe un obvio fundamento técnico que explica la tendencia a la formación de equipos y la "división del trabajo" dentro de esos equipos (el caso de jodi es paradigmático: artista-diseñador + técnico informático), pero más allá de ese fundamento técnico se diría que es un fundamento ideológico y político el que en muchos casos explica que los potenciales de trabajo en red, de networking, que hace posible el trabajo en internet, desemboquen tan a menudo en proyectos y prácticas de carácter colectivo, comunitario. De hecho, casi siempre sucede que los trabajos más interesantes que se presentan en la red surgen de este tipo de maquinarias moleculares que representan el ensamblamiento de una multiplicidad de esfuerzos singulares. En muchos casos -Mongrel, el Critical Art Ensemble, IOD, La Société Anonyme, el propio Teatro de la Resistencia Electrónica- estos esfuerzos se dispersan en campos de actividad muy diversos, desde la reflexión teórica o crítica a la propia experimentación técnica.
+
+Incluso cuando este tipo de esquemas asociacionistas no preside la actividad creadora especfícamente, la colectivización de los esfuerzos para la distribución -cuando menos durante todo el período histórico, en el que no existían otros canales para la difusión que los autogestionados por los propios net.artistas- se aparecía imprescindible. Así tenemos que la mayoría de los websites independientes, que han sido el canal mediante el que el estas nuevas prácticas han alcanzado a sus audiencias, han sido desarrollados en base a similares estrategias de net.working, de asociación y colectivización del los esfuerzos y recursos -así Teleportacia, äda-web o the Thing.
+
+Más allá de ello, algunos proyectos -muy especialmente aquellos impulsados desde el ámbito de cierto neosituacionismo italiano- han incidido con particular acidez y efectividad en estas estrategias comunitaristas, explorando y poniendo en juego toda su criticidad contra las concepciones preasumidas de la autoría individual. Es el caso de proyectos como Luther Blisseth -un nombre utilizado sin control específico por una pléyade de autores anónimos, que encauzan bajo este nombre una crítica sistemática a la formulación espectacular de la cultura contemporánea-. O, hablando ya muy específicamente en el ámbito de internet, el grupo 010001.org, un grupo de "plagiaristas" que mediante la copia de sites dedicados al net.art y alguna "obras de autor" han planteado una estrategia frontal de resistencia al proceso de comercialización e institucionalización del net.art.
+
+Del encuentro de algunos de estos grupos neosituacionistas con los Knowbotics Research -seguramente el colectivo más riguroso en cuanto a la experimentación en la dimensión social de la incidencia del arte electrónico- ha surgido IO_lavoro_inmateriale, en mi opinión el proyecto en el que mejor se plantea la pregunta en última instancia clave: ¿qué acción es posible en la esfera pública?
+
+
+#
+
+
+Si queremos responderla con objetividad, sería de todo punto absurdo ignorar que está en curso un proceso de colonización imperial -para utilizar la expresión de Negri- de la red internet. En función de esa colonización, ésta viene abandonando su condición inicial -de archipiélago difuso y excéntrico de zonas temporalmente autónomas, digamos- para deslizarse a una condición actual plenamente sometida a los intereses de las grandes corporaciones de la comunicación, transformándose desde su primera fase de instrumento efectivo para el activismo postmedial -al servicio de la implementación de una "comunidad de productores de medios"- a su fase actual de nuevo "medio de comunicación de masas" -o si se quiere, de aparato forjador de una comunidad pasiva de consumidores de pseudoproductos "informativos".
+
+Sea como sea, en este proceso de transformación está en juego la interposición de constantes y multiplicadas estrategias de resistencia, que eviten que ese destino se cumpla sin dejar fisuras. No es (lo que está en juego) que la suerte final de conjunto se decida en un sentido o en otro -sino cuántas zonas de resitencia conseguirán incrustarse y de qué formas lo harán.
+
+#
+
+
+En cierto modo, la red es el espejo invertido del exhaustivo condicionamiento de los mundos de vida contemporáneos por las industrias de la comunicación y el espectáculo. Es su contrafigura subversiva: donde aquélla produce -o pretende que produce- "información", "realidad" o "comunicación", ésta en cambio sólo revoca toda pretensión de "realidad", nos conduce si acaso al reconocimiento de lo "poco de realidad" que, como sujetos de experiencia en el mundo contemporáneo, nos corresponde usufructuar. 
+
+En sí misma, la existencia de la red es testimonio de las trágicas insuficiencias que frente a las industrias de la comunicación de masas experimenta el ciudadano de nuestros días. No encuentra en ellas -casi nada de lo que de verdad le interesa. Y mucho menos encuentra en ellas -la posibilidad de expresar lo que de verdad le interesa. La red es el grito de rebeldía irrevocable que una humanidad silenciada en lo que le importa eleva minuto a minuto -frente al insultante mandarinato contemporáneo de los periodistas. 
+
+#
+
+
+De hecho: el efecto de "globalidad" de la red no podría nunca realizarse bajo una figura de universalidad que supusiera denegación de las diferencias -sino justamente expresión irrevocablemente multivocal de ellas. Es por eso que la idea de una sola red global, de una macro-red, repugna en el fondo al carácter subversivo -mestizo y multicultural- que caracteriza su naturaleza. Sólo a costa de pensarla como "red de redes", por tanto, puede hablarse de la web. 
+
+Lo que en la polifonía anárquica de la totalidad estallada de las infinitas voces es mero ruido, se convierte en diálogo e inteligencia cuando el scoop se centra, cuando el coro de las voces se modula. Lo que para la comunidad universal -para la red global- se da como final sumando la mera redundancia, la descomunicación -para las microcomunidades e intraredes que en ella reverberan se da, en cambio, como nítida y espléndida pertinencia. 
+
+Una comunidad de microcomunidades, una red de intraredes. Todo el efecto de pertinencia política -y todo el valor de producción de significancia- atribuible a la red pasa por esa capacidad de activar lo micro - dentro de un paradigma global, ilimitado -en el que todo efecto de identidad queda en suspenso. La red es -territorio para la producción sistemática de microesferas públicas diseminadas en una red de vasos comunicantes- el lugar de comparecencia de la "comunidad imposible": aquella comunidad de productores de medios que surgiría de entre las cenizas de -aquella que Bataille decribía como- la comunidad "de los que no tienen comunidad".
+
+
+#
+
+
+"Pues si los hombres, en lugar de buscar todavía una identidad propia en la forma ahora impropia e insensata de la identidad, llegasen a adherirse a esta impropiedad como tal, a hacer del propio ser-así no una identidad y una propiedad individual, sino una singularidad sin identidad, una singularidad común y absolutamente manifiesta -si los hombres pudiesen no ser así, en esta o aquella identidad biográfica particular, sino ser sólo el así, su exterioridad singular y su rostro, entonces la humanidad accedería por primera vez a una comunidad sin presupuestos y sin sujetos, a una comunicación que no conocería más lo incomunicable. 
+
+Seleccionar en la nueva humanidad planetaria aquellos caracteres que permitan su supervivencia, remover el diafragma sutil que separa la mala publicidad mediática de la perfecta exterioridad que se comunica sólo a sí misma -ésta es la tarea política de nuestra generación". 
+
+G. Agamben, La comunidad que viene. 
+
+Se trata entonces de explotar las posibilidades que la red ofrece de establecer formas flotantes de comunidad -que vendrían a expresar únicamente "momentos de comunidad", vectores específicos de una comunidad de intereses, de preocupaciones o de deseos, momentáneas e inestables líneas de código estabecidas en los flujos libres de la diferencia. 
+
+No alguna comunidad regulada por efectos de identidad -étnica, cultural, política: nada de estado o aún de individuo- sino meras comunidades fluctuantes reguladas tan sólo por la instantánea y efímera expresión de efectos de diferencia -comunidades trans-idénticas, mestizas, multiformes y pluriculturales desde su misma base. 
+
+En ellas, no habría más "sujetos" o individuos -sino el circular de puros efectos de identidad, dispositivos y máquinas de producción de la subjetividad-: meras expresiones de la diferencia libre. 
+
+En la fuerza de esa doble puesta en evidencia, también la red podría hacerse anuncio de "la comunidad que viene". Forzándonos a despertar del delirio despotizador de un sistema ya milenario, ella podría en efecto constituirse en su más tremenda pesadilla -y por ello, el más dulce de nuestros sueños.
+
+ 

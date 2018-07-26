@@ -1,0 +1,40 @@
+  
+La muerte del computer-art. 
+Lev Manovich  
+
+Después de leer con gran interés las discusiones recientes sobre el ISEA y el Ars Electrónica de este año, querría ofrecer las siguientes reflexiones (en parte como compensación por no haber podido acudir a ninguno de ambos eventos).  
+Mucha gente habla sobre la convergencia próxima de los ordenadores, la comunicación y la televisión. Esta convergencia probablemente llegará a suceder. De hecho, a juzgar por los nuevos modelos de ordenadores personales que están siendo claramente establecidos como recursos electrónicos de consumo (incluyendo el contestador automático y las TV cards entre ellos), esto sin duda va en progreso.  
+
+Aquellos de nosotros que trabajamos en el arte digital a menudo debatimos otra convergencia, la convergencia entre el mundo del arte y el mundo del arte de los ordenadores. Recientemente llegué a la conclusión de que esta particular convergencia NO se producirá. Abajo expondré las razones.  
+
+(En los puntos siguientes me referiré al mundo del arte -galerias, museos principales, revistas de arte prestigiosas- como Duchamplandia, en analogía con Disneylandia. También me referiré al mundo del arte de los ordenadores, ejemplificado por ISEA, Ars Electrónica, SIGGRAPH art shows, etc. como Turinglandia).  
+
+El objeto típico que se admite en Duchamplandia (es decir, el objeto considerado como arte contemporáneo) reúne las siguientes características:  
+
+1. Está orientado hacia el "contenido". [...]  
+
+2. Es "complicado".[...]  
+
+3. Es Irónico, auto-referencial y a menudo implica una actitud literalmente destructiva hacia su propio material, su tecnología, sea lienzo, cristal, motores, electrónica, etc.[...]  
+
+Miremos ahora en Turinglandia. Como veremos Turinglandia está caracterizada por las características directamente opuestas:  
+
+1. Orientación hacia la más nueva tecnología de ordenadores, no hacia el "contenido". [...]  
+
+2. "Simple" y normalmente careciente de ironía. Se verá más adelante.  
+
+3. Y lo más importante, los objetos en Turinglandia se toman la tecnología que utilizan siempre en serio.  
+
+En eso, el computer-art funciona exactamente como la industria de los ordenadores. Con qué frecuencia ves a los artistas de los ordenadores enfrentándose y anteponiendo seriamente los problemas de la tecnología informática -que si los ordenadores se "caen"; que si los programas exceden la memoria; que la mitad de los enlaces de www llevan a ninguna parte; que un usuario de internet típico pierde el tiempo estando literalmente perdido más que ocupado en la interacción "significativa" con un mundo virtual; etc... En resumen, nuestra civilización tiende a establecerse sobre una tecnología que sólo puede ser descrita como insegura, transitoria e incompleta. Cuando los ordenadores no están en un espectáculo de arte de ordenador, los artistas y la audiencia siempre tratan este hecho con horror, aunque estén presentes en las presentaciones industriales -tomando eso como si fuera un maravilloso accidente dadaista.  
+
+[...]  
+
+Pero volvamos a la batalla entre Duchamplandia y Turinglandia. ¿Podría concluir mi análisis con que ahora, como Duchamplandia ha descubierto finalmente los ordenadores y ha empezado a utilizarlos con su ironía y sofisticación usuales, reuniones como ISEA y Ars Electrónica deberían simplemente ser abolidas? Probablemente no. Estas reuniones cumplen una importante función de zona amortiguadora, una zona interactiva donde el mundo de la cultura y el mundo de la cultura informática se reúnen. Algunas veces incluso vemos artistas empujando los límites de la nueva estética de los medios, e incluso yendo más allá de lo que ya se ha llevado a cabo en cuanto a simuladores de vuelo, nuevos juegos de ordenador, los proyectos MIT Media Lab, etc... A veces los artistas pueden competir con los investigadores, más que simplemente crear nuevos demos para el sofware comercial, funcionando como meras "cobayas" para la industria del ordenador.  
+
+Lo que no deberíamos esperar de Turinglandia es arte que sea aceptado en Duchamplandia. Duchamplandia necesita arte, no investigación en nuevas posibilidades estéticas de nuevos medios. La convergencia no se producirá.  
+ 
+ 
+
+
+  
+  

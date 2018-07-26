@@ -1,0 +1,42 @@
+Software especulativo. Una entrevista a I/O/D  
+Geert Lovink  
+
+Geert Lovink: "Todos llevamos dentro un diseñador de navegadores"--pero, al menos por ahora, no todos tenemos como hobby crear uno. ¿Cómo surge la idea de crear vuestro propio navegador? Normalmente los diseñadores trabajan con un contenido al que tienen que dar el mejor aspecto posible, pero ahora ha surgido una nueva profesión: la de los "diseñadores interactivos". ¿Vosotros pertenecéis a esta profesión? ¿Sois de los tecnodeterministas que creen que la forma que adopta el interfaz determina la información en sí?  
+Matthew Fuller: Hmm, esa es una de esas afirmaciones del tipo "Jederman es un artista" de Joseph Beuys, que suenan democráticas pero que en el fondo llevan implícito el mensaje de: "¡Todo el mundo quiere ser como yo: el gran hombre!"*  
+
+No, por supuesto que no todo el mundo es un diseñador de navegadores. Y desde luego no sería muy aconsejable desear ser como nosotros. La gente debe tener verdaderas aspiraciones ¿no? La idea de producir otro software que se pudiera usar en la red surgió por varias razones. Primero, I/O/D había estado trabajando con ideas diferentes sobre lo que era un interfaz y nuestra práctica general giraba en torno a la reinvención especulativa del ordenador. Segundo, estábamos aburridos de todo el revuelo. Tercero, sabíamos que se podía hacer, pero no teníamos ni el conocimiento ni las habilidades necesarias para hacerlo... así que por supuesto tuvimos que intentarlo.  
+
+En cuanto a lo de ser tecnodeterministas... supongo que nos interesa averiguar qué hay de cierto en ello. ¿Qué entra en juego cuando utilizas la red? El material del URL que se está utilizando que no sólo es información específica sino también los programas, las habilidades y los materiales empleados en la creación del propio URL. También está la infraestructura de hardware, los ordenadores, los servidores, las líneas telefónicas, los módems y, por supuesto, el software que se ejecuta en ellos (en resumen, todo lo que se refiere a la anchura de banda) y además, el software que se emplea para acceder a la red. Encima de este enorme cúmulo de elementos está el navegador, el visualizador de pantalla o lo que sea. Todos estos elementos y cómo se combinan determinan hasta cierto punto la naturaleza de la interacción.  
+
+Una de las cosas que nos incitó a crear el Web Stalker fue que ni nosotros ni la mayoría de la gente utilizamos los sitios de la red del modo en que se supone que hay que usarlos. Sea desconectando los gifs, bloqueando los cookies, da igual, el caso es que siempre empleamos soluciones caseras para obtener lo que realmente nos interesa. Quisimos que el Web Stalker funcionara del mismo modo. Está diseñado para ser un depredador que no tolera el aburrimiento. Al mismo tiempo esperamos que, como *software especulativo* anime a las personas a utilizar la red como un espacio para la reinvención.  
+
+Geert Lovink: Web Stalker nos muestra lo que hay detrás del funcionamiento de los navegadores. ¿Podéis explicarnos cómo funciona?  
+
+Simon Pope: El Web Stalker actúa únicamente dentro de los límites del espacio html. Todo el que quiera conspirar con él debe ir provisto de, al menos, un URL que remita a un documento html y darle esto al rastreador. Entonces el Stalker empieza su proceso de análisis buscando vorazmente los enlaces con otros recursos html. Se abre una ventana de "mapeo" que abre un canal de entrada a este proceso a través del cual los URL se representan gráficamente como círculos y los enlaces como líneas. El Stalker vivirá mientras cada documento html contenga un vínculo con otro documento html, pero si lo arrojas a un espacio netscape, microsoft, macromedia o java-only, no tardará en morir.  
+
+Colin Green: Cuando empezamos a usar el Stalker como principal software de acceso a la red nos dimos cuenta de hasta qué punto el html se había convertido en un marco de rivalidad comercial. Los navegadores diseñados por los dos rivales más conocidos limitan la experiencia que casi todo el mundo tiene de la red. Se trata de una limitación real: lo que ocurre dentro de la ventana del Explorer, por ejemplo, constituye el límite de las posibilidades. El HTML es, después de todo, un lenguaje de marcado que indica la estructura y la intención de un documento.  
+
+Geert Lovink: Pero, ¿no tiene el Web Stalker resonancias protestantes, en el sentido de que es antiimagen y pro código?  
+
+Matthew Fuller: El Web Stalker establece la existencia potencial de culturas alternativas de uso de la red. Las convenciones estéticas de los navegadores en la actualidad se basan en la disciplina del diseño humano de interfaz informático. Para ver cuáles son las preferencias de este enfoque sólo tienes que fijarte en que el color de fondo que sale por defecto en la composición de la página es el gris. El avance se indica con el aumento gradual del falso sombreado de las ventanas. El usuario normal no es en este contexto más que un usuario normalizado. Ha llegado la hora de cambiar.  
+
+Según nuestro punto de vista, el software debe relacionarse de algún modo con la belleza. Esto, en cierto modo, se puede interpretar como algo que sólo sucede a nivel visual, pero también es algo que sucede a un nivel intrínsecamente político ya que afecta al desarrollo de esas culturas potenciales de uso. Es por esto por lo que llamamos al Web Stalker software especulativo. No se establece como un recurso universal, un sistema de conmutación bajo licencia para la inteligencia general, sino como un dispositivo sensorial, una forma de percepción, de saber y de hacer las cosas en la red que deja claras sus preferencias.  
+
+No adoptamos un punto de vista ascético. Consideramos que un problema básico de los navegadores es que no permiten que todo lo que vomita la red se manifieste lo *suficiente*. Este software es una llamada a que la red y todo lo relacionado con ella gane en sensualidad. Como decía el líder sindicalista Big Bill Heywood acariciándose la barriga y chupando su aromático puro del tamaño de una cagada de perro: Nada es demasiado bueno para el proletariado.  
+
+Geert Lovink: ¿Qué lugar ocupa en todo esto una iniciativa como esta del International Browser Day de Amsterdam?  
+
+Matthew Fuller: Para nosotros esta celebración es una iniciativa muy útil. Una vez se rompa el hielo y se demuestre que la red se puede usar y desarrollar de formas muy diferentes a las que proponen los navegadores bajo licencia y con intereses muy distintos también, *potencialmente* se podrá dar vía libre a todo. Se podrán lanzar mil dispositivos distintos. El día del navegador es importante porque en él se ha logrado un equilibrio entre técnica y teoría sin dar prioridad ni a una ni a otra y se ha realizado de una manera festiva y accesible al público. No se celebra tan sólo para promulgar de modo didáctico la idea de que el software puede ser *estimulante* sino también para que la gente pueda reconfigurar realmente, en vez de virtualmente, la manera de percibir, saber y hacer.  
+
+[Esta entrevista de Geert Lovink a Simon Pope, Colin Green y Matthew Fuller, integrantes de I/O/D, apareció por primera vez en Nettime. Se celebró en Amsterdam el 17 de abril de 1998 con ocasión del Primer Día Internacional del Navegador -First International Browser Day- (www.waag.org).  
+
+I/O/D son los creadores de Web Stalker, un navegador de internet.]  
+  
+
+http://www.waag.org  
+
+http://www.backspace.org/iod  
+
+---  
+[Trad: Carolina Díaz]
+ 

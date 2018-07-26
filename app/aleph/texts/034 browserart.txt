@@ -1,0 +1,34 @@
+browser.art  
+Alex Galloway  
+
+En plena corriente de proliferación del diseño gráfico de alta tecnología, de los plug-ins de navegador y de las aplicaciones especiales de medios, un número cada vez mayor de sitios de la web se están concentrando en hacer un tipo de arte exclusivamente diseñado para la red, centrado en el interfaz como objeto y receptáculo. Llamémoslo browser.art. Esta nueva mezcla entre arte y tecnología podría ser la evolución de mayor influencia formativa que se ha producido hasta la fecha en el net.art.  
+En vez de reproducir el arte de fuera y trasladarlo precariamente a la red poniendo unos cuantos enlaces por aquí y por allá, o digitalizar una película y meterla en un servidor, los sitios dedicados al arte como jodi. org están creando arte especialmente para la red, arte de red.  
+
+Olvidaos de la jerga de la red, de palabras como "inmersión" e "interactividad". No nos interesa, no les interesa. No se trata de la comunidad ni del espacio, ni de la identidad. No se trata ni de realaudio, ni de shockwave. Si acaso, este disperso grupo de net.artistas se centra en el interfaz.  
+
+Y no es ninguna tontería. Antes sólo teníamos representación. Ahora tenemos que "navegar" para conseguir la información, ¿no? Antes, como los estudiosos de la semiótica no se cansan de recordarnos, el mundo era un complejo entretejido de imágenes. Nosotros, los usuarios, sólo teníamos que "leer" las imágenes. Está claro que ahora el filtro es el amo. El interfaz es aquello que nos mira desde el punto de vista del contenido y es siempre una fachada para la información, pero también un torpe manipulador de esa información. Es el detalle que siempre está presente, el protocolo, el mediador. Es el navegador, el browser.  
+
+Se cree, y no sin razón, que el duo Jodi, muy de moda en el mundo actual del arte de los nuevos medios, encarna un cierto estilo nuevo de "arte de interfaz". Les encanta la imagen del código al desnudo y la usan en su obra, les encantan los volcados de procesos informáticos, les encantan esos pequeños iconos de Macintosh. Pero lo más importante es que les encanta sobrecargar tu navegador con metacódigo html y javascript.  
+
+Prestando especial atención a una estética más degradada y simplificada, el proyecto de Jodi titulado day66 es un ejemplo típico del arte de navegador. Con imágenes ininteligibles apilándose en el fondo y un uso destacado de la función "scroll" de javascript, la obra entra aparatosamente en el campo de visión. Justo después de cargarse, la página empieza a moverse frenéticamente, desplazándose en diagonal a través de la pantalla como si el sistema operativo hubiera sido sutituido por una cinta transportadora gigante.  
+
+Aunque para algunos puede resultar sencillo despreciar a Jodi acusando su arte de ser un montón de bobadas hostiles, hay en su obra un tipo de estética tecnológica a la que merece la pena prestar atención. Más allá de la pantalla cubierta de mensajes intermitentes, más allá de las tremendas animaciones, se percibe un notable interés por el navegador en sí como centro de interés y base estructural de la producción del artista. No existe ningún otro tipo de net.art que refleje de modo tan claro la naturaleza de ésta como medio.  
+
+Los imitadores del estilo de Jodi abundan. Desde la reciente aparición de la obra de RGB Hotwired al grupo de diseño e13; desde superbad.com de San Francisco a Fakeshop, espacio de performance experimental de Brooklyn. Por esta vía, el net.art se está distanciandose a pasos agigantados del diseño gráfico para imprenta y se acerca más a una estética de la máquina, del código, de la sobrecarga.  
+
+La coordinación del arte y la tecnología también se perciben en la reciente competición y exposición de Alexei Shulgin llamada Form Art. Se llama form art (arte de formato, digamos) a toda obra de arte para la red que utiliza sólo los botones, los menús desplegables y los recuadros de texto que se encuentran en los formatos html. Deliberadamente simple y técnicamente limitado, el form art utiliza el html para explorar y explotar nuevos territorios. La estética de Shulgin es flor de un día, efímera, se detiene en el sentimiento de lo ya caduco.  
+
+El browser.art no es entonces simplemente la adopción de una "éstetica" tecnológica (como puede ser un dibujo ASCII), sino un enfoque de la tecnología en sí como objeto. No se trata de quicktime, ni se trata de realaudio. En este minigénero dentro del net.art, la propia red es el objeto.  
+
+Es una obra sin profundidad, y en su lugar aparece una estética de relación, de máquinas que se comunican con otras máquinas. No es difícil pasar por alto el browser.art, considerarlo irritante o estúpido, considerar que no es arte. Pero es en este browser.art en el que los productores de la web piensan dentro de los límites de la red, en vez de dedicarse a reciclar material del exterior. Al empezar a reflexionar "sobre" la red, en efecto, empezamos a ver una mejoría en el arte de los nuevos medios.  
+
+[Traducción Carolina Díaz]  
+
+---  
+Este texto se publicó originalmente en Rhizome -donde puede consultarse la versión original.  
+http://www.rhizome.org/query 
+ 
+
+  
+  
+  

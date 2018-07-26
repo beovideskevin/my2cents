@@ -18,7 +18,7 @@
 	"REGISTER":
 	{
 		"EXCEPTIONS": "",
-		"FOLDERS": "helpers/"
+		"FOLDERS": "helpers/;app/"
 	},
 	
 	"ROUTES":
@@ -59,6 +59,16 @@
 				"enforce": "enforce",
 				"action": "privateArea"
 			}
+		},
+		
+		"try1": "try1",
+		
+		"try2": "try2",
+		
+		"interview": {
+			"set1": "problem1",
+			"set2": "problem2",
+			"set3": "problem3"
 		}
 	}
 }

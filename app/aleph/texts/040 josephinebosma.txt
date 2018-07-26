@@ -1,0 +1,82 @@
+Salvando el net.art para la posteridad. Entrevista con Josephine Bosma   
+Petra Heck  
+ 
+
+¿Dónde y cómo puede ser exhibido el net art: en un museo o en la red? ¿Qué problemas se plantean? ¿Debería de ser recogido y/o guardado para la posteridad? ¿Puede haber algún criterio que defina estas cuestiones?
+
+Una entrevista con Josephine Bosma...
+
++++
+
+Petra Heck: ¿Cómo definirías el Internet Art?
+
+Josephine Bosma: El net.art es arte que utiliza como medio las redes entre ordenadores, en el sentido en que esta red sirve por sí misma y/o por sus contenidos (técnicos, culturales y sociales) como base del trabajo artístico. Yo personalmente utilizo una definición más amplia, a saber: todo arte cuya base sea la net.cultura (Esto va un poco más allá e incluye también aquellos trabajos que no utilizan de un modo directo las redes de computadoras.)
+
+PH: ¿Cuál crees que es el mejor lugar para presentar el net.art? (una institución- virtual-, únicamente la red, el site de un museo, un museo, etc. o tal vez no importe dónde.)
+
+JB: La respuesta más obvia sería: el mejor lugar para el net.art es la red. En mi opinión, no importa realmente dónde se presente, me refiero a que lo que hay son buenas y menos buenas formas de presentarlo. Estas 'menos buenas' formas de presentarlo suelen ser despreciadas por los 'amantes' del net.art, pero también pueden ser consideradas como una extensión del propio trabajo en red. Yvonne Wilhelm de Knowbotic Research lo plantea de este modo: 'cada publicación, cada carta, fax o e-mail en conexión con nuestro trabajo forma parte de él'. Lo que puedes ver en un espacio de exposición es tan sólo un aspecto diferente del trabajo. Hay multitud de obras net que no se pueden comprender en su totalidad. El significado de las obras net.art puede estar determinado (o al menos influido) por la comunicación (sobre el trabajo en concreto, pero también en general) de las listas de correo, etc. Debido a esto soy algo reacia a las galerías que quieren exhibir net.art, aunque sean on-line. Siempre he temido que una tendencia hacia más presentaciones en galerías y menos en espacios mantenidos por los propios artistas en última instancia constituiría una tendencia hacia un net.art más estático. Me parecería vergonzoso.
+
+PH: ¿De qué modo crees que el net.art podría ser presentado de forma eficaz? ¿Cuáles son los criterios, las necesidades (teóricas y prácticas, qué tipo de espacio, condiciones ópticas, etc)?
+
+JB: Hablamos de la presentación en espacios reales, ¿no es así? Creo que esto depende completamente del trabajo en concreto. Uno debería de tomarse su tiempo para encontrar el mejor modo de presentarlo. Tendría que hacer algo de "brainstorming" para responder a tu pregunta, desarrollar algunas hipótesis...
+
+Me parece una pregunta difícil de responder. La recepción de una obra de arte depende de tantas cosas, por ejemplo de la mentalidad de su audiencia, su localización (el país, su entorno social) etc. Creo que es importante añadir a la presentación un sentido de espacio extra, el espacio de la red. Esta es mi opinión personal con respecto a aquellos centros de arte cuya audiencia no esté acostumbrada al net.art. Este tipo de presentaciones inmersivas funcionan bien para cualquier tipo de audiencia y no necesitan dedicarse demasiado a abordar cuestiones vinculadas con 'Espacios Reales'.
+
+Sin embargo, no todos los trabajos net.art se encuentran 'dentro' de la red. Algunos requieren de algún tipo de instalación o montaje. En otros casos, una presentación que puede parecer de lo más simple o aburrida (sólo un ordenador en una esquina o en un pedestal), quizá esté haciendo hincapié en un sentido intencionado de simpleza o ingenuidad que el trabajo requiere.
+
+Cuando muestras varios trabajos a la vez, en general sólo funcionan bien cuando evidencias las conexiones o diferencias que existen entre ellos, o una variedad de estilos, de elecciones distintas. De hecho hay casi tanta variedad de formas de net.art como de arte 'antiguo'. Tampoco se trata de amontonarlas todas ellas en una habitación sin que esté mínimamente justificado. Además, debido al componente conceptual o 'abstracto' de gran parte de las obras, su lectura requiere un cierto bagaje intelectual. La mayor parte de la audiencia de un museo no está familiarizada con la net.cultura o la tecnología informática. Esto requiere una buena pre-presentación que deje el trabajo lo más 'intacto' posible, además de catálogos bien construidos y meticulosas políticas de prensa. Con respecto a la presentación es, como poco, de buen gusto discutirla con el artista. El net.art suele ser apartado, muy a la ligera, de la influencia del artista. "¿acaso no nos la ofrecía gratuitamente?"
+
+Creo que para exponer net.art, uno tiene que sugerir esa idea de red al público. De nuevo, uno ha de ser creativo, estar en contacto con el artista. Puede ser muy sencillo, como lo que hizo el propietario de la galería Sueca con el trabajo de Olia Lialina, mostrándolo en los recientes I-mac. Esas máquinas resultaban tan novedosas en ese momento que fácilmente podían funcionar como símbolo de una especie de paisaje futurista del net.art. Imagínate a una de esas máquinas en medio de un gran cubo blanco ;) menudo impacto.
+
+De todos modos, ha de ser recalcado que realmente el problema de la presentación del net.art no es tanto de los artistas como de los curators. El artista ya ha presentado su trabajo, tiene sus propios canales. Por supuesto aquí no estamos hablando de aquellos trabajos encargados para un lugar específico.
+
+PH: David Ross del SFMOMA habló de lo íntima que es la relación con las piezas de net.art. ¿Debido a esto, no parece más conveniente su visualización en monitores pequeños?
+
+JB: No se a que tipo de 'intimidad' se está haciendo aquí referencia. Creo que no todo el net.art es 'íntimo', yo diría más bien que todo lo contrario.
+
+Algunos ejemplos de net.art son producidos en círculos muy pequeños y surgen a consecuencia de determinados artículos en pequeñas publicaciones y discusiones entre los propios artistas. Dentro de este pequeño foco creativo, resulta muy difícil que entre el mundo del arte 'real' (críticos, curators), también porque el net.art no está siendo tomado demasiado en serio. De este modo, a veces se puede confundir el net.art por ser íntimo cuando lo que sucede es que para mucha gente pasa desapercibido. Pero, como ya he dicho, tampoco todo el net.art refiere exclusivamente a sus círculos de difusión.
+
+PH: Dices que la presentación de las obras depende de cada trabajo individual. Esto implica que, si al artista no le preocupa la presentación, no importa que el trabajo se presente en una pantalla grande o en un monitor. Por esto he mencionado a David Ross. El ve una característica del net.art en la intimidad. En casa normalmente ves net.art en un monitor pequeño, como máximo de 17 pulgadas. En el caso de una pieza interactiva: ¿Puedes ampliar la pantalla para que mucha gente pueda verla cuando está diseñada para que sus controles sean manejados individualmente?
+
+JB: Como ya he dicho antes, es posible tener distintas percepciones de una obra. Debido a que el net.art ya tiene su propio lugar de exhibición, una presentación en 'espacios reales' ha de ser considerada como una extensión del propio trabajo. Por tanto, puede ser diferente a la original. Hay que ser cautelosos, por supuesto. Se debería intentar mantener la intención y la atmósfera de la pieza lo más intacta posible. A veces es necesario ampliar el trabajo para trasladar sus características a Espacios Reales, a veces se requiere una presentación más íntima, quizá para instalaciones a las que puedan acceder visitantes de uno en uno. Esto último crea una percepción del trabajo demasiado cerrada (en todos sus sentidos), yo no la recomendaría con demasiada facilidad. Creo que aumentar y/o desenmarañar el trabajo funciona mejor para una presentación en Espacios Reales en muchos aspectos. Parece que cuando se discute esto siempre se piensa en grandes museos: también puedo imaginar presentaciones realmente íntimas en pequeñas reuniones de gente interesada en el tema, lo que no es difícil de encontrar. Además suele estar el propio artista presente, lo que le da un verdadero aire vanguardista ;) de energía condensada.
+
+PH: ¿Debería dar un museo un valor 'extra' a la obra?
+
+JB: Se trata más de dejarle a la obra su propio valor y darle la posibilidad de que la audiencia la considere por sus propios méritos. Esto es difícil de mantener cuando la mayor parte del net.art constituye una experiencia de red. No se trata tanto de dar a la obra un valor extra sino de compensar la falta de presencia en la red (no tanto la falta de experiencia de formar parte de una red de ordenadores como la falta de información sobre las circunstancias sociales, políticas y culturales de la red).
+
+PH: No estoy segura de hasta que punto podrían ser realizadas estas soluciones creativas que propones. Pienso que el museo debería de buscar su propia solución, pero ¿no debería ,igualmente, de adaptarse a las necesidades de cada medio? ¿O simplemente te parece que la exhibición en el museo constituye un diferente medio, un nuevo contexto, un nuevo modo de ver la obra? Entiendo lo que planteas, tan sólo quiero remarcar las características y el contexto del medio. ¿No puede el museo hacer algo para adaptarse? Por ejemplo, encuentro inaceptables las presentaciones offline. 
+
+JB: Presentar net.art offline suele ser considerado como algo absolutamente blasfemo, y realmente no es lo suyo. Sin embargo, a veces una institución no tiene la posibilidad de hacerlo online. Recuerdo una exposición en Belgrado, en Cyberrex, donde no tenían otra posibilidad que la de mostrarlo offline, pero estaba hecho de una manera muy consecuente.
+
+Existen muchas respuestas posibles a tu pregunta. Intentaré ser lo más concisa posible, también por que lo que voy a decir no es algo que se pueda decir que conozca a fondo. Tan sólo quiero intentar desplazar un poco la línea de pensamiento que llevas.
+
+Creo que deberías intentar pensar sobre la influencia que ejerce la estructura de la Red sobre otras estructuras. Es tan sólo un leve, sutil, cambio de manera de ver, de punto de vista y un método de trabajo. Este cambio no produce conceptos absolutamente nuevos. Estoy hablando de, por ejemplo, Pierre Levy cuando escribe sobre la historia de lo virtual. Lo virtual no es tan sólo lo que sucede dentro de un ordenador, o en la Red. También en la Vida Real existe lo virtual. El 'significado' de una obra net.art no es meramente tecnológico. Ya se que te das cuenta de esto, pero tiene implicaciones mucho más profundas que el simple desarrollo de dos mundos paralelos uno de los cuales produce información y por tanto es intangible. Esta intangibilidad tiene todo tipo de consecuencias. La información es lenguaje, es código: se estructura y provoca cambios estructurales dependiendo del medio. El modo en que nos vemos forzados a tratar con esta reestructuración, este re-situar lugares, lenguajes, jerarquías, valores, en última instancia se transfiere al Mundo Real. El problema del net.art es que se está presentando en un mundo que todavía no es plenamente consciente de estas influencias, a veces porque no interesa (por tradición o lo que sea). También otras veces esas influencias no resultan visibles.
+
+Lo que realmente quiero decir es que las características del medio, a las que te refieres, pueden ser representadas por otros medios que no sean exclusivamente tecnológicos. Tampoco me apetece nada perder los nervios delante de una terminal de ordenador estúpidamente situada en una exposición. Al final se trata de que un museo puede ser bueno o malo, de acuerdo con las decisiones y preferencias de su directiva.
+
+PH: ¿Piensas que el net.art debería de ser coleccionado o guardado para la posteridad?
+
+JB: A veces me parece una pena que piezas que han impresionado hayan cambiado o desaparecido completamente. Por ejemplo el net.art performance es casi irreparable. De todos modos creo que a través del uso de distintas técnicas uno puede intentar salvar su esencia. Por tanto mi respuesta es: sí.
+
+PH: ¿ Cuáles son los criterios para esto, son diferentes a los empleados con otras formas artísticas?
+
+JB: Los criterios son similares a los utilizados para le preservación de otras manifestaciones artísticas transitorias como el fluxus-art, performance, de intervención etc..
+
+PH: ¿Tienes alguna idea de cómo poder hacer esto?
+
+JB: Hay planes para compilar net.art junto con los ordenadores y el software de la época específica en la que fue creado. Una parte del trabajo podría ser salvada así. Probablemente, lo mejor sería guardarlo por partes o elementos. Sólo por especular: la correspondencia en libros o en un site; las entrevistas y documentales en cd-roms, vídeo; los museos establecidos on-line podrían incluir web-sites y archivos...es decir, documentándolo de cualquier manera disponible.
+
+No me importaría tener un enorme disco duro portátil o algo que pueda contener net.art y que de algún modo genere la ilusión del trabajo original. Esto sólo puede hacerse con cierto tipo de obras y uno debería ser muy consciente de ello. Sólo sería un objeto, un juguete, un libro de arte para la mesa del salón. Hay muchas limitaciones para lo que puede contener, no puede haber performance, no puede haber info-guerrilla etc. Además, el trabajo debería de ser adaptado especialmente para este propósito. Sería como una reproducción fotográfica. Y ahora viene la pregunta de siempre, ¿sigue siendo esto net.art? Según mi definición, si lo es
+
+PH: ¿Cómo crees que las instituciones van a (deberían de) afrontar el net.art en el futuro?
+
+JB: Tanto las obras como todo lo que esté relacionado con ellas (por tanto también la cultura en la que se encuentran y que generan) probablemente se diluirá en la realidad de cada día, de tal modo que ya no habrá un discurso separado entre el net.art y otras formas artísticas, como hoy ya casi esta sucediendo. Muchas disciplinas se 'conectarán' a la red y los discursos, tradiciones, estilos se entremezclarán tanto, que seguramente se desarrollará una especie de nostalgia para preservar el término net.art.
+
+Hoy ya hay gente que distingue entre 'puro' net.art y net.art en general. El 'puro' net.art sólo existe on line, no tiene extensiones ni presencia fuera de él, esto es lo que argumentan. Esta visión del net.art se debe a menudo a cierta inexperiencia en una net.cultura de gente que acaba de descubrir el medio y están fascinados por él. No son conscientes de los desarrollos e investigaciones presentes en la net-cultura que tienen que ver con el cuerpo, con las extensiones con el mundo real. Otros son los cyborg-tradicionalistas. Quieren ser pura información. Es un tipo de actitud romántica que me parece encantadora. Aún así, todavía es necesaria una consolidación del término net.art. Representa una aproximación al arte muy diferente y necesitamos ser capaces de discutirla.
+
+Para responder a tu pregunta, yo diría que en el futuro el net.art será algo muy común se llame como se llame. La gente lo utilizará de acuerdo con su propio gusto y perspicacia. De todos modos, las instituciones, al igual que en el pasado (y en el presente) nunca serán capaces de cubrir ni hacer sitio a la totalidad de las prácticas artísticas. Por otro lado, las actividades artísticas ajenas a la institución, al igual que hoy, crecerán y se harán más importantes. Aún no ha llegado el final de la historia. Odio cuando la gente habla en esos términos. Las instituciones tendrán que compartir su poder con mayor número de pequeñas instituciones, proyectos a corto o largo plazo e individuos. Decidir lo que será arte y lo que no ya no estará en manos de unos pocos. Debemos darnos cuenta de esto. Suena como 'un antiguo soniquete' pero debemos ser conscientes del desarrollo que se está produciendo. No tiene nada que ver con ciertas historias míticas sobre el Internet. Simplemente tiene que ver con el desarrollo tecnológico. Compara el número de canales de televisión. El modo en que alguien en el futuro tendrá acceso a la información va a ser otra historia. Estará en las manos de aquellos que controlen las líneas o redes más importantes. El desarrollo del 'streaming media' (flujo de información en tiempo real) produce estructuras y jerarquías muy poderosas que controlarán el uso del ancho de banda.
+
+[ Traducción: David García Casado ]  
+
+  
+ 

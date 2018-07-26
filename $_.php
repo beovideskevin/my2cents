@@ -226,14 +226,10 @@ class MVClass extends QueryClass
 		}
 	}
 	
-	public function register($options = []) 
+	public function register() 
 	{
 		// REGISTER CLASSES & FILES
-		if (! empty($options['folders']) && ! empty($options['exceptions'])) {
-			$folders = $options['folders'];
-			$exceptions = $options['exceptions'];
-		}
-		elseif (! empty(self::$config['REGISTER'])) {
+		if (! empty(self::$config['REGISTER'])) {
 			// get the exceptions from the configuration
 			if (! empty(self::$config['REGISTER']['EXCEPTIONS'])) {
 				$exceptions = explode(';', self::$config['REGISTER']['EXCEPTIONS']);
@@ -248,12 +244,12 @@ class MVClass extends QueryClass
 			}
 			else {
 				$folders = [''];
-			}	
-		}
-		
-		// loop the folders
-		foreach ($folders as $f) {
-			$this->reginclude(FILES_BASE_PATH . $f, $exceptions);
+			}
+			
+			// loop the folders
+			foreach ($folders as $f) {
+				$this->reginclude(FILES_BASE_PATH . $f, $exceptions);
+			}
 		}
 	}
 	
@@ -292,19 +288,19 @@ class MVClass extends QueryClass
 		}
 	}
 	
-	public function route($url = '') 
+	public function route() 
 	{
-		if (! empty($url)) { 
-			$url = explode('/', $url);
-		}
-		elseif (! empty($_REQUEST['_url'])) {
-			$url = explode('/', $_REQUEST['_url']);
-			unset($_REQUEST['_url']);
-		}
-		
 		// ROUTE
 		$class = "";
 		$enforce = "";
+		
+		if (! empty($_REQUEST['_url'])) {
+			$url = explode('/', $_REQUEST['_url']);
+			unset($_REQUEST['_url']);
+		}
+		else {
+			$url = [];
+		}
 			
 		if (empty($url)) { // if there is no _url put the default
 			$action = self::$config['ROUTES']['DEFAULT'];
@@ -487,21 +483,12 @@ $_ = function ($query = '', $options = [], $extras = '') {
 			$query_obj->config($options);
 			break;
 		
-		//
-		case 'register:':
-			$query_obj->reginclude(FILES_BASE_PATH . ($query[0] != '/' ? '/' : '') . $query, []);
-			break;
-		
 		case 'register': 
-			$query_obj->register($options);
+			$query_obj->register();
 			break;
 		
-		//
-		case 'route:':
-			$options = $query;
-			
 		case 'route': 
-			$query_obj->route($options);
+			$query_obj->route();
 			break;
 
 		//
@@ -514,11 +501,10 @@ $_ = function ($query = '', $options = [], $extras = '') {
 		
 		//
 		case 'layout:': 
-			$extras = $options;
 			$options = $query;
 			
 		case 'layout': 
-			$query_obj->layout($options, $extras);
+			$query_obj->layout($options);
 			break;
 	
 		// connect to a database
