@@ -1,5 +1,30 @@
 <?php
 
+/*
+	Dollar Lib - https://github.com/beovideskevin/dollarlib 
+	Copyright (c) 2016 Flow with the Code
+
+	This file is part of Dollar Lib.
+
+    Dollar Lib is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Dollar Lib is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Dollar Lib.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/**
+* This is the main file of the Dollar Lib, include this file 
+* and you don't need to include anything else 
+*/
+
 class QueryClass
 {
 	protected static $link = NULL, $result = NULL, $retType = 'assoc'; 
@@ -68,6 +93,8 @@ class QueryClass
 		
 		self::$result = self::$link->query($query);
 
+		error_log('WOW (query): ' . $query);
+		
 		if (! self::$result) {
 			error_log('WOW (query): ' . $query);
 			
@@ -178,10 +205,10 @@ class MVClass extends QueryClass
 
 		// the main path
 		if (isset(self::$config['FILES_BASE_PATH'])) {
-			DEFINE ('FILES_BASE_PATH', self::$config['FILES_BASE_PATH']);
+			DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . self::$config['FILES_BASE_PATH']);
 		}
 		else {
-			DEFINE ('FILES_BASE_PATH', '/');
+			DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/');
 		}
 
 		// MySQL conection data
@@ -248,6 +275,7 @@ class MVClass extends QueryClass
 			
 			// loop the folders
 			foreach ($folders as $f) {
+				if (empty($f)) continue;
 				$this->reginclude(FILES_BASE_PATH . $f, $exceptions);
 			}
 		}

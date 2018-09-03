@@ -1,5 +1,5 @@
 {
-	"FILES_BASE_PATH": "c://wamp64/www/dollarlib/",
+	"FILES_BASE_PATH": "",
 	
 	"LANGUAGES_PATH": "language/",
 	"DEFAULT_LANGUAGE": "en",
@@ -69,6 +69,13 @@
 			"set1": "problem1",
 			"set2": "problem2",
 			"set3": "problem3"
-		}
+		},
+		
+		"mysql": {
+			"create": ""
+		},
+		
+		"phd": "phd"
+ 
 	}
 }

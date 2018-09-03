@@ -61,7 +61,10 @@ function try1 ($args)
 
 function try2 ($args) 
 {
-	echo sha1("a714c884522f639b" . sha1("12345678"));
+	$digits = 6;
+	echo rand(pow(10, $digits-1), pow(10, $digits)-1);
+	
+	// echo sha1("a714c884522f639b" . sha1("12345678"));
 
 	// yamel
 	// id 401
@@ -77,3 +80,42 @@ function try2 ($args)
 	// new (12345678)
 	// 62e6eee237d72ce927941b0df9b5f103621f686d
 }
+
+/* 
+en el config.json: 
+		
+"provincia": {
+	"action": "provincia"
+}
+ 
+function provincia($args) 
+{
+	global $_;
+	
+	$results = ["HEADER" => "Output"];
+	$province_id = 16;
+	
+	$_(": SET NAMES 'utf8'");
+	
+	if (! empty($args['all'])) {
+		$outputHTML = "";
+		$lines = explode("\n", $args['all']);
+		foreach ($lines as $l) {
+			$parts = explode("\t", $l);
+			$outputHTML .= "code : " . $parts[0];
+			$outputHTML .= "<br>";
+			$outputHTML .= "name: " . $parts[1];
+			$outputHTML .= "<br>";
+			
+			$_(": INSERT INTO municipios (province_id, municipio, code) VALUES (?, '?', '?')", [$province_id, urldecode($parts[1]), $parts[0]]);
+		} 
+		$outputHTML .= '<a href="/provincia">Back</a>';
+		$results["OUTPUT"] = $outputHTML;
+	} 
+	else {
+		$results["OUTPUT"] = '<form action="/provincia"><textarea name="all"></textarea><br><input type="submit" value="submit"></form>';
+	}
+	
+	$_("render", $results);
+} 
+*/
