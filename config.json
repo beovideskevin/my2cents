@@ -29,7 +29,7 @@
 	"REGISTER":
 	{
 		"EXCEPTIONS": "",
-		"FOLDERS": "helpers/;app/;vendor/"
+		"FOLDERS": "helpers/;vendor/;app/"
 	},
 	
 	"ROUTES":
@@ -75,8 +75,6 @@
 		"try1": "try1",
 		
 		"try2": "try2",
-		
-		"try3": "try3",
 		
 		"interview": {
 			"set1": "problem1",
