@@ -15,10 +15,21 @@
 		"PASSWORD": ""
 	},	
 	
+	"EMAIL": 
+	{
+		"SMTP_EMAIL": 0,
+		"SMTP_SERVER": "",
+		"SMTP_PORT": "",
+		"SMTP_USER": "",
+		"SMTP_PASSWORD": "",
+		"SYSTEM_EMAIL": "",
+		"SYSTEM_FROM": ""
+	},
+	
 	"REGISTER":
 	{
 		"EXCEPTIONS": "",
-		"FOLDERS": "helpers/;app/"
+		"FOLDERS": "helpers/;app/;vendor/"
 	},
 	
 	"ROUTES":
@@ -64,6 +75,8 @@
 		"try1": "try1",
 		
 		"try2": "try2",
+		
+		"try3": "try3",
 		
 		"interview": {
 			"set1": "problem1",

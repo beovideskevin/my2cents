@@ -93,8 +93,6 @@ class QueryClass
 		
 		self::$result = self::$link->query($query);
 
-		error_log('WOW (query): ' . $query);
-		
 		if (! self::$result) {
 			error_log('WOW (query): ' . $query);
 			
@@ -539,7 +537,7 @@ $_ = function ($query = '', $options = [], $extras = '') {
 		case 'connect':
 			$query_obj->connection();
 			break;
-
+		
 		// run a literal query and overwrites the default return type with the value 
 		case 'single:':
 		case 'insertid:':
@@ -600,10 +598,21 @@ function sendEmail ($subject, $content, $emailto)
 	$emailto = preg_replace($pattern, '', $emailto);
 
 	$body = wordwrap($content);
+	
+/*	
+DEFINE('SYSTEM_EMAIL', 'info@chwoom.com');
+DEFINE('SUPPORT_EMAIL', 'support@chwoom.com');
+DEFINE('SYSTEM_FROM', 'Admin');
+DEFINE('SMTP_EMAIL', true);
+DEFINE('SMTP_SERVER', 'smtp.sparkpostmail.com');
+DEFINE('SMTP_PORT', '587');
+DEFINE('SMTP_USER', 'SMTP_Injection');
+DEFINE('SMTP_PASSWORD', '17fece952b477023932c0be0dc5f46ffc52ee606');
+*/
 
     // if smpt email sending is allowed use PHPMailer
 	if (SMTP_EMAIL && class_exists('PHPMailer')) {
-		$mail = new PHPMailer;
+		$mail = new PHPMailer();
 
         // for debug only
         // $mail->SMTPDebug = 3;
@@ -618,7 +627,7 @@ function sendEmail ($subject, $content, $emailto)
         // The password and from email
         $mail->Username = SMTP_USER;
         $mail->Password = SMTP_PASSWORD;
-        $mail->setFrom(SYSTEM_EMAIL, 'PAMISLA');
+        $mail->setFrom(SYSTEM_EMAIL, SYSTEM_FROM);
 
         // set the email the subject and the content
         $mail->addAddress($emailto);
@@ -636,7 +645,7 @@ function sendEmail ($subject, $content, $emailto)
             $mail_sent = true;
 	}
 	else { // sent the email with php mail
-	    $from = SYSTEM_FROM . ' <' . SYSTEM_EMAIL. '>';
+		$from = SYSTEM_FROM . ' <' . SYSTEM_EMAIL. '>';
 
 		// Create a boundary for the email. This
         $boundary = uniqid('ch');
