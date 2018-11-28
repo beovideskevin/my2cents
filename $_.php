@@ -533,9 +533,16 @@ $_ = function ($query = '', $options = [], $extras = '') {
 			$query_obj->layout($options);
 			break;
 	
+		case 'inject:':
+			return $query->inject($query, $options, empty($extras) ? false : true);
+	
 		// connect to a database
 		case 'connect':
 			$query_obj->connection();
+			break;
+		
+		case 'sanitize':
+			return $query_obj->sanitize($options);
 			break;
 		
 		// run a literal query and overwrites the default return type with the value 

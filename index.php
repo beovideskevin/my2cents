@@ -25,7 +25,11 @@ function index ($args)
 	
 	$_("render", $results);
 
-	*/	
+	*/
+
+	// echo is_numeric("+52000000");
+	
+	
 }
 
 function ajax ($args) 
