@@ -1,12 +1,22 @@
 <?php
-// paths: /example1 /example3/donotredirect
+// paths: /example1 /example3/doThis
 function doThis() 
 {
 	global $_;
 	
 	$results = ["OUTPUT" => "doThis"];
 	
-	$_("render", $results);
+	echo $_("render", $results);
+}
+
+// paths: /example5 /example6
+function arguments ($args)
+{
+	global $_;
+	
+	$results = ["OUTPUT" => print_r($args, true)];
+	
+	echo $_("render", $results);
 }
 
 // path: /example2
@@ -21,7 +31,7 @@ class ExampleClass
 	
 		$results = ["OUTPUT" => "exampleMethod"];
 
-		$_("render", $results);
+		echo $_("render", $results);
 	}	
 }
 
@@ -33,7 +43,7 @@ function publicArea ()
 	
 	$results = ["OUTPUT" => "public"];
 	
-	$_("render", $results);
+	echo $_("render", $results);
 }
 
 // path: /exmaple4/private 
@@ -43,5 +53,16 @@ function privateArea ()
 	
 	$results = ["OUTPUT" => "private"];
 	
-	$_("render", $results);
+	echo $_("render", $results);
 }
+
+// path: /show
+function show ($args) 
+{
+	global $_;
+	
+	$results = ["OUTPUT" => "hello, world!"];
+
+	echo $_("render", $results);
+}
+

@@ -14,22 +14,13 @@ $_("init");
 
 function index ($args)
 {
-	/* 
-	 * Example of using the index file
-	
 	global $_;
 	
-	$res = $_("assoc: SELECT COUNT(*) as c FROM counter WHERE `date` > '?' AND `ip` like '?'", ['2015-1-1 12:00:00', '77.%']);
+	$res = $_("assoc: SELECT COUNT(*) as c FROM counter WHERE `date` > '?' AND `ip` like '?'", ['2015-1-1 12:00:00', '66.%']);
 	
 	$results = ["OUTPUT" => $res["c"]];
 	
-	$_("render", $results);
-
-	*/
-
-	// echo is_numeric("+52000000");
-	
-	
+	echo $_("render", $results);
 }
 
 function ajax ($args) 

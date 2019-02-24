@@ -9,7 +9,7 @@ function notFound ()
 	
 	$results = ["OUTPUT" => "404"];
 	
-	$_("render", $results);
+	echo $_("render", $results);
 }
 
 /**
@@ -23,7 +23,7 @@ function login ()
 	
 	$results = ["OUTPUT" => "login"];
 	
-	$_("render", $results);
+	echo $_("render", $results);
 }
 
 /**
@@ -47,6 +47,5 @@ function logout ()
 	
 	$results = ["OUTPUT" => "logout"];
 	
-	$_("render", $results);
+	echo $_("render", $results);
 }
-

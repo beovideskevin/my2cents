@@ -9,6 +9,7 @@
 	
 	"DATABASE":
 	{
+		"DRIVER": "MYSQL",
 		"SERVER": "localhost",
 		"DATABASE": "eldile5_edd_db",
 		"USER": "root",
@@ -29,7 +30,7 @@
 	"REGISTER":
 	{
 		"EXCEPTIONS": "",
-		"FOLDERS": "helpers/;vendor/;app/"
+		"FOLDERS": "helpers/;app/"
 	},
 	
 	"ROUTES":
@@ -37,6 +38,41 @@
 		"DEFAULT": "index",
 		
 		"404": "notFound",
+		
+		"show": "show",
+		
+		"example1": "doThis",
+		
+		"example2": {
+			"class": "ExampleClass",
+			"method": "exampleMethod"
+		},
+		
+		"example3": {
+			"redirect": "/",
+			"dothis": "doThis" 
+		},
+		
+		"example4": {
+			"action": "publicArea",
+			"private": {
+				"enforce": "enforce",
+				"action": "privateArea"
+			}
+		},
+		
+		"example5" : {
+			"action": "arguments",
+			"args": "{\"test\": \"1\", \"outside\": {\"inside\": \"1\"}}"
+		},
+		
+		"example6": {
+			"action": "doThis",
+			"arguments" : {
+				"action": "arguments",
+				"args": "{\"test\": \"1\", \"outside\": {\"inside\": \"1\"}}"
+			}
+		},
 		
 		"login": 
 		{
@@ -52,41 +88,10 @@
 			}
 		},
 		
-		"example1": "doThis",
-		
-		"example2": {
-			"class": "ExampleClass",
-			"method": "exampleMethod"
-		},
-		
-		"example3": {
-			"redirect": "/",
-			"donotredirect": "doThis"
-		},
-		
-		"example4": {
-			"action": "publicArea",
-			"private": {
-				"enforce": "enforce",
-				"action": "privateArea"
-			}
-		},
-		
-		"try1": "try1",
-		
-		"try2": "try2",
-		
 		"interview": {
 			"set1": "problem1",
 			"set2": "problem2",
 			"set3": "problem3"
-		},
-		
-		"mysql": {
-			"create": ""
-		},
-		
-		"phd": "phd"
- 
+		}
 	}
 }
