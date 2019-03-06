@@ -9,11 +9,12 @@
 	
 	"DATABASE":
 	{
-		"DRIVER": "MYSQL",
-		"SERVER": "localhost",
-		"DATABASE": "eldile5_edd_db",
-		"USER": "root",
-		"PASSWORD": ""
+		"ADAPTER": "postgresql",
+		"HOST": "api-test.payrix.com",
+		"PORT": "5432",
+		"DATABASE": "payrix",
+		"USER": "payrix",
+		"PASSWORD": "payrix"
 	},	
 	
 	"EMAIL": 

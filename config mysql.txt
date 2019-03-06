@@ -1,0 +1,6 @@
+"ADAPTER": "MYSQL",
+"HOST": "localhost",
+"PORT": "",
+"DATABASE": "eldile5_edd_db",
+"USER": "root",
+"PASSWORD": ""

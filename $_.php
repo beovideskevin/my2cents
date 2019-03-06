@@ -25,87 +25,89 @@
 * and you don't need to include anything else 
 */
 
-class QueryClass
-{
-	protected static $link = NULL, $result = NULL; 
+class PostgreSQL_Adapter {
+	public static $link = NULL, $result = NULL; 
 
-	public function connection () 
+	public function connection($server, $port, $user, $pass, $database) 
 	{
-		// if the link is not empty, abort the previous connection
-		if (! empty(self::$link)) { 
-			$this->disconnect();
-		}
-
-		// create the new connection
-		if (! defined('DATABASE_SERVER') || ! defined('DATABASE_CONFIG') || ! defined('DATABASE_USER_CONFIG') || ! defined('DATABASE_PASSWORD_CONFIG')) {
-			die ('No database configuration!');
-		}
-
-		$server = DATABASE_SERVER;
-		$user = DATABASE_USER_CONFIG;
-		$pass = DATABASE_PASSWORD_CONFIG;
-		$database = DATABASE_CONFIG;
+		self::$link = pg_connect("host={$server} port={$port} dbname={$database} user={$user} password={$pass}");
 		
-		self::$link = new mysqli($server, $user, $pass, $database);
-
-		if (! self::$link || ! empty(self::$link->connect_errno) || ! empty(self::$link->connect_error)) {
-			die('Could not connect: ' . mysqli_error(self::$link) . '<br>' . self::$link->connect_errno . '<br>' . self::$link->connect_error);
-		}
+		if (! self::$link) 
+			die('Could not connect!');
 	}
 	
 	protected function disconnect () 
+	{
+		pg_close(self::$link);
+	}
+	
+	public function sanitize ($var) 
+	{
+		return pg_escape_string(self::$link, $var);
+	}
+	
+	public function query ($query)
+	{
+		self::$result = pg_query($query);
+		
+		return self::$result;
+	}
+	
+	public function result ($ret = '') 
+	{
+		$act = empty($ret) ? 'assoc' : trimLower($ret);
+		
+		switch ($act) {
+			case 'single':
+				$tmp = pg_fetch_array(self::$result);
+				return $tmp[0];
+
+			case 'insertid':
+				return pg_last_oid(self::$link);
+
+			case 'obj':
+				return pg_fetch_object(self::$result);
+				
+			case 'assoclist':
+				$rows = [];
+				while($row = pg_fetch_assoc(self::$result))
+					$rows[] = $row;
+
+				return $rows;
+
+			case 'assoc':
+			default:
+				return pg_fetch_assoc(self::$result);
+		}
+	}
+}
+
+class MySQL_Adapter {
+	public static $link = NULL, $result = NULL; 
+	
+	public function connection($server, $port, $user, $pass, $database) 
+	{
+		self::$link = new mysqli($server, $user, $pass, $database, $port);
+		
+		if (! self::$link) 
+			die('Could not connect!');
+	}
+	
+	public function disconnect () 
 	{
 		mysqli_close(self::$link);
 	}
 	
 	public function sanitize ($var) 
-	{
-		if (empty($var)) {
-			return $var;
-		}
-
-		if (is_array($var)) {
-			foreach ($var as $key => $subvar) {
-				$result[$key] = $this->sanitize($subvar);
-			}
-
-			$var = $result;
-		}
-		else {
-			$var = mysqli_real_escape_string(self::$link, $var); 
-		}
-		
-		return $var;
+	{	
+		return mysqli_real_escape_string(self::$link, $var);
 	}
-		
-	public function query ($query, $args = '', $ret = '') 
+	
+	public function query ($query)  
 	{
-		if (! empty($args)) {
-			$args = $this->sanitize($args);
-			$i = 0;
-			while(($letter_pos = strpos($query, '?')) !== false) {
-				$query = substr_replace($query, $args[$i], $letter_pos, 1);
-				$i++;
-				if ($i > count($args)) {
-					break;
-				}
-			}
-		}
-		
 		self::$result = self::$link->query($query);
-
-		if (! self::$result) {
-			error_log('WOW (query): ' . $query);
-			
-			return false;
-		}
-		elseif (! empty($ret)) {
-			$res = $this->result($ret);
-			
-			return $res;
-		}
-
-		return true;
+		
+		return self::$result;
 	}
 	
 	public function result ($ret = '') 
@@ -125,9 +127,8 @@ class QueryClass
 				
 			case 'assoclist':
 				$rows = [];
-				while($row = self::$result->fetch_array(MYSQLI_ASSOC)) {
+				while($row = self::$result->fetch_array(MYSQLI_ASSOC))
 					$rows[] = $row;
-				}
 
 				return $rows;
 
@@ -135,6 +136,91 @@ class QueryClass
 			default:
 				return self::$result->fetch_assoc();
 		}
+	}
+}
+
+class QueryClass
+{
+	public $adapter = NULL;
+
+	public function connection () 
+	{
+		// if the link is not empty, abort the previous connection
+		if (! empty($this->adapter)) {
+			$this->adapter->disconnect();
+			$this->adapter = NULL;
+		}
+
+		// create the new connection
+		if (! defined('DATABASE_ADAPTER') || ! defined('DATABASE_HOST') || ! defined('DATABASE_PORT') ||
+			! defined('DATABASE_CONFIG') || ! defined('DATABASE_USER_CONFIG') || ! defined('DATABASE_PASSWORD_CONFIG'))
+			die ('No database configuration!');
+		
+		$server = DATABASE_HOST;
+		$port = DATABASE_PORT;
+		$user = DATABASE_USER_CONFIG;
+		$pass = DATABASE_PASSWORD_CONFIG;
+		$database = DATABASE_CONFIG;
+		
+		if (trimLower(DATABASE_ADAPTER) == "mysql")
+			$this->adapter = new MySQL_Adapter();
+		elseif (trimLower(DATABASE_ADAPTER) == "postgresql")
+			$this->adapter = new PostgreSQL_Adapter();
+		else
+			die ('No adapter for the database!');
+
+		$this->adapter->connection($server, $port, $user, $pass, $database);
+	}
+	
+	public function disconnect () 
+	{
+		$this->adapter->disconnect();
+	}
+	
+	public function sanitize ($var) 
+	{
+		if (empty($var)) 
+			return $var;
+
+		if (is_array($var)) {
+			foreach ($var as $key => $subvar) 
+				$result[$key] = $this->sanitize($subvar);
+
+			$var = $result;
+		}
+		else 
+			$var = $this->adapter->sanitize($var);
+		
+		return $var;
+	}
+		
+	public function query ($query, $args = '', $ret = '') 
+	{
+		if (! empty($args)) {
+			$args = $this->sanitize($args);
+			$i = 0;
+			while(($letter_pos = strpos($query, '?')) !== false) {
+				$query = substr_replace($query, $args[$i], $letter_pos, 1);
+				$i++;
+				if ($i > count($args)) 
+					break;
+			}
+		}
+		
+		if (! $this->adapter->query($query)) {
+			error_log('WOW (query): ' . $query);
+			
+			return false;
+		}
+		elseif (! empty($ret)) 
+			return $this->adapter->result($ret);
+
+		return true;
+	}
+	
+	public function result ($ret = '') 
+	{
+		return $this->adapter->result($ret);
 	}
 }
 
@@ -189,11 +275,14 @@ class MVClass extends QueryClass
 			DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/');
 
 		// MySQL conection data
-		if (isset(self::$config['DATABASE']['DRIVER'])) 
-			DEFINE ('DATABASE_DRIVER', self::$config['DATABASE']['DRIVER']);
+		if (isset(self::$config['DATABASE']['ADAPTER'])) 
+			DEFINE ('DATABASE_ADAPTER', self::$config['DATABASE']['ADAPTER']);
 		
-		if (isset(self::$config['DATABASE']['SERVER'])) 
-			DEFINE ('DATABASE_SERVER', self::$config['DATABASE']['SERVER']);
+		if (isset(self::$config['DATABASE']['HOST'])) 
+			DEFINE ('DATABASE_HOST', self::$config['DATABASE']['HOST']);
+
+		if (isset(self::$config['DATABASE']['PORT'])) 
+			DEFINE ('DATABASE_PORT', self::$config['DATABASE']['PORT']);
 
 		if (isset(self::$config['DATABASE']['DATABASE'])) 
 			DEFINE ('DATABASE_CONFIG', self::$config['DATABASE']['DATABASE']);
@@ -359,8 +448,11 @@ class MVClass extends QueryClass
 				call_user_func($enforce, $args);
 		
 		// lets call the main action now
-		if (! empty($class) && is_callable([new $class($args), $action]))
-			call_user_func([$class, $action], $args);
+		if (! empty($class) && is_callable([new $class($args), $action])) {
+			// call_user_func([$class, $action], $args);
+			$c = new $class($args);
+			$c->$action($args);
+		}
 		elseif (! empty($action) && is_callable($action)) 
 			call_user_func($action, $args); 
 		else 

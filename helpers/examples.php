@@ -25,7 +25,7 @@ class ExampleClass
 	/*
 	 * Note that the method is static
 	 */
-	public static function exampleMethod() 
+	public function exampleMethod() 
 	{
 		global $_;
 	
