@@ -10,20 +10,4 @@ session_start();
 
 require_once('$_.php');
 
-$_("init");
-
-function index ($args)
-{
-	global $_;
-	
-	$res = $_("assoc: SELECT COUNT(*) as c FROM counter WHERE `date` > '?' AND `ip` like '?'", ['2015-1-1 12:00:00', '66.%']);
-	
-	$results = ["OUTPUT" => $res["c"]];
-	
-	echo $_("render", $results);
-}
-
-function ajax ($args) 
-{
-	die("ajax");
-}
+$_("run");
