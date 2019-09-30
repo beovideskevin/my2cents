@@ -65,6 +65,8 @@ class PostgreSQL_Adapter
 		
 		switch ($act) {
 			case 'insertid':
+				// for this to work you need to add to the INSERT query:
+				// RETURNING id
 			case 'single':
 				$tmp = pg_fetch_array(self::$result);
 				return $tmp[0];

@@ -1,49 +1,64 @@
-EN MI CASA:
+AT HOME:
 
-"FILES_BASE_PATH": "",
+	"FILES_BASE_PATH": "",
 
-"ADAPTER": "MYSQL",
-"HOST": "localhost",
-"DATABASE": "eldile5_edd_db",
-"USER": "root"
+	MYSQL
+		"ADAPTER": "MYSQL",
+		"HOST": "localhost",
+		"DATABASE": "eldile5_edd_db",
+		"USER": "root"
 
-"ADAPTER": "postgresql",
-"HOST": "localhost",
-"PORT": "5432",
-"DATABASE": "postgres",
-"USER": "postgres",
-"PASSWORD": "det3RM1nati0n"
+	POSTGRESQL
+		"ADAPTER": "postgresql",
+		"HOST": "localhost",
+		"PORT": "5432",
+		"DATABASE": "postgres",
+		"USER": "postgres",
+		"PASSWORD": "det3RM1nati0n"
 
 TEST:
 
-"ADAPTER": "MYSQL",
-"HOST": "localhost",
-"DATABASE": "my2cents",
-"USER": "root",
+	MYSQL
+		"ADAPTER": "MYSQL",
+		"HOST": "localhost",
+		"DATABASE": "my2cents",
+		"USER": "root",
 
--- Database: `my2cents`
--- Table structure for table `test`
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE IF NOT EXISTS `test` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `searchKey` varchar(64) NOT NULL,
-  `searchValue` text NOT NULL,
-  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-COMMIT;
+	SCRIPT
+		-- Database: `my2cents`
+		-- Table structure for table `test`
+		DROP TABLE IF EXISTS `test`;
+		CREATE TABLE IF NOT EXISTS `test` (
+		  `id` int(11) NOT NULL AUTO_INCREMENT,
+		  `searchKey` varchar(64) NOT NULL,
+		  `searchValue` text NOT NULL,
+		  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+		  PRIMARY KEY (`id`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+		COMMIT;
 
+	POSTGRESQL
+		"ADAPTER": "postgresql",
+		"HOST": "localhost",
+		"PORT": "5432",
+		"DATABASE": "postgres",
+		"USER": "postgres",
+		"PASSWORD": "det3RM1nati0n"
 
-PAYRIX:
+	SCRIPT
 
-"FILES_BASE_PATH": "/dollarlib/",
+	
+AT PAYRIX:
 
-"ADAPTER": "postgresql",
-"HOST": "api-test.payrix.com",
-"PORT": "5432",
-"DATABASE": "testnosql",
-"USER": "payrix",
-"PASSWORD": "payrix"
+	"FILES_BASE_PATH": "/my2cents/",
+
+	POSTGRESQL
+		"ADAPTER": "postgresql",
+		"HOST": "api-test.payrix.com",
+		"PORT": "5432",
+		"DATABASE": "testnosql",
+		"USER": "payrix",
+		"PASSWORD": "payrix"
 
 
 
