@@ -1,5 +1,0 @@
-comments
-
-make emails work with SMTP
-	
-write readme
