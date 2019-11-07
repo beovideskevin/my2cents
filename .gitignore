@@ -1,2 +1,4 @@
-config.json
+/app/
 /backup/
+/backup/configs.txt
+config.json
