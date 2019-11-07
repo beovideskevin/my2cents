@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<!-- SEO
+	============================================= -->
+	<meta name="author" content="<:SEO_AUTHOR/>">
+	<meta name="description" content="<:SEO_DESCRIPTION/>">
+	<meta name="keywords" content="<:SEO_KEYWORDS/>">
+	
+	<!-- Document Title
+	============================================= -->
+	<title><:TITLE/> | <:SEO_TITLE/></title>
+	
+	<!-- Mobile Specific Metas
+	============================================= -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<!-- Favicon
+	============================================= -->
+	<link rel="icon" type="image/png" href="/my2cents/app/layouts/images/favicon.png">
+
+	<!-- FONT
+	============================================= -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  
+	<!-- Stylesheets
+	============================================= -->
+	<link rel="stylesheet" href="/my2cents/app/layouts/css/normalize.min.css">
+	<link rel="stylesheet" href="/my2cents/app/layouts/css/skeleton.min.css">
+
+	<!-- Custom Stylesheet
+	============================================= -->
+	<style>
+		<:MAIN_STYLE/>
+	</style>
+	
+</head>
+
+<body>
+	
+	<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container">
+		<div class="row">
+			<div class="one-half column">
+				<h4 id="mainTitle"><:HEADER/></h4>
+				<:OUTPUT/>
+			</div>
+			
+			<div class="one-half column">
+				<:CONTENT/>
+			</div>
+			
+		</div>
+	</div>
+	
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="/my2cents/app/layouts/js/jquery-3.3.1.min.js"></script>
+
+	<!-- Custom Javascript
+	============================================= -->
+	<script>
+		<:MAIN_SCRIPT/>
+	</script>
+</body>
+</html>

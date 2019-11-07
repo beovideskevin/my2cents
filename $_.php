@@ -1,57 +1,71 @@
 <?php
 
-/***********************************************************************************
+/******************************************************************************
 
-	My two cents - https://github.com/beovideskevin/dollarlib 
+	My 2 cents - https://github.com/beovideskevin/my2cents
 	Copyright (c) 2016 Flow with the Code
 
-	This file is part of Dollar Lib.
-
-    My two cents is free software: you can redistribute it and/or modify
+    My 2 cents is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    My two cents is distributed in the hope that it will be useful,
+    My 2 cents is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Dollar Lib.  If not, see <http://www.gnu.org/licenses/>.
+    along with My 2 cents. If not, see <http://www.gnu.org/licenses/>.
 
-************************************************************************************
-
-	This is the main file, include it and you don't need to include anything else
-		
-************************************************************************************/
+******************************************************************************/
 
 /**
- *
+ * The "driver" to connect and query PostgreSQL
  */
-class PostgreSQL_Adapter 
+class PostgreSQLAdapter 
 {
-	public static $link = NULL, 
-				  $result = NULL; 
+	protected static $link = NULL, 
+				     $result = NULL; 
 
+	/**
+	 * @param $server the server to connect to 
+	 * @param $port the port to connect to
+	 * @param $user the user that connects to the database
+	 * @param $pass the password of the user
+	 * @param $database the database name 
+ 	 */ 
 	public function connect($server, $port, $user, $pass, $database) 
 	{
 		self::$link = pg_connect("host={$server} port={$port} dbname={$database} user={$user} password={$pass}");
 		
-		if (! self::$link) 
+		if (!self::$link) 
 			die('Could not connect!');
+		
+		return self::$link;
 	}
 	
-	protected function disconnect () 
+	/**
+	 * Disconnect from the database
+ 	 */ 
+	public function disconnect () 
 	{
 		pg_close(self::$link);
 	}
 	
+	/**
+	 * Clean the argument, sanitize it
+	 * @param $var 
+ 	 */ 
 	public function sanitize ($var) 
 	{
 		return pg_escape_string(self::$link, $var);
 	}
 	
+	/**
+	 * Query the database
+	 * @param $query the query to use
+ 	 */ 
 	public function query ($query)
 	{
 		self::$result = pg_query($query);
@@ -59,11 +73,15 @@ class PostgreSQL_Adapter
 		return self::$result;
 	}
 	
-	public function result ($ret = '') 
+	/**
+	 * Return the result of a query
+	 * @param $ret the type of result: insertid; single; obj; assoclist or assoc (this is the default)
+ 	 */ 
+	public function result ($ret = 'assoc') 
 	{
-		$act = empty($ret) ? 'assoc' : trimLower($ret);
+		$ret = trimLower($ret);
 		
-		switch ($act) {
+		switch ($ret) {
 			case 'insertid':
 				// for this to work you need to add to the INSERT query:
 				// RETURNING id
@@ -78,7 +96,6 @@ class PostgreSQL_Adapter
 				$rows = [];
 				while($row = pg_fetch_assoc(self::$result))
 					$rows[] = $row;
-
 				return $rows;
 
 			case 'assoc':
@@ -89,31 +106,52 @@ class PostgreSQL_Adapter
 }
 
 /**
- *
+ * The "driver" to connect and query MySQL
  */
-class MySQL_Adapter 
+class MySQLAdapter 
 {
-	public static $link = NULL, 
-				  $result = NULL; 
+	protected static $link = NULL, 
+				     $result = NULL; 
 	
+	/**
+	 * Connect to the database
+	 * @param $server the server to connect to 
+	 * @param $port the port to connect to
+	 * @param $user the user that connects to the database
+	 * @param $pass the password of the user
+	 * @param $database the database name 
+ 	 */ 
 	public function connect($server, $port, $user, $pass, $database) 
 	{
 		self::$link = new mysqli($server, $user, $pass, $database, $port);
 		
-		if (! self::$link) 
+		if (!self::$link) 
 			die('Could not connect!');
+		
+		return self::$link;
 	}
 	
+	/**
+	 * Disconnect from the database
+ 	 */ 
 	public function disconnect () 
 	{
 		mysqli_close(self::$link);
 	}
 	
+	/**
+	 * Clean the argument, sanitize it
+	 * @param $var 
+ 	 */ 
 	public function sanitize ($var) 
 	{	
 		return mysqli_real_escape_string(self::$link, $var);
 	}
 	
+	/**
+	 * Query the database
+	 * @param $query the query to use
+ 	 */ 
 	public function query ($query)  
 	{
 		self::$result = self::$link->query($query);
@@ -121,11 +159,15 @@ class MySQL_Adapter
 		return self::$result;
 	}
 	
-	public function result ($ret = '') 
+	/**
+	 * Return the result of a query
+	 * @param $ret the type of result: insertid; single; obj; assoclist or assoc (this is the default)
+ 	 */ 
+	public function result ($ret = 'assoc') 
 	{
-		$act = empty($ret) ? 'assoc' : trimLower($ret);
+		$ret = trimLower($ret);
 		
-		switch ($act) {
+		switch ($ret) {
 			case 'single':
 				$tmp = self::$result->fetch_row();
 				return $tmp[0];
@@ -140,7 +182,6 @@ class MySQL_Adapter
 				$rows = [];
 				while($row = self::$result->fetch_array(MYSQLI_ASSOC))
 					$rows[] = $row;
-
 				return $rows;
 
 			case 'assoc':
@@ -151,28 +192,7 @@ class MySQL_Adapter
 }
 
 /**
- *
- */
-class SQLite_Adapter 
-{
-	public function connect($server, $port, $user, $pass, $database) 
-	{}
-	
-	public function disconnect () 
-	{}
-	
-	public function sanitize ($var) 
-	{}
-	
-	public function query ($query)  
-	{}
-	
-	public function result ($ret = '') 
-	{}
-}
-
-/**
- *
+ * This is the main class to connect to the database
  */
 class Database
 {
@@ -184,10 +204,13 @@ class Database
 				  $user = '', 
 				  $password = '';
 
+	/**
+	 * Establish a connection to the databse
+ 	 */ 
 	public function connect () 
 	{
 		// if the link is not empty, abort the previous connection
-		if (! empty(self::$driver)) {
+		if (!empty(self::$driver)) { 
 			self::$driver->disconnect();
 			self::$driver = NULL;
 		}
@@ -199,20 +222,27 @@ class Database
 		$database = self::$database;
 		
 		if (trimLower(self::$adapter) == 'mysql')
-			self::$driver = new MySQL_Adapter();
+			self::$driver = new MySQLAdapter();
 		elseif (trimLower(self::$adapter) == 'postgresql')
-			self::$driver = new PostgreSQL_Adapter();
+			self::$driver = new PostgreSQLAdapter();
 		else
 			die ('No adapter for the database!');
 
-		self::$driver->connect($server, $port, $user, $pass, $database);
+		return self::$driver->connect($server, $port, $user, $pass, $database);
 	}
 	
+	/**
+	 * Disconnect from the database
+ 	 */ 
 	public function disconnect () 
 	{
 		self::$driver->disconnect();
 	}
 	
+	/**
+	 * Clean the argument, sanitize it
+	 * @param $var 
+ 	 */ 
 	public function sanitize ($var) 
 	{
 		if (empty($var)) 
@@ -230,30 +260,38 @@ class Database
 		return $var;
 	}
 		
+	/**
+	 * Query the database
+	 * @param $query the query to use
+ 	 */ 
 	public function query ($query, $args = [], $ret = '') 
 	{
-		if (! empty($args)) {
+		if (!empty($args)) {
 			$args = $this->sanitize($args);
 			$i = 0;
-			while(($letter_pos = strpos($query, '?')) !== false) {
-				$query = substr_replace($query, $args[$i], $letter_pos, 1);
+			while(($letterPos = strpos($query, '?')) !== false) {
+				$query = substr_replace($query, $args[$i], $letterPos, 1);
 				$i++;
-				if ($i > count($args)) 
+				if ($i >= count($args)) 
 					break;
 			}
 		}
 		
-		if (! self::$driver->query($query)) {
+		if (!self::$driver->query($query)) {
 			error_log('WOW (query): ' . $query);
 			
 			return false;
 		}
-		elseif (! empty($ret))
+		elseif (!empty($ret))
 			return self::$driver->result($ret);
 
 		return true;
 	}
 	
+	/**
+	 * Return the result of a query
+	 * @param $ret the type of result: insertid; single; obj; assoclist or assoc (this is the default)
+ 	 */ 
 	public function result ($ret = '') 
 	{
 		return self::$driver->result($ret);
@@ -261,130 +299,95 @@ class Database
 }
 
 /**
-* To add functionality to this model class just implement some of these methods:
-* 	protected function validate () {} This method is call for validate the values of the object
-* 	protected function relate () {} This method is call to buil the external relationships
-* 	protected function cascade () {} This method is called to delete the related records when deleting this one
-* 	protected function beforeSave () {} This method is called before inserting or updating
-* 	protected function afterSave () {} This method is called after inserting or updating
-* 	protected function beforeDelete () {} This method is called before deleting
-* 	protected function afterDelete () {} This method is called after deleting
-*/
-
-class Model 
+ * This class works as a model. To add functionality to this record class just extend it and implement some of these methods:
+ * 	protected function validate () {} // This method is call for validate the values of the object
+ * 	protected function relate () {} // This method is call to buil the external relationships
+ * 	protected function cascade () {} // This method is called to delete the related records when deleting this one
+ */
+class Table extends Database
 {
-	public $_table = '', 
-		   $_id = '';
+	protected $_table, 
+		      $_id;
 
-	function __construct ($table, $id = '', $properties = []) 
+	/**
+	 * Create a 
+	 * @param $table the table we are using
+	 * @param $id the id field 
+ 	 */ 
+	function __construct ($table, $id = false) 
 	{
-		// create the internal data
-		if (! $table) 
-			throw new Exception('ERROR: TABLE');
+		if (!$table) 
+			throw new Exception('ERROR: NO TABLE');
 		
 		$this->_table = $table;
 		$this->_id = $id;
+	}
+	
+	/** 
+	 * Assign values to the object
+	 * @param $properties an array with the properties to assign to the object
+	 */
+	public function assign ($properties = []) 
+	{
+		if (!$properties)
+			return false;
 
-		if ($properties) {
-			// assign data if there is any
-			$this->assign($properties);
-			
-			if (is_callable([$this, 'validate']) && ! $this->validate()) 
-				throw new Exception('ERROR: VALIDATE');
-						
-			if (is_callable([$this, 'relate']) && ! $this->relate())
-				throw new Exception('ERROR: RELATE');
-		}
+		foreach ($properties as $key => $value)
+			$this->$key = $value;
+		
+		if (is_callable([$this, 'validate']) && !$this->validate())
+			return false;
+					
+		if (is_callable([$this, 'relate']) && !$this->relate())
+			return false;
+
+		return true;
 	}
 
-	public function load ($id) 
+	/**
+	 * Sync the current object with the database, get the info from the database
+	 * @param $id the id of the record
+	 */
+	public function sync ($id = '') 
 	{
-		if ($this->_id) {
-			$result = $this->find("{$this->_id} = '?'", $id, ["LIMIT" => 1]);
-			
-			if (! $result)
-				return false;
-			
-			$this->assign($result[0]);
-			
-			if (is_callable([$this, 'validate']) && ! $this->validate())
-				return false;
-						
-			if (is_callable([$this, 'relate']) && ! $this->relate())
-				return false;
-			
-			return true;
+		global $_;
+
+		$idName = $this->_id;
+		
+		$id = $id ? $id : $this->$idName;
+		
+		$result = $_("assoc: SELECT * FROM {$this->_table} WHERE {$idName} = '?' LIMIT 1", [$id]);
+		
+		if ($result) {
+			return $this->assign($result);
 		}
 		
 		return false;
 	}
-	
-	public function assign ($properties) 
-	{
-		foreach ($properties as $key => $value)
-			$this->$key = $value;
-	}
-	
-	public function count ($conditions = '', $values = [], $options = [])
-	{
-		return $this->find($conditions, $values, $options, 'single:', "count({$this->_id})");
-	}
-	
-	public function find ($conditions = '', $values = [], $options = [], $type = '', $select = '')
-	{
-		global $_;
-		
-		if ($type) 
-			$query = $type;
-		else 
-			$query = "assoclist:";
 
-		$query .= " SELECT ";
-		
-		if ($select) 
-			$query .= $select;
-		else 
-			$query .= "*";
-		
-		$query .= " FROM {$this->_table} ";
-	
-		if ($conditions) 
-			$query .= " WHERE {$conditions} ";
-		
-		if (isset($options['ORDER'])) 
-			$query .= " ORDER BY {$options['ORDER']}";
-		
-		if (isset($options['LIMIT'])) {
-			$query .= " LIMIT {$options['LIMIT']}";
-			if (isset($options['PAGE'])) 
-				$query .= ",{$options['PAGE']}";
-		}
-		
-		if (! is_array($values)) 
-			$values = [$values];
-	
-		return $_($query, $values);
-	}
-	
-	public function save ($properties = [])
-	{
+	/**
+	 * Save the model, insert or update a record
+	 * @param $properties an array with the properties to assign to the object
+ 	 */ 
+	public function save ($properties = []) 
+	{ 
 		global $_;
-		
-		if ($properties) 
-			$this->assign($properties);
+
+		// assign data if there is any
+		if ($properties) {
+			if (!$this->assign($properties))
+				return false;
+			$recordProps = $properties;
+		}
 		else 
-			$properties = get_object_vars($this);
+			$recordProps = get_object_vars($this);
 		
-		if (is_callable([$this, 'validate']) && ! $this->validate()) 
-			return false;
-		
-		if (is_callable([$this, 'beforeSave']) && ! $this->beforeSave())
-			return false;
-	
 		$idName = $this->_id;
-		if ($idName && ! empty($this->$idName)) { // update the record
+		$tableName = $this->_table;
+		
+		if ($idName && !empty($this->$idName)) { // this is an update
 			$query = "";
-			foreach ($properties as $key => $value) {
+			foreach ($recordProps as $key => $value) {
 				if ($key == '_table' || $key == '_id')
 					continue;
 				
@@ -393,12 +396,12 @@ class Model
 				
 				$query .= $key . "='" . $value . "'";
 			}
-			$result = $_(": UPDATE {$this->_table} SET {$query} WHERE {$idName} = '{$this->$idName}'");
+			$result = $_(": UPDATE {$tableName} SET {$query} WHERE {$idName} = '{$this->$idName}'");
 		}
-		else { // create the record
+		else { // this is a new record
 			$insertKey = "";
 			$insertValue = "";
-			foreach ($properties as $key => $value) {
+			foreach ($recordProps as $key => $value) {
 				if ($key == '_table' || $key == '_id')
 					continue;
 				
@@ -411,9 +414,9 @@ class Model
 				$insertKey .= $key;
 				$insertValue .= "'" . $value . "'"; 
 			}
-			$query = "insertid: INSERT INTO {$this->_table} ({$insertKey}) VALUES ({$insertValue})";
+			$query = "insertid: INSERT INTO {$tableName} ({$insertKey}) VALUES ({$insertValue})";
 			
-			if (trimLower(DATABASE_ADAPTER) == "postgresql") 
+			if (trimLower(Database::$adapter) == "postgresql") 
 				$query .= " RETURNING {$idName}";
 			
 			$result = $_($query);
@@ -421,90 +424,32 @@ class Model
 			if ($result) 
 				$this->$idName = $result;
 		}
-		
-		if ($result) {
-			if (! $this->load($this->$idName)) 
+	
+		if ($result) 
+			if (is_callable([$this, 'cascade']) && !$this->cascade())
 				return false;
-		}
-		else
-			return false;
-		
-		if (is_callable([$this, 'afterSave']) && ! $this->afterSave())
-			return false;
-		
-		return true;
-	}
 
-	public function delete () 
-	{
-		global $_;
-		
-		if (is_callable([$this, 'beforeDelete']) && ! $this->beforeDelete())
-			return false;
-		
-		if (is_callable([$this, 'relate']) && ! $this->relate())
-			return false;
-		
-		if (is_callable([$this, 'cascade']) && ! $this->cascade())
-			return false;
-		
-		$idName = $this->_id;
-		if ($idName && ! empty($this->$idName)) { // update the record
-			if (! $_(": DELETE FROM {$this->_table} WHERE {$idName} = '?'", [$this->$idName]))
-				return false;
-		}
-		else 
-			return false;
-		
-		if (is_callable([$this, 'afterDelete']) && ! $this->afterDelete())
-			return false;
-		
-		return true;
+		return $result;
 	}
 }
 
 /**
- *
+ * This class acts like a controller
  */
-class Controller
+class App
 {
-	public static $config = [], 
-				  $url = [], 
-				  $routes = [], 
-				  $includes = [];
-	
-	public function getAction ($fullQuery) 
-	{
-		$query = explode (' ', trim($fullQuery));
-		
-		if (strrpos($query[0], ':') === 0)
-			$action = ':';
-		elseif (! empty($query[1]) && $query[1] == ':') 
-			$action = $query[0] . $query[1];
-		else 
-			$action = $query[0];
-		
-		return trimLower($action);
-	}
-	
-	public function getQuery($query) 
-	{
-		if (strrpos($query, ':') === 0) 
-			return substr(trim($query), 1);
+	protected static $config = [], 
+				     $url = [], 
+				     $routes = [], 
+				     $includes = [];
 
-		$parts = explode (' ', trim($query));
-		
-		unset($parts[0]);
-			
-		if (! empty($parts[1]) && $parts[1] == ':')
-			unset($parts[1]);
-		
-		return implode(' ', $parts);
-	}
-	
+	/** 
+	 * Loads the configuration and registers the classes
+	 * @param $filepath the config file, if empty gets the default config.json
+	 */
 	public function config($filepath = '') 
 	{ 
-		$filepath = $filepath ? $filepath . '.json' : 'config.json';
+		$filepath = $filepath ? $filepath . '.json' : '../config.json';
 					
 		self::$config = json_decode(file_get_contents($filepath), true);
 		
@@ -513,13 +458,13 @@ class Controller
 
 		foreach (self::$config as $key => $value) {
 			switch (trimlower($key)) {
-				// The main path
-				case 'files_base_path':
+				// the main path
+				case 'files_base_path': 
 					DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . $value);
 					break;
 	
 				// the path for the classes to include
-				case 'register':
+				case 'register': 
 					foreach (self::$config[$key] as $regKey => $regVal) {
 						switch (trimlower($regKey)) {
 							case 'exceptions':
@@ -532,9 +477,9 @@ class Controller
 						}
 					}
 					break;
-					
+				
 				// set the routes
-				case 'routes':
+				case 'routes': 
 					foreach (self::$config[$key] as $rKey => $rVal) {
 						switch (trimlower($regKey)) {
 							case 'default':
@@ -547,33 +492,38 @@ class Controller
 						}
 					}
 					break;
-					
-				// the layout
-				case 'layouts_path': 
-					View::$layout_path = $value;
-					break;
 				
-				case 'default_layout': 
-					if (! empty($_SESSION['LAYOUT_IN_USE']))
-						View::$layout_in_use = $_SESSION['LAYOUT_IN_USE'];
-					else
-						View::$layout_in_use = $value;
+				// set the dafault template and language 
+				case 'template':
+					foreach (self::$config[$key] as $tKey => $tVal) {
+						switch (trimlower($tKey)) {
+							case 'layout_path': 
+								DEFINE ('LAYOUT_PATH', $tVal);
+								break;
+
+							case 'default_layout':  
+								if (!empty($_SESSION['LAYOUT_IN_USE']))
+									Template::$defaultLayout = $_SESSION['LAYOUT_IN_USE'];
+								else
+									Template::$defaultLayout = $tVal;
+								break;
+
+							case 'language_path': 
+								DEFINE ('LANGUAGE_PATH', $tVal);
+								break;
+
+							case 'default_language': 
+								if (!empty($_SESSION['LANGUAGE_IN_USE']))
+									Template::$defaultLanguage = $_SESSION['LANGUAGE_IN_USE'];
+								else
+									Template::$defaultLanguage = $tVal;
+								break;
+						}
+					}
 					break;
 
-				// the language
-				case 'languages_path': 
-					View::$language_path = $value;
-					break;
-					
-				case 'default_language': 
-					if (! empty($_SESSION['LANGUAGE_IN_USE']))
-						View::$language_in_use = $_SESSION['LANGUAGE_IN_USE'];
-					else
-						View::$language_in_use = $value;
-					break;
-					
 				// MySQL conection data
-				case 'database':
+				case 'database': 
 					foreach (self::$config[$key] as $dbKey => $dbVal) {
 						switch (trimlower($dbKey)) {
 							case 'adapter': 
@@ -597,9 +547,9 @@ class Controller
 						}
 					}
 					break;
-					
-				// SMTP email configuration
-				case 'email':
+				
+				// SMTP email configuration	
+				case 'email': 
 					foreach (self::$config[$key] as $eKey => $eVal) {
 						switch (trimlower($eKey)) {
 							case 'system': 
@@ -623,50 +573,58 @@ class Controller
 							case 'layout':
 								Email::$layout = $eVal;
 								break;
-							case 'language':
-								Email::$language = $eVal;
-								break;
 						}
 					}
 					break;
 			}
 		}
 		
-		// If the main path is not set, lets set the default
+		// if the main path is not set, lets set the default
 		if (!defined('FILES_BASE_PATH')) 
 			DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/');
 	}
 	
+	/** 
+	 * This method recursively includes all the files and classes
+	 * @param $folder the folder where to start
+	 * @param $exceptions files not to include
+	 */
 	protected function register ($folder, $exceptions) 
 	{
-		if (! $folder)
+		if (!$folder)
 			return false;
 		
-		$other_files = [];
+		$otherFiles = [];
 
-		if (! in_array('$_', $exceptions))
+		if (!in_array('$_', $exceptions))
 			$exceptions[] = '$_';
 			
 		$files = scandir($folder);
 		foreach ($files as $f) {
 			if ($f == '.' || $f == '..' || in_array($f, $exceptions))
 				continue;
+			// this is for the libraries installed with composer
 			elseif (is_dir($folder . $f) && $f == 'vendor' && file_exists($folder . 'vendor/autoload.php'))
-				require_once($folder . 'vendor/autoload.php'); // this is for the libraries installed with composer
+				require_once($folder . 'vendor/autoload.php'); 
 			elseif (is_dir($folder . $f)) 
-				$other_files[] = $folder . $f;
+				$otherFiles[] = $folder . $f;
 			elseif (substr($f, -4) == '.php')
 				include_once($folder . $f);
 		}
 
-		if (! empty($other_files))
-			foreach ($other_files as $of)
+		if (!empty($otherFiles))
+			foreach ($otherFiles as $of)
 				$this->register($of . '/', $exceptions);
 	}
 	
+	/** 
+	 * Routes the app, that is calls the function or method inside a class that is requested
+	 * @param $urlpath the path to map as a function or method call
+	 * @param $args the arguments passed to the method or function
+	 */
 	public function route ($urlpath = '', $args = []) 
 	{
-		if (! $urlpath && isset($_REQUEST['_url']))
+		if (!$urlpath && isset($_REQUEST['_url']))
 			$urlpath = $_REQUEST['_url'];
 				
 		if ($urlpath) {
@@ -677,38 +635,40 @@ class Controller
 			}
 		}
 		
-		if (! $args)
+		if (!$args)
 			$args = $_REQUEST;
 					
-		if (! self::$url) // if there is no _url put the default
+		// if there is no _url put the default
+		if (!self::$url) 
 			$action = self::$routes['DEFAULT'];
 		else {
 			$action = self::$routes;
 			$index = 0;
 			
 			while($index < count(self::$url) && is_array($action)) {
-				if (! empty($action[trimLower(self::$url[$index])])) { // check for the action
+				// check for the action
+				if (!empty($action[trimLower(self::$url[$index])])) { 
 					$action = $action[trimLower(self::$url[$index])];
 					$index++;
 					
 					// private area of the website
-					if (isset($action['enforce'])) 
+					if (isset($action['enforce']))  
 						$enforce = $action['enforce'];
 					
 					// set the layout
 					if (isset($action['layout'])) 
-						View::$layout_in_use = $action['layout'];
+						Template::$defaultLayout = $action['layout'];
 					
 					// set the language
 					if (isset($action['language']))	
-						View::$language_in_use = $action['language'];
+						Template::$defaultLanguage = $action['language'];
 					
 					// register any needed classes
 					if (isset($action['register']))	
 						self::$includes['FOLDERS'] = $action['register'];
 					
 					// get the arguments if any 
-					if (! empty($action['args'])) 
+					if (!empty($action['args'])) 
 						$args = array_merge($args, json_decode($action['args'], true));
 				}
 				else {
@@ -718,33 +678,38 @@ class Controller
 			}
 			
 			// if the result is still an array
-			if (is_array($action)) {
-				if (! empty($action['redirect'])) { // redirect to another url
+			if (is_array($action)) { 
+			
+				// redirect to another url
+				if (!empty($action['redirect'])) { 
 					header ('Location: ' . $action['redirect']);
 					die ();
 				}
-				elseif (! empty($action['method']) && ! empty($action['class'])) { // preferred way when a class is called
+				
+				// preferred way when a class is called
+				elseif (!empty($action['method']) && !empty($action['class'])) { 
 					$class = $action['class'];
 					$action = $action['method'];					
 				}
-				elseif (! empty($action['action'])) // preferred way when the action is just a function
+				
+				// preferred way when the action is just a function
+				elseif (!empty($action['action'])) 
 					$action = $action['action'];
+				
+				// there is something wrong here...
 				else 
 					$action = self::$routes['404'];
 			}
 		}
 		
-		// include all the classes
-		if (! empty(self::$includes['FOLDERS'])) {
-			// get the folders where the classes are
-			$folders = explode(';', self::$includes['FOLDERS']);
+		// register all the classes
+		if (!empty(self::$includes['FOLDERS'])) { 
+			$folders = explode(';', self::$includes['FOLDERS']); 
 
-			// get the exceptions from the configuration
-			$exceptions = empty(self::$includes['EXCEPTIONS']) ? [] : explode(';', self::$includes['EXCEPTIONS']);
-
-			// loop the folders
+			$exceptions = empty(self::$includes['EXCEPTIONS']) ? [] : explode(';', self::$includes['EXCEPTIONS']); 
+			
 			foreach ($folders as $f) {
-				if (! $f) 
+				if (!$f) 
 					continue;
 				$this->register(FILES_BASE_PATH . $f, $exceptions);
 			}
@@ -753,91 +718,135 @@ class Controller
 		if (is_dir(FILES_BASE_PATH . 'vendor') && file_exists(FILES_BASE_PATH . 'vendor/autoload.php'))
 			require_once(FILES_BASE_PATH . 'vendor/autoload.php'); 
 		
-		if (! empty($enforce) && is_callable($enforce)) // call the function that enforces login
+		// call the function that enforces login
+		if (!empty($enforce) && is_callable($enforce)) 
 				call_user_func($enforce, $args);
 		
-		// lets call the main action now
-		if (! empty($class) && is_callable([$c = new $class($args), $action]))
+		// lets call the main action inside a class
+		if (!empty($class) && is_callable([$c = new $class($args), $action])) 
 			return $c->$action($args);
-		elseif (! empty($action) && is_callable($action)) 
+		
+		// lets call the main action as a function
+		elseif (!empty($action) && is_callable($action)) 
 			return call_user_func($action, $args); 
+		
 		else 
 			die('No action method found!'); 
 	}
 }
 
 /**
- *
+ * This class takes care of the view
  */
-class View
+class Template
 {
-	public static $layout_path = '', 
-				  $layout_in_use = '', 
-				  $language_path = '', 
-				  $language_in_use = '', 
-				  $full_language = '', 
-				  $full_view = ''; 
+	public static $defaultLayout = '',
+				  $defaultLanguage = '';
+				  
+	protected $fullLanguage = '',
+		      $fullLayout = '';
 	
-	public function setLang ($language = '') 
+	/**
+	 * Set the layout
+	 * @param $layout the file to get the layout from, if empty the default is set
+ 	 */ 
+	public function setLayout ($layout = '') 
 	{
-		$lang = [];
+		$filename = LAYOUT_PATH . ($layout ? $layout : self::$defaultLayout);
+
+		$this->fullLayout = $this->inject($filename . '.html');
+
+		return $this->fullLayout;
+	}
+	
+	/**
+	 * Get the layout, just returns the layout
+ 	 */ 
+	public function getLayout () 
+	{
+		return $this->fullLayout;
+	}
+	
+	/**
+	 * Set the language of the template
+	 * @param $language 
+ 	 */
+	public function setLang ($language = '')
+	{
+		$filename = LANGUAGE_PATH . ($language ? $language : self::$defaultLanguage);
+
+		$allLines = file(FILES_BASE_PATH . $filename . '.ini');
 		
-		if (! $language) 
-			$language = self::$language_path . self::$language_in_use;
-		
-		$all_lines = file(FILES_BASE_PATH . $language . '.ini');
-		
-		foreach ($all_lines as $line) {
+		$this->fullLanguage = [];
+		foreach ($allLines as $line) {
 			$line = trim($line);
 			if (empty($line)) 
 				continue;
-
-			$key_value = explode('=>', $line);
-			
-			if ($key_value[0][0] == '#' || empty($key_value[1])) 
+			$keyValue = explode('=>', $line);
+			if ($keyValue[0][0] == '#' || empty($keyValue[1])) 
 				continue;
-			
-			$lang[trim($key_value[0])] = trim($key_value[1]);
+			$this->fullLanguage[trim($keyValue[0])] = trim($keyValue[1]);
 		}
-		
-		return $lang;
+
+		return $this->fullLanguage;
 	}
 	
+	/**
+	 * Get language or a specific index of the language array
+	 * @param $propos the index of the language array or if empty returns the whole thing
+ 	 */
 	public function getLang ($props = '') 
 	{
-		if (! self::$full_language)
-			self::$full_language = $this->setLang();
+		if (!$this->fullLanguage)
+			$this->setLang();
 		
 		if (empty($props))
-			$res = self::$full_language;
+			$res = $this->fullLanguage;
 		elseif (is_array($props)) {
 			$res = [];
 			foreach ($props as $p) 
-				if (isset(self::$full_language[$p]))
-					$res[$p] = self::$full_language[$p];
+				if (isset($this->fullLanguage[$p]))
+					$res[$p] = $this->fullLanguage[$p];
 		}
-		elseif (isset(self::$full_language[$props]))
-			$res = self::$full_language[$props];
+		elseif (isset($this->fullLanguage[$props]))
+			$res = $this->fullLanguage[$props];
 		else 
 			$res = false;
 		
 		return $res;
 	}
 		
-	protected function apply ($html, $all_defs) 
+	/**
+	 * Apply a language to the template
+	 * @param $html the html template to process
+	 * @param $allDefs all the indexes to substitute in the template
+	 * @param $clean if true remove all the not used anchors in teh template 
+ 	 */
+	protected function apply ($html, $allDefs, $clean = false) 
 	{
-		foreach ($all_defs as $name => $content) {
-			$content = addcslashes($content, '\\$'); // this is escaping the $ in the string
+		foreach ($allDefs as $name => $content) {
+			// this is escaping the $ in the string
+			$content = addcslashes($content, '\\$'); 
 			$html = preg_replace('/\<:'.$name.'\/\>/', $content, $html);
 		}
+
+		if ($clean)
+			$html = preg_replace('/\<:(.*)\/\>/', '', $html);
+
 		return $html;
 	}
 
-	public function inject ($filename, $alldef = [], $clean = false) 
+	/**
+	 * This method is usefull to inject code in a template
+	 * @param $filename 
+	 * @param $allDef all the indexes to substitute in the template
+	 * @param $clean if true remove all the not used anchors in teh template 
+ 	 */
+	public function inject ($filename, $allDef = [], $clean = false) 
 	{
 		$filename = FILES_BASE_PATH . $filename;
 
-		if (! file_exists($filename))
+		if (!file_exists($filename))
 			return '';
 
 		$code = file_get_contents($filename);
@@ -845,202 +854,356 @@ class View
 		if ($code === FALSE)
 			return '';
 
-		if ($alldef)
-			$code = $this->apply($code, $alldef);
-
-		if ($clean)
-			$code = preg_replace('/\<:(.*)\/\>/', '', $code);
+		if ($allDef)
+			$code = $this->apply($code, $allDef, $clean);
 
 		return $code;
 	}
-	
+
+	/**
+	 * Renders the template with the definitions of the results
+	 * @param $results the values to insert in the template
+ 	 */
 	public function render ($results = [])
 	{
-		if (! self::$layout_in_use) 
-			return $results;
+		if (!$this->fullLayout)
+			$this->setLayout();
 		
-		if (! self::$full_language) 
-			self::$full_language = $this->setLang();
+		if (!$this->fullLanguage) 
+			$this->setLang();
 				
-		$all = array_merge(self::$full_language, $results);
+		$all = array_merge($this->fullLanguage, $results);
 		
-		self::$full_view = $this->inject(self::$layout_path . self::$layout_in_use . '.html', $all, true);
-		
-		return self::$full_view;
+		return $this->apply($this->fullLayout, $all, true); 
 	}
 }
 
 /**
- *
+ * Class to send emails
  */
-class Email {
+class Email 
+{
 	public static $system = '', 
 				  $from = '', 
 				  $server = '', 
 				  $port = '', 
 				  $user = '', 
-				  $password = '', 
-				  $layout = '', 
-				  $language = ''; 
-	
-	function sendEmail ($emailtoFull, $subjectFull, $content) 
+				  $password = '',
+				  $layout = '';
+
+	/**
+	 * The main method of the class, use this one to send emails
+	 * @param $emailtoFull the destinatary email
+	 * @param $subjectFull the subject of teh email
+	 * @param $content the content of the email
+	 * @param $language if you want to use a specific language in the email
+	 */
+	function sendEmail ($emailtoFull, $subjectFull, $content, $language = '') 
 	{
 		$pattern = ['/\n/', '/\r/', '/content-type:/i', '/to:/i', '/from:/i', '/cc:/i'];
-		
-		$subject = preg_replace($pattern, '', $subjectFull);
-		
 		$emailto = preg_replace($pattern, '', $emailtoFull);
+		$subject = preg_replace($pattern, '', $subjectFull);
 
-		if (self::$layout) {
-			$view = new View();
-			if (self::$language) 
-				$content = array_merge($content, $view->setLang(LANGUAGE_PATH . self::$language));
-			$content = $view->inject(LAYOUT_PATH . self::$layout, $content);
+		if (is_array($content)) {
+			$template = new Template();
+			if ($language)
+				$template->setLang($language);
+			$template->setLayout(self::$layout);
+			$body = wordwrap($template->render($content));
 		}
+		else {
+			$body = wordwrap($content);
+		}
+
+		if (class_exists('PHPMailer')) { 
+			// if smpt email sending is allowed use PHPMailer
+			return $this->sendPHPMailer($emailto, $subject, $body);
+		}
+		else { 
+			// sent the email with php mail
+			return $this->sendMail($emailto, $subject, $body);
+		}
+	}
+	
+	/**
+	 * Send email over SMTP
+	 * @param $emailto the email to send the email to
+	 * @param $subject the subject of the email
+	 * @param $body the full body of the email
+	 */
+	protected function sendPHPMailer ($emailto, $subject, $body) 
+	{
+		$mail = new PHPMailer();
+
+		// for debug only
+		// $mail->SMTPDebug = 3;
+
+		$mail->isSMTP();
+		$mail->Host = self::$server;
+		$mail->Port = self::$port;
+		$mail->SMTPSecure = 'tls';
+		$mail->SMTPAuth = true;
+		$mail->CharSet = 'UTF-8';
+
+		// set the username and password 
+		$mail->Username = self::$user;
+		$mail->Password = self::$password;
+
+		// set the email the subject and the content
+		$mail->setFrom(self::$system, self::$from);
+		$mail->addAddress($emailto);
+		$mail->Subject = $subject;
+		$mail->IsHTML(true);
+		$mail->Body = $body;
+		$mail->AltBody = strip_tags(str_replace('<br>', '\n', $body));
+
+		// send email
+		if (!$mail->send()) { 
+			error_log('Message could not be sent');
+			error_log('Mailer Error: ' . $mail->ErrorInfo);
+			return false;
+		}
+		 
+		return true;
+	} 
+	
+	/**
+	 * Send email 
+	 * @param $emailto the email to send the email to
+	 * @param $subject the subject of the email
+	 * @param $body the full body of the email
+	 */
+	protected function sendMail ($emailto, $subject, $body) 
+	{
+		$from = self::$from . ' <' . self::$system . '>';
+
+		// create a boundary for the email. This
+		$boundary = uniqid('ch');
+
+		// set the headers
+		$headers = 'MIME-Version: 1.0' . '\n';
+		$headers .= 'From: ' . $from . '\n';
+		$headers .= 'Reply-To: ' . $from . '\n';
+		$headers .= 'Content-Type: multipart/alternative;boundary=' . $boundary . '\n';
 		
-		$body = wordwrap($content);
+		// set the body and the txt version
+		$message = '\n\n--' . $boundary . '\n';
+		$message .= 'Content-type: text/plain;charset=utf-8' . '\n\n';
+		$message .= strip_tags(str_replace('<br>', '\n', $body));
+		$message .= '\n\n--' . $boundary . '\n';
+		$message .= 'Content-type: text/html;charset=utf-8' . '\n\n';
+		$message .= $body;
+		$message .= '\n\n--' . $boundary . '--';
 
-		// if smpt email sending is allowed use PHPMailer
-		if (class_exists('PHPMailer')) {
-			$mail = new PHPMailer();
+		error_log($emailto);
+		error_log($subject);
+		error_log($message);		
+		error_log($headers);
 
-			// for debug only
-			// $mail->SMTPDebug = 3;
-
-			$mail->isSMTP();
-			$mail->Host = self::$server;
-			$mail->Port = self::$port;
-			$mail->SMTPSecure = 'tls';
-			$mail->SMTPAuth = true;
-			$mail->CharSet = 'UTF-8';
-
-			// The password and from email
-			$mail->Username = self::$user;
-			$mail->Password = self::$password;
-			$mail->setFrom(self::$system, self::$from);
-
-			// set the email the subject and the content
-			$mail->addAddress($emailto);
-			$mail->Subject = $subject;
-			$mail->IsHTML(true);
-			$mail->Body = $body;
-			$mail->AltBody = strip_tags(str_replace('<br>', '\n', $body));
-
-			if (! $mail->send()) { // send email
-				$mail_sent = false;
-				error_log('Message could not be sent');
-				error_log('Mailer Error: ' . $mail->ErrorInfo);
-			}
-			else 
-				$mail_sent = true;
-		}
-		else { // sent the email with php mail
-			$from = self::$from . ' <' . self::$system . '>';
-
-			// Create a boundary for the email. This
-			$boundary = uniqid('ch');
-
-			// Create header
-			$headers = 'MIME-Version: 1.0' . '\n';
-			$headers .= 'From: ' . $from . '\n';
-			$headers .= 'Reply-To: ' . $from . '\n';
-			$headers .= 'Content-Type: multipart/alternative;boundary=' . $boundary . '\n';
-
-			// Create the body and the txt version
-			$message = '\n\n--' . $boundary . '\n';
-			$message .= 'Content-type: text/plain;charset=utf-8' . '\n\n';
-			$message .= strip_tags(str_replace('<br>', '\n', $body));
-			$message .= '\n\n--' . $boundary . '\n';
-			$message .= 'Content-type: text/html;charset=utf-8' . '\n\n';
-			$message .= $body;
-			$message .= '\n\n--' . $boundary . '--';
-
-			// Send email
-			$mail_sent = mail($emailto, $subject, $message, $headers);
-		}
-
-		return $mail_sent;
+		// send email
+		return mail($emailto, $subject, $message, $headers);	
 	}
 }
 
 /**
- *
+ * Class to send calls over the internet
+ */
+class Curl 
+{
+	private $handle = null, 
+			$lastUrl = '';
+
+	/**
+	 * Method to send a call over the internet
+	 * @param $method the method of the call (GET, POST, PUT, DELETE)
+	 * @param $url the url of the curl call
+	 * @param $request the body of the request for POST, PUT, etc
+	 * @param $headers the headers of the curl call
+	 * @param $options more options for the curl call
+	 * @param $connectTimeout the amount of time tofor the timeout
+	 */
+	public function sendHttp($method, $url, $request = '', $headers = array(), $options = array(), $connectTimeout = 30) 
+	{
+		$ret = array(
+			'result' => false,
+			'code'   => 0
+		);
+
+		// if arguments are incorrect type, return unsuccessful
+		if (!$method || !$url) {
+			return $ret;
+		}
+
+		// if this is a new url, reset the handle and set the lastUrl
+		if ($url !== $this->lastUrl) {
+			if ($this->handle) {
+				curl_close($this->handle);
+			}
+			$this->handle = curl_init($url);
+			$this->lastUrl = $url;
+		}
+
+		// setup the request method and (optional) data
+		switch ($method) {
+			case 'GET':
+				// don't do anything
+				break;
+
+			case 'PUT':
+				curl_setopt($this->handle, CURLOPT_POSTFIELDS, $request);
+				curl_setopt($this->handle, CURLOPT_CUSTOMREQUEST, "PUT");
+				break;
+					
+			case 'POST':
+				curl_setopt($this->handle, CURLOPT_POSTFIELDS, $request);
+				curl_setopt($this->handle, CURLOPT_CUSTOMREQUEST, "POST");
+				break;
+					
+			case 'DELETE':
+				curl_setopt($this->handle, CURLOPT_CUSTOMREQUEST, "DELETE");
+				break;
+
+			default: 
+				return $ret;
+		}
+
+		if ($headers) {
+			// set the headers
+			$curlHeaders = array();
+			foreach ($headers as $header => $value) {
+				$curlHeaders[] = "{$header}: {$value}";
+			}
+			curl_setopt($this->handle, CURLOPT_HTTPHEADER, $curlHeaders);
+		}
+  		
+		if ($options) {
+			// set the options
+			foreach ($options as $key => $option) {
+				curl_setopt($this->handle, $key, $option);
+			}
+		}
+		
+		// set the timeout
+		curl_setopt($this->handle, CURLOPT_TIMEOUT, $connectTimeout);
+  
+		$result = curl_exec($this->handle);
+
+		$ret['result'] = $result;
+		$ret['code'] = curl_getinfo($this->handle, CURLINFO_HTTP_CODE);
+	  
+		// this function have to be called several times because the messages are queued
+		while (openssl_error_string());
+
+		return $ret;
+	}
+}
+
+/**
+ * This is a quick access to the main features 
+ * @param $query this is the main query, usually in this syntax "action: query"
+ * @param $options this options to insert in the query
+ * @param $extras more options basically
  */
 $_ = function ($query = '', $options = [], $extras = '') 
 {
-	static $controller = NULL, 
+	static $app = NULL, 
 		   $database = NULL, 
-		   $view = NULL, 
+		   $template = NULL, 
 		   $email = NULL;
 
-	$controller = $controller ?? new Controller();
+	$app = $app ?? new App();
 	$database = $database ?? new Database();
-	$view = $view ?? new View();
+	$template = $template ?? new Template();
 	$email = $email ?? new Email();
 	
 	// first get the parts of the query into an array
-	$action = $controller->getAction($query);
-	$query = $controller->getQuery($query);
+	$action = getAction($query);
+	$query = getQuery($query);
 	
 	// check if the action is defined
 	switch ($action) 
-	{	
-		/******************
-		* Express Init & Run
-		*******************/
-			
+	{
+		/*********************
+		 * Express Init & Run
+		 *********************/
+		
+		// run the app, automatic and simple
 		case 'run': 
-			$controller->config();
+			$app->config();
 			$database->connect();
-			echo $view->render($controller->route());			
+			echo $template->render($app->route());
 			break;
 		
-		/******************
-		* CONTROL ACTIONS
-		*******************/
+		/*********************
+		 * APP ACTIONS
+		 *********************/
 
+		// load the config from some file
 		case 'config:':
 			$options = $query;
 			
+		// set the config	
 		case 'config': 
-			return $controller->config($options);
+			return $app->config($options);
 				
+		// route to some path
 		case 'route:':
 			$extras = $options;
 			$options = $query;
 			
+		// route the app
 		case 'route': 
-			return $controller->route($options, $extras);
+			return $app->route($options, $extras);
 
-		/*******************
-		* VIEW ACTIONS
-		********************/
+		/*********************
+		 * TEMPLATE ACTIONS
+		 *********************/
 
+		// get the full layout 
+		case 'getlayout':
+			return $template->getLayout();
+
+		// set layout from some specific file
+		case 'setlayout:': 
+			$options = $query;
+
+		// set layout
+		case 'setlayout': 
+			return $template->setLayout($options);
+	
+		// set language to some specific file
 		case 'setlang:': 
 			$options = $query;
 			
+		// set language
 		case 'setlang': 
-			return $view->setlang($options);
+			return $template->setlang($options);
 		
+		// get some of the value sof the language
 		case 'getlang:':
 			$options = $query;
 			
+		// get the language
 		case 'getlang':
-			return $view->getLang($options);
+			return $template->getLang($options);
 			
+		// inject a file
 		case 'inject:':
-			return $view->inject($query, $options, $extras ? false : true);
+			return $template->inject($query, $options, $extras ? false : true);
 	
+		// render the results
 		case 'render':
-			return $view->render($options);
+			return $template->render($options);
 	
-		/*******************
-		* DATABASE ACTIONS
-		********************/
+		/*********************
+		 * DATABASE ACTIONS
+		 *********************/
 		
+		 // connect to the database
 		case 'connect':
 			return $database->connect();
 		
+		// sanitize the values
 		case 'sanitize':
 			return $database->sanitize($options);
 		
@@ -1057,19 +1220,19 @@ $_ = function ($query = '', $options = [], $extras = '')
 		case ':':
 			return $database->query($query, $options, $extras ? $extras : []);
 
-		/*******************
-		* EMAIL ACTIONS
-		********************/
+		/*********************
+		 * EMAIL ACTIONS
+		 *********************/
 		
+		// send email takes an email, the subject and the content
 		case 'mail:': 
-			// send email takes an email, the subject and the content
 			return $email->sendEmail($query, $options, $extras);
 			break;
 		
-		/******************
-		* Unknowed action,
-		* return error 
-		*******************/
+		/*********************
+		 * Unknowed action,
+		 * return error 
+		 *********************/
 
 		default:
 			error_log('WOW (not an option): ' . $action . ' \n query: ' . print_r($query, true) . '\n options: ' . print_r($options, true));
@@ -1077,10 +1240,51 @@ $_ = function ($query = '', $options = [], $extras = '')
 	}
 };
 
-/******** TOOLS **********************/
+/**
+ * Gets the query and extracts the action, the first part of the query
+ */
+function getAction ($fullQuery) 
+{
+	$query = explode (' ', trim($fullQuery));
+
+	if (strrpos($query[0], ':') === 0)
+		$action = ':';
+	elseif (!empty($query[1]) && $query[1] == ':') 
+		$action = $query[0] . $query[1];
+	else 
+		$action = $query[0];
+
+	return trimLower($action);
+}
 
 /**
- *
+ * Gets the string and extracts the real query, everything after the action
+ */	
+function getQuery($query) 
+{
+	$query = trim($query);
+
+	if (strrpos($query, ':') === 0) 
+		return substr($query, 1);
+
+	$parts = explode (' ', $query);
+	
+	unset($parts[0]);
+	
+	for ($i = 1, $c = count($parts); $i <= $c; $i++) {
+		if (!empty($parts[$i])) 
+			break;
+		unset($parts[$i]);
+	}
+
+	if ($i <= $c && $parts[$i] == ':') 
+		unset($parts[$i]); 
+
+	return implode(' ', $parts);
+}
+
+/**
+ * Trim and "lowercase" a string, useful to compare usernames in the database 
  */
 function trimLower ($str) 
 {
@@ -1088,22 +1292,22 @@ function trimLower ($str)
 }
 
 /**
- *
+ * Just return the string as html output, with especial symbols (< to &lt;) and new lines (\n to <br>) converted
  */
 function htmlOut ($str = '') 
 {
-	return nl2br(htmlspecialchars($str, ENT_QUOTES)); // just output in html
+	return nl2br(htmlspecialchars($str, ENT_QUOTES)); 
 }
 
 /**
- *
+ * Return a link properly formatted
  */
-function linkOut ($urlpage = '', $get_args = []) 
+function linkOut ($urlpage = '', $getArgs = []) 
 {
 	$url = rawurlencode($urlpage);
-	if (! empty($get_args)) {
+	if (!empty($getArgs)) {
 		$url .= '?';
-		foreach ($get_args as $key => $value)
+		foreach ($getArgs as $key => $value)
 			$url .= $key . '=' . urlencode($value);
 	}
 
@@ -1111,7 +1315,7 @@ function linkOut ($urlpage = '', $get_args = [])
 }
 
 /**
- *
+ * Return the javascript code for output
  */
 function jsOut($str = '') 
 {
