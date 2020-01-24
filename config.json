@@ -1,5 +1,5 @@
 {
-	"FILES_BASE_PATH": "/my2cents/",
+	"FILES_BASE_PATH": "/",
 	
 	"TEMPLATE": {
 		"LANGUAGE_PATH": "app/languages/",
@@ -11,9 +11,11 @@
 	"DATABASE": {
 		"ADAPTER": "MYSQL",
 		"HOST": "localhost",
+		"PORT": "3306",
 		"DATABASE": "my2cents",
 		"USER": "root",
-	},	
+		"PASSWORD": ""
+	},
 	
 	"EMAIL": {
 		"SYSTEM": "my2cents@gmail.com",
@@ -31,11 +33,13 @@
 	},
 	
 	"ROUTES": {
-		"DEFAULT": "index",
-		
+		"DEFAULT": {
+			"redirect": "/quotes"
+		},
+
 		"404": "notFound",
 		
-		"example1": "doThis",
+		"example1": "hello",
 		
 		"example2": {
 			"class": "ExampleClass",
@@ -43,8 +47,8 @@
 		},
 		
 		"example3": {
-			"redirect": "/",
-			"dothis": "doThis" 
+			"redirect": "/example1",
+			"hello": "hello" 
 		},
 		
 		"example4": {
@@ -61,7 +65,7 @@
 		},
 		
 		"example6": {
-			"action": "doThis",
+			"action": "hello",
 			"arguments" : {
 				"action": "arguments",
 				"args": "{\"test\": \"1\", \"outside\": {\"inside\": \"1\"}}"
@@ -82,14 +86,8 @@
 			}
 		},
 		
-		"interview": {
-			"set1": "problem1",
-			"set2": "problem2",
-			"set3": "problem3"
-		},
-
-		"full": {
-			"action": "fullExample",
+		"btc": {
+			"action": "BTCFullExample",
 			"refresh": {
 				"action": "refreshBTCPrice",
 				"layout": "simple"
@@ -99,11 +97,33 @@
 				"layout": "simple"
 			}
 		},
-		
-		"urldecode": {
-			"class": "urldecodeClass",
-			"method": "urldecodeAction",
-			"layout": "simple"
+
+		"quotes": {
+			"action": "Quotes\\showQuotes",
+			"layout": "quotes",
+			"language": "quotes",
+			"signin": {
+				"action": "Quotes\\signInQuotes"
+			},
+			"signup": {
+				"action": "Quotes\\signupQuotes"
+			},
+			"logout": "Quotes\\logoutQuote",
+			"dashboard": {
+				"enforce": "Quotes\\enforceQuotes",
+				"action": "Quotes\\dashboardQuotes",
+				"new": "Quotes\\newQuotes",
+				"edit": "Quotes\\editQuotes"
+			},
+			"ajax": {
+				"layout": "simple",
+				"get": "Quotes\\Ajax\\getQuotes",
+				"admin": {
+					"enforce": "Quotes\\Ajax\\enforceAjaxQuotes",	
+					"add": "Quotes\\Ajax\\addQuotes",
+					"del": "Quotes\\Ajax\\delQuotes"
+				}
+			}
 		}
 	}
 }

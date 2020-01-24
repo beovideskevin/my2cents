@@ -25,7 +25,7 @@ function refreshBTCPrice ()
 		]
 	);
 
-	return ["RESULT" => $result['result']];
+	return ["OUTPUT" => $result['result']];
 }
 
 function saveBTCPrice ($args) 
@@ -41,5 +41,5 @@ function saveBTCPrice ($args)
 		]);
 	}
 
-	return ["RESULT" => $return];
+	return ["OUTPUT" => $return];
 }

@@ -9,7 +9,7 @@ $(document).ready(function () {
 // get the exchange rate
 function getExchange() {
     $.ajax({
-        url: "full/refresh", 
+        url: "btc/refresh", 
     }).done(function (data) {
 
             data = JSON.parse(data);
@@ -41,7 +41,7 @@ function getExchange() {
 
                 $("#result").html(html);
 
-                $.ajax({url: "full/save", data: data}).done(function (ret) { 
+                $.ajax({url: "btc/save", data: data}).done(function (ret) { 
                     if (!ret) {
                         console.log("Saving the data failed");
                     }

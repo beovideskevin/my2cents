@@ -1,4 +1,2 @@
-/app/
-/backup/
-/backup/configs.txt
-config.json
+.idea
+backup

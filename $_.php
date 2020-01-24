@@ -388,9 +388,7 @@ class Table extends Database
 				if ($key == '_table' || $key == '_id')
 					continue;
 				
-				if ($query) 
-					$query .= ",";
-				
+				$query .= $query ? "," : "";
 				$query .= $key . "='" . $value . "'";
 			}
 			$result = $_(": UPDATE {$tableName} SET {$query} WHERE {$idName} = '{$this->$idName}'");
@@ -402,11 +400,8 @@ class Table extends Database
 				if ($key == '_table' || $key == '_id')
 					continue;
 				
-				if ($insertKey) 
-					$insertKey .= ",";
-				
-				if ($insertValue) 
-					$insertValue .= ",";
+				$insertKey .= $insertKey ? "," : "";
+				$insertValue .= $insertValue ? "," : "";
 				
 				$insertKey .= $key;
 				$insertValue .= "'" . $value . "'"; 
@@ -434,7 +429,7 @@ class Table extends Database
 	 */
 	public function delete() 
 	{
-		// I didn't implemented this method because I think you should never delete anything
+		// I didn't implemented this method because I think you should never delete anything.
 		// If you still feel you should delete something, don't forget to implement and call cascade.
 		// if (is_callable([$this, 'cascade']) && !$this->cascade()) return false;
 	}
@@ -711,33 +706,33 @@ class App
 					break;
 				}
 			}
-			
-			// if the result is still an array
-			if (is_array($action)) { 
-			
-				// redirect to another url
-				if (!empty($action['redirect'])) { 
-					header ('Location: ' . $action['redirect']);
-					die ();
-				}
-				
-				// preferred way when a class is called
-				elseif (!empty($action['method']) && !empty($action['class'])) { 
-					$class = $action['class'];
-					$action = $action['method'];					
-				}
-				
-				// preferred way when the action is just a function
-				elseif (!empty($action['action'])) 
-					$action = $action['action'];
-				
-				// there is something wrong here...
-				else 
-					$action = self::$routes['404'];
-			}
 		}
-		
-		// register all the classes
+
+        // if the result is still an array
+        if (is_array($action)) {
+
+            // redirect to another url
+            if (!empty($action['redirect'])) {
+                header ('Location: ' . $action['redirect']);
+                die ();
+            }
+
+            // preferred way when a class is called
+            elseif (!empty($action['method']) && !empty($action['class'])) {
+                $class = $action['class'];
+                $action = $action['method'];
+            }
+
+            // preferred way when the action is just a function
+            elseif (!empty($action['action']))
+                $action = $action['action'];
+
+            // there is something wrong here...
+            else
+                $action = self::$routes['404'];
+        }
+
+        // register all the classes
 		if (!empty(self::$includes['FOLDERS'])) { 
 			$folders = explode(';', self::$includes['FOLDERS']); 
 
@@ -755,7 +750,7 @@ class App
 		
 		// call the function that enforces login
 		if (!empty($enforce) && is_callable($enforce)) 
-				call_user_func($enforce, $args);
+			call_user_func($enforce, $args);
 		
 		// lets call the main action inside a class
 		if (!empty($class) && is_callable([$c = new $class($args), $action])) 
@@ -778,7 +773,7 @@ class Template
 	public static $defaultLayout = '',
 				  $defaultLanguage = '';
 				  
-	protected $fullLanguage = [],
+	protected $fullLanguage = '',
 		      $fullLayout = '';
 	
 	/**
@@ -857,7 +852,7 @@ class Template
 	 * @param $allDefs all the indexes to substitute in the template
 	 * @param $clean if true remove all the not used anchors in teh template 
  	 */
-	protected function apply ($html, $allDefs = [], $clean = false) 
+	protected function apply ($html, $allDefs, $clean = false) 
 	{
 		foreach ($allDefs as $name => $content) {
 			// this is escaping the $ in the string
@@ -877,7 +872,7 @@ class Template
 	 * @param $allDef all the indexes to substitute in the template
 	 * @param $clean if true remove all the not used anchors in teh template 
  	 */
-	public function inject ($filename, $allDefs = [], $clean = false) 
+	public function inject ($filename, $allDef = [], $clean = false) 
 	{
 		$filename = FILES_BASE_PATH . $filename;
 
@@ -889,8 +884,8 @@ class Template
 		if ($code === FALSE)
 			return '';
 
-		if ($allDefs)
-			$code = $this->apply($code, $allDefs, $clean);
+		if ($allDef)
+			$code = $this->apply($code, $allDef, $clean);
 
 		return $code;
 	}
@@ -994,8 +989,8 @@ class Email
 
 		// send email
 		if (!$mail->send()) { 
-			error_log('Message could not be sent');
-			error_log('Mailer Error: ' . $mail->ErrorInfo);
+			// error_log('Message could not be sent');
+			// error_log('Mailer Error: ' . $mail->ErrorInfo);
 			return false;
 		}
 		 
@@ -1030,10 +1025,10 @@ class Email
 		$message .= $body;
 		$message .= '\n\n--' . $boundary . '--';
 
-		error_log($emailto);
-		error_log($subject);
-		error_log($message);		
-		error_log($headers);
+		// error_log($emailto);
+		// error_log($subject);
+		// error_log($message);		
+		// error_log($headers);
 
 		// send email
 		return mail($emailto, $subject, $message, $headers);	
@@ -1054,7 +1049,7 @@ class Curl
 	 * @param $url the url of the curl call
 	 * @param $request the body of the request for POST, PUT, etc
 	 * @param $headers the headers of the curl call
-	 * @param $options more options for the curl call
+	 * @param $options more options for the curl call ()
 	 * @param $connectTimeout the amount of time tofor the timeout
 	 */
 	public function sendHttp($method, $url, $request = '', $headers = array(), $options = array(), $connectTimeout = 30) 
@@ -1131,6 +1126,37 @@ class Curl
 
 		return $ret;
 	}
+	
+	/*
+		Useful snippets of code, you do not have to use all those options: 
+
+		$query_string = http_build_query($data_array); 
+		$time = 30;
+		$useragent='InvestiGate API Access';
+		$userpwd = array(
+			"api_username" => "", 
+			"api_password" => ""
+		);
+		$curl = new Curl();
+		$result = $curl->sendHttp(
+			"POST", 
+			"https://www.example.com/",
+			"",
+			[],
+			[
+				CURLOPT_SSL_VERIFYPEER => 0,
+				CURLOPT_RETURNTRANSFER => true,
+				CURLOPT_VERBOSE        => false,
+				CURLOPT_POSTFIELDS     => $query_string,
+				CURLOPT_POST           => true,
+				CURLOPT_HTTPGET        => true,
+				CURLOPT_TIMEOUT        => $time,
+				CURLOPT_CONNECTTIMEOUT => $time,
+				CURLOPT_USERAGENT      => $useragent,
+				CURLOPT_USERPWD        => $userpwd['api_username'].':'.$userpwd['api_password']
+			]
+		);
+	*/
 }
 
 /**
@@ -1166,7 +1192,9 @@ $_ = function ($query = '', $options = [], $extras = '')
 		case 'run': 
 			$app->config();
 			$database->connect();
-			echo $template->render($app->route());
+			// if the router returned null pass an empty array to the render, 
+			// this avoids warnings from php 
+			echo $template->render($app->route() ?? []); 
 			break;
 		
 		/*********************
