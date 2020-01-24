@@ -9,12 +9,10 @@
 	},
 	
 	"DATABASE": {
-		"ADAPTER": "postgresql",
-		"HOST": "api-test.payrix.com",
-		"PORT": "5432",
-		"DATABASE": "testnosql",
-		"USER": "payrix",
-		"PASSWORD": "payrix"
+		"ADAPTER": "MYSQL",
+		"HOST": "localhost",
+		"DATABASE": "my2cents",
+		"USER": "root",
 	},	
 	
 	"EMAIL": {

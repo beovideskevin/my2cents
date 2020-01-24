@@ -299,10 +299,7 @@ class Database
 }
 
 /**
- * This class works as a model. To add functionality to this record class just extend it and implement some of these methods:
- * 	protected function validate () {} // This method is call for validate the values of the object
- * 	protected function relate () {} // This method is call to buil the external relationships
- * 	protected function cascade () {} // This method is called to delete the related records when deleting this one
+ * This class works as a model. To add functionality to this table class just implement validations. 
  */
 class Table extends Database
 {
@@ -431,6 +428,44 @@ class Table extends Database
 
 		return $result;
 	}
+	
+	/**
+	 * Deletes the record. 
+	 */
+	public function delete() 
+	{
+		// I didn't implemented this method because I think you should never delete anything
+		// If you still feel you should delete something, don't forget to implement and call cascade.
+		// if (is_callable([$this, 'cascade']) && !$this->cascade()) return false;
+	}
+
+}
+
+/**
+ * This interface is useful to extend the functionality of the Table class:
+ * 	protected function validate () {} // This method is call for validate the values of the object
+ * 	protected function relate () {} // This method is call to buil the external relationships
+ * 	protected function cascade () {} // This method is called to delete the related records when deleting this one
+ */
+interface Validations 
+{
+	/**
+	 * In this method you should implement the validations, 
+	 * it returns true if the values of the object are correct 
+	 * and false if they are wrong
+	 */
+	function validate ();
+	
+	/**
+	 * In this method you should build external relationships to this object 
+	 * and store them in the properties
+	 */
+	function relate ();
+	
+	/**
+	 * This method is called after save to update the related records 
+	 */
+	function cascade ();
 }
 
 /**
@@ -743,7 +778,7 @@ class Template
 	public static $defaultLayout = '',
 				  $defaultLanguage = '';
 				  
-	protected $fullLanguage = '',
+	protected $fullLanguage = [],
 		      $fullLayout = '';
 	
 	/**
@@ -822,7 +857,7 @@ class Template
 	 * @param $allDefs all the indexes to substitute in the template
 	 * @param $clean if true remove all the not used anchors in teh template 
  	 */
-	protected function apply ($html, $allDefs, $clean = false) 
+	protected function apply ($html, $allDefs = [], $clean = false) 
 	{
 		foreach ($allDefs as $name => $content) {
 			// this is escaping the $ in the string
@@ -842,7 +877,7 @@ class Template
 	 * @param $allDef all the indexes to substitute in the template
 	 * @param $clean if true remove all the not used anchors in teh template 
  	 */
-	public function inject ($filename, $allDef = [], $clean = false) 
+	public function inject ($filename, $allDefs = [], $clean = false) 
 	{
 		$filename = FILES_BASE_PATH . $filename;
 
@@ -854,8 +889,8 @@ class Template
 		if ($code === FALSE)
 			return '';
 
-		if ($allDef)
-			$code = $this->apply($code, $allDef, $clean);
+		if ($allDefs)
+			$code = $this->apply($code, $allDefs, $clean);
 
 		return $code;
 	}
