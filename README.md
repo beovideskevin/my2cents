@@ -145,6 +145,7 @@ my2cents.loc/example6
 my2cents.loc/example6/arguments
 my2cents.loc/btc
 my2cents.loc/quotes
+my2cents.loc/quotes/login
 ```
 
 For the lastone the username is "admin@my2cents.loc" and the password is "123456". 
