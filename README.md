@@ -123,7 +123,5 @@ After cloning the repository add a file named "config.json" to the root folder w
 }
 ```
 
-In order to make all the examples work you will need to import into the database the scripts located in the folder "migrartions". 
-
-I developed this framkework using using WAMP. If you are using IIS or Nginx or PostgreSQL you will need to make some changes in the scripts and other configuration files (read ".htaccess" and reproduce that logic).
+I developed this framkework using using WAMP. All the examples should work in an Apache virtual host. If you are using IIS or Nginx you will need to make some changes in the configuration files of your server (read ".htaccess" and reproduce that logic). In order to make all the examples work you will need to import into the database the scripts located in the folder "migrartions". These were created for MySQL, if you are using PostgreSQL or somethng else, you may need to make some changes.
 
