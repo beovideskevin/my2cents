@@ -60,7 +60,7 @@ function BTCFullExample ($args)
 	}
 
 	$oldValues = "";
-	$rates = $_("assoc: SELECT * FROM rates ORDER BY id DESC");
+	$rates = $_("assoc: SELECT * FROM btcexample ORDER BY id DESC");
 
 	if ($rates) {
 		$rate = new Rate();
@@ -79,7 +79,7 @@ function BTCFullExample ($args)
 		
 		// This sends an email 
 		$email = new Email();
-		$email->sendEmail("beovideskevin@gmail.com", "Exchange rate", ["RESULT" => $oldValues]);
+		// $email->sendEmail("beovideskevin@gmail.com", "Exchange rate", ["RESULT" => $oldValues]);
 	}
 
 	$results = [

@@ -12,6 +12,6 @@ class QuoteUser extends Table
 {
 	function __construct () 
 	{
-		parent::__construct("quote_user", "id");
+		parent::__construct("quotes_user", "id");
 	}
 }
