@@ -1,11 +1,16 @@
 <?php
 
-function ajax ($args) 
+function ajax ()
 {
 	die();
 }
 
-function refreshBTCPrice () 
+function helloAjax()
+{
+    return ["OUTPUT" => "Hello, world!"];
+}
+
+function refreshBTCPrice ()
 {
 	/**
 	 * https://www.alphavantage.co/documentation/
