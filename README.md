@@ -76,6 +76,7 @@ After cloning the repository add a file named "config.json" to the root folder w
 			"action": "ajax",
 			"layout": "simple",
 			"admin": {
+				"action": "helloAjax",
 				"enforce": "enforce"
 			}
 		},
@@ -130,6 +131,14 @@ my2cents.loc/example1
 my2cents.loc/example2
 my2cents.loc/example3
 my2cents.loc/example4
+my2cents.loc/example4/private
+my2cents.loc/login
+my2cents.loc/example4/private
+my2cents.loc/logout
+my2cents.loc/ajax/admin
+my2cents.loc/login
+my2cents.loc/ajax/admin
+my2cents.loc/logout
 my2cents.loc/example5
 my2cents.loc/example6
 my2cents.loc/btc
