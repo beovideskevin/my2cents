@@ -1,126 +1,128 @@
 # My two cents
 
-File structure:
-/
-	.htaccess
-	config.json
-	index.php
-/app/
-	/controllers/
-		index.php
-	/layouts/
-		home.html
-	/languages/
-		en.ini
+My2Cents is a simple but feature rich php framework. You can see a full working example here: <a href="https://my2cents.eldiletante.com/">my2cents</a>
 
-/.htaccess:
-	<IfModule mod_rewrite.c>
-		RewriteEngine On
-		RewriteCond %{REQUEST_FILENAME} !-d
-		RewriteCond %{REQUEST_FILENAME} !-f
-		RewriteRule ^((?s).*)$ index.php?_url=$1 [QSA,L]
-	</IfModule>
+After cloning the repository add a file named "config.json" to the root folder with the following code:
 
-	<Files "config.json">
-		Order Allow,Deny
-		Deny from all
-	</Files>
-
-	Options -Indexes
-
-/config.json:
-	{
-		"BASE_PATH": "/",
-
-		"LANGUAGES_PATH": "app/languages/",
+{
+	"FILES_BASE_PATH": "/",
+	
+	"TEMPLATE": {
+		"LANGUAGE_PATH": "app/languages/",
 		"DEFAULT_LANGUAGE": "en",
-
 		"LAYOUT_PATH": "app/layouts/",
-		"DEFAULT_LAYOUT": "home",
-
-		"REGISTER":
-		{
-			"EXCEPTIONS": "",
-			"FOLDERS": "app/"
+		"DEFAULT_LAYOUT": "example"
+	},
+	
+	"DATABASE": {
+		"ADAPTER": "MYSQL",
+		"HOST": "localhost",
+		"PORT": "3306",
+		"DATABASE": "my2cents",
+		"USER": "yourusername",
+		"PASSWORD": "yourpassword"
+	},
+	
+	"EMAIL": {
+		"SYSTEM": "my2cents@gmail.com",
+		"FROM": "My2Cents",
+		"SERVER": "",
+		"PORT": "",
+		"USER": "",
+		"PASSWORD": "",
+		"LAYOUT": "email"
+	},
+	
+	"REGISTER": {
+		"EXCEPTIONS": "",
+		"FOLDERS": "app/"
+	},
+	
+	"ROUTES": {
+		"DEFAULT": {
+			"redirect": "/quotes"
 		},
-
-		"ROUTES":
-		{
-			"DEFAULT": "index",
-			"404": "notFound"
+		"404": "notFound",
+		"example1": "hello",
+		"example2": {
+			"class": "ExampleClass",
+			"method": "exampleMethod"
+		},
+		"example3": {
+			"redirect": "/example1",
+			"hello": "hello" 
+		},
+		"example4": {
+			"action": "publicArea",
+			"private": {
+				"enforce": "enforce",
+				"action": "privateArea"
+			}
+		},
+		"example5" : {
+			"action": "arguments",
+			"args": "{\"test\": \"1\", \"outside\": {\"inside\": \"1\"}}"
+		},
+		"example6": {
+			"action": "hello",
+			"arguments" : {
+				"action": "arguments",
+				"args": "{\"test\": \"1\", \"outside\": {\"inside\": \"1\"}}"
+			}
+		},
+		"login": {
+			"action": "login"
+		},
+		"logout": "logout",
+		"ajax": {
+			"action": "ajax",
+			"layout": "simple",
+			"admin": {
+				"enforce": "enforce"
+			}
+		},
+		"btc": {
+			"action": "BTCFullExample",
+			"refresh": {
+				"action": "refreshBTCPrice",
+				"layout": "simple"
+			},
+			"save": { 
+				"action": "saveBTCPrice",
+				"layout": "simple"
+			}
+		},
+		"quotes": {
+			"action": "Quotes\\showQuotes",
+			"layout": "quotes",
+			"language": "quotes",
+			"signin": {
+				"action": "Quotes\\signInQuotes"
+			},
+			"signup": {
+				"action": "Quotes\\signupQuotes"
+			},
+			"logout": "Quotes\\logoutQuote",
+			"dashboard": {
+				"enforce": "Quotes\\enforceQuotes",
+				"action": "Quotes\\dashboardQuotes",
+				"new": "Quotes\\newQuotes",
+				"edit": "Quotes\\editQuotes"
+			},
+			"ajax": {
+				"layout": "simple",
+				"get": "Quotes\\Ajax\\getQuotes",
+				"admin": {
+					"enforce": "Quotes\\Ajax\\enforceAjaxQuotes",	
+					"add": "Quotes\\Ajax\\addQuotes",
+					"del": "Quotes\\Ajax\\delQuotes"
+				}
+			}
 		}
 	}
+}
 
-/index.php
-    <?php
-		session_start();
+In order to make all the examples work you will need to import into the database the scripts located in the folder "migrartions". 
 
-		require_once('$_.php');
+I developed this framkework using using WAMP. If you are using IIS or Nginx or PostgreSQL you will need to make some changes in the scripts and other configuration files (read ".htaccess" and reproduce that logic).
 
-		$_('run');
-
-/app/contollers/index.php:
-    <?php
-		function index($args) {
-			return ["OUTPUT" => "hello, world"];
-		}
-
-		function notFound() {
-			die("404");
-		}
-
-/app/layout/home.html:
-	<:TITLE/>
-	<:OUTPUT/>
-
-/app/language/en.ini
-	TITLE=>Hello
-
-Layouts
-	Adding HTML
-	Adding css
-	Adding javascript
-	Injecting code
-		HTML
-		css
-		javascript
-
-Languages
-	Adding various languages
-
-Registering
-
-Routing
-	indexes, action, sub-routes
-	classes
-	passing arguments
-	privacy
-		enforce
-		login
-		logout
-		ajax calls
-	adding registering
-	changing templates and language
-	redirection
-
-Connecting to a database and doing queries
-	include here the mysql code
-
-Working with models
-	
-	validation of card number
-    /**
-     * Credit card number patterns used to figure out the credit card network
-     * @var array
-     */
-    const CARD_PATTERNS = array(
-      'AMEX'     => '/(^34|^37)\d{13}/',
-      'VISA'     => '/(^4)(\d{15}|\d{12})/',
-      'MC'       => '/((^5[1-5])(\d{17}|\d{14}))|((^2[2-7])(\d{17}|\d{14}))/',
-      'DISCOVER' => '/^30[0-5]\d{5}|^3095\d{4}|^35(2[8-9]\d{4}|[3-8]\d{5})|' .
-                    '^36|^38|^39|^64|^65|^6011|^62(2(1(2[6-9]\d{2}|' .
-                    '[3-9]\d{2}|[3-9]\d{3})|[2-9]\d{4})|[3-6]\d{5})|' .
-                    '^628[2-8]\d{4}/'
-    );
-
-Working with emails
