@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule   ^$ public/    [L]
+    RewriteRule   ((?s).*) public/$1 [L]
+</IfModule>
+
+<Files "config.json">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+Options -Indexes
