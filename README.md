@@ -124,7 +124,7 @@ After cloning the repository add a file named "config.json" to the root folder w
 I developed this framkework using using WAMP. All the examples should work in an Apache virtual host. If you are using IIS or Nginx you will need to make some changes in the configuration files of your server (reproduce the logic in "/.htaccess" and "/public/.htaccess"). In order to make all the examples work you will need to import into the database the scripts located in the folder "migrartions". These were created for MySQL, if you are using PostgreSQL or somethng else, you may need to make some changes.
 
 After all this is done you can check the examples in the routes:
-
+```
 my2cents.loc/
 my2cents.loc/example1
 my2cents.loc/example2
@@ -134,3 +134,4 @@ my2cents.loc/example5
 my2cents.loc/example6
 my2cents.loc/btc
 my2cents.loc/quotes
+```
