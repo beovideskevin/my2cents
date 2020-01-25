@@ -3,7 +3,7 @@
 My2Cents is a simple but feature rich php framework. You can see a full working example here: <a href="https://my2cents.eldiletante.com/">my2cents</a>
 
 After cloning the repository add a file named "config.json" to the root folder with the following code:
-
+```
 {
 	"FILES_BASE_PATH": "/",
 	
@@ -121,6 +121,7 @@ After cloning the repository add a file named "config.json" to the root folder w
 		}
 	}
 }
+```
 
 In order to make all the examples work you will need to import into the database the scripts located in the folder "migrartions". 
 
