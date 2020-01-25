@@ -4,7 +4,7 @@ class Rate extends Table
 {
 	function __construct () 
 	{
-		parent::__construct("rates", "id");
+		parent::__construct("btcexample", "id");
 	}
 
 	function getFormatedValue () 
