@@ -126,7 +126,7 @@ After doing this add a file named "/config.json" to the root folder with the fol
 	}
 }
 ```
-If you don't want to use a virtual host, you could just clone the repository in the root of your web documents and change the second line of the "config.json" to "FILES_BASE_PATH": "/my2cents/". Then go to /app/layouts/ and edit both "example.html" and "quotesLay.html"; every reference to an external resource should be prefixed with "/my2cents/".
+If you don't want to use a virtual host, you could just clone the repository in the root of your web documents and create the htaccess files. Create the config file but change the second line to "FILES_BASE_PATH": "/my2cents/". Then go to /app/layouts/ and edit both "example.html" and "quotesLay.html"; every reference to an external resource should be prefixed with "/my2cents/".
 
 If you are using IIS or Nginx you will need to make some changes to "web.config" or the configuration files of your server (reproduce the logic in "/.htaccess" and "/public/.htaccess"). 
 
