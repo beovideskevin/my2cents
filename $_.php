@@ -2,21 +2,23 @@
 
 /******************************************************************************
 
-	My 2 cents - https://github.com/beovideskevin/my2cents
-	Copyright (c) 2016 Flow with the Code
+	My2cents - https://github.com/beovideskevin/my2cents
+	Copyright (c) 2019 El Diletante Digital
 
-    My 2 cents is free software: you can redistribute it and/or modify
+	This is the main file of the framework and probably the only one you really need.
+	
+    My2cents is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    My 2 cents is distributed in the hope that it will be useful,
+    My2cents is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with My 2 cents. If not, see <http://www.gnu.org/licenses/>.
+    along with My2cents. If not, see <http://www.gnu.org/licenses/>.
 
 ******************************************************************************/
 
