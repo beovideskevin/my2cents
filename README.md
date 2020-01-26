@@ -2,9 +2,7 @@
 
 My2cents is a simple php framework. You can see a full working example here: <a href="https://my2cents.eldiletante.com/">my2cents.eldiletante.com</a>
 
-I developed this framkework using using WAMP. All the examples should work in an Apache virtual host; create your own and name it "my2cents.loc". 
-
-After cloning the repository create two files. The first "/.htaccess" with the code: 
+I developed this framkework using using WAMP. All the examples should work in an Apache virtual host; create your own and name it "my2cents.loc". After cloning the repository create two files. The first "/.htaccess" with the code: 
 ```
 <IfModule mod_rewrite.c>
     RewriteEngine on
@@ -19,7 +17,6 @@ After cloning the repository create two files. The first "/.htaccess" with the c
 
 Options -Indexes
 ```
-
 And the second "/public/.htaccess" with these lines:
 ```
 <IfModule mod_rewrite.c>
@@ -124,33 +121,12 @@ After doing this add a file named "/config.json" to the root folder with the fol
 			"action": "Quotes\\showQuotes",
 			"layout": "quotes",
 			"language": "quotes",
-			"signin": {
-				"action": "Quotes\\signInQuotes"
-			},
-			"signup": {
-				"action": "Quotes\\signupQuotes"
-			},
-			"logout": "Quotes\\logoutQuote",
-			"dashboard": {
-				"enforce": "Quotes\\enforceQuotes",
-				"action": "Quotes\\dashboardQuotes",
-				"new": "Quotes\\newQuotes",
-				"edit": "Quotes\\editQuotes"
-			},
-			"ajax": {
-				"layout": "simple",
-				"get": "Quotes\\Ajax\\getQuotes",
-				"admin": {
-					"enforce": "Quotes\\Ajax\\enforceAjaxQuotes",	
-					"add": "Quotes\\Ajax\\addQuotes",
-					"del": "Quotes\\Ajax\\delQuotes"
-				}
-			}
+			"contact": "Quotes\\contactQuotes"
 		}
 	}
 }
 ```
-If you don't want to use a virtual host, you could just clone the repository in the root of your web documents and change the second line of the "config.json" to "FILES_BASE_PATH": "/my2cents/". Then go to /app/layouts/ and edit both "example.html" and "quotesLay.html". Every reference to an external resource should be prefixed with "/my2cents/".
+If you don't want to use a virtual host, you could just clone the repository in the root of your web documents and change the second line of the "config.json" to "FILES_BASE_PATH": "/my2cents/". Then go to /app/layouts/ and edit both "example.html" and "quotesLay.html"; every reference to an external resource should be prefixed with "/my2cents/".
 
 If you are using IIS or Nginx you will need to make some changes to "web.config" or the configuration files of your server (reproduce the logic in "/.htaccess" and "/public/.htaccess"). 
 
@@ -179,7 +155,7 @@ my2cents.loc/btc
 my2cents.loc/btc?lan=es
 my2cents.loc/btc?lan=en
 my2cents.loc/quotes
-my2cents.loc/quotes/login
+my2cents.loc/quotes/contact
 ```
 
 For the lastone the username is "admin@my2cents.loc" and the password is "123456". 
