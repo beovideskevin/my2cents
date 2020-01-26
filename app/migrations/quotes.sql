@@ -42,31 +42,9 @@ CREATE TABLE IF NOT EXISTS `quotes` (
 -- Dumping data for table `quotes`
 --
 
-INSERT INTO `quotes` (`id`, `quote`, `image`, `user`, `status`) VALUES
-(1, 'I think; therefore I am. Rene Descartes', 'rene_descartes.jpg', 1, 'active'),
-(2, 'Call no man unhappy until he is married. Socrates', 'socrates.jpg', 1, 'active');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `quotes_user`
---
-
-DROP TABLE IF EXISTS `quotes_user`;
-CREATE TABLE IF NOT EXISTS `quotes_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(256) NOT NULL,
-  `password` varchar(256) NOT NULL,
-  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `quotes_user`
---
-
-INSERT INTO `quotes_user` (`id`, `email`, `password`, `created`) VALUES
-(1, 'admin@my2cents.loc', '7c4a8d09ca3762af61e59520943dc26494f8941b', '2020-01-25 20:13:31');
+INSERT INTO `quotes` (`id`, `quote`, `image`, `status`) VALUES
+(1, 'I think; therefore I am. Rene Descartes', 'rene_descartes.jpg', 'active'),
+(2, 'Call no man unhappy until he is married. Socrates', 'socrates.jpg', 'active');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

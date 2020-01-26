@@ -1289,7 +1289,7 @@ $_ = function ($query = '', $options = [], $extras = '')
 		 *********************/
 		
 		// send email takes an email, the subject and the content
-		case 'mail:': 
+		case 'email:':
 			return $email->sendEmail($query, $options, $extras);
 			break;
 		
