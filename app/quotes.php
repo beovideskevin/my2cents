@@ -5,14 +5,14 @@ namespace Quotes {
 	/**
 	 * This method show the quotes one by one
 	 */
-	function showQuotes() {		
+	function showQuotes($args) {
 		global $_;
 
-        if (isset($_POST['g-recaptcha-response'])) {
-            $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdgjdIUAAAAAPrA3yoyaZivGerl5a_0tA-59KvG&response=" . $_POST['g-recaptcha-response']), true);
-            //print_r($output);
+        if (isset($args['g-recaptcha-response'])) {
+            $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdgjdIUAAAAAPrA3yoyaZivGerl5a_0tA-59KvG&response=" . $args['g-recaptcha-response']), true);
+            error_log(print_r($output, true));
             if (isset($output['success']) && $output['success'] == true) {
-                error_log(yep);
+                error_log("yep");
             }
         }
 
