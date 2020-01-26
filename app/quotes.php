@@ -15,7 +15,7 @@ namespace Quotes {
 		$html = $_("inject: app/assets/quotes/show.html");
 
 		// Get the quotes
-		$quotes = $_("assoclist: SELECT * FROM quotes WHERE user = 1");
+		$quotes = $_("assoclist: SELECT * FROM quotes WHERE status = 'active'");
         $selected = array_rand ($quotes);
 
 		return [
