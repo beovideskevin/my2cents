@@ -75,11 +75,7 @@ function BTCFullExample ($args)
 		$rate->sync($rates['id']);
 		
 		// This is how you would update
-		$rate->save(["from_currency" => "popo", "exchange_rate" => 1]);
-		
-		// This sends an email 
-		$email = new Email();
-		// $email->sendEmail("beovideskevin@gmail.com", "Exchange rate", ["RESULT" => $oldValues]);
+		$rate->save(["from_currency" => "Bitcoin", "exchange_rate" => 1]);
 	}
 
 	$results = [

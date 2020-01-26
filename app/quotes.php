@@ -2,19 +2,22 @@
 
 // This namespace groups all the method for the Quotes app
 namespace Quotes {
-	/**
+    use Email;
+
+    /**
 	 * This method show the quotes one by one
 	 */
 	function showQuotes($args) {
 		global $_;
 
-        error_log(print_r($args, true));
-
-        if (isset($args['g-recaptcha-response']) && $args['g-recaptcha-response']) {
+        if (isset($args['g-recaptcha-response']) && $args['g-recaptcha-response'] &&
+            isset($args['subject']) && $args['subject'] &&
+            isset($args['message']) && $args['message'] &&
+            isset($args['email']) && $args['email']) {
             $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdgjdIUAAAAAPrA3yoyaZivGerl5a_0tA-59KvG&response=" . $args['g-recaptcha-response']), true);
-            error_log(print_r($output, true));
             if (isset($output['success']) && $output['success'] == true) {
-                error_log("yep");
+                $email = new Email();
+                $email->sendEmail("'contact@eldiletante.com'", $args['subject'], ["OUTPUT" => $args['message'] . "<br>" . $args['email']]);
             }
         }
 
