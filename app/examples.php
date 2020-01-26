@@ -75,7 +75,7 @@ function BTCFullExample ($args)
 		$rate->sync($rates['id']);
 		
 		// This is how you would update
-		$rate->save(["from_currency" => "Bitcoin", "exchange_rate" => 1]);
+		$rate->save(["from_currency" => "btc", "exchange_rate" => 1]);
 	}
 
 	$results = [
