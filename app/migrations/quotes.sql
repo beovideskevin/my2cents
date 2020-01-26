@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `quotes` (
 
 INSERT INTO `quotes` (`id`, `quote`, `image`, `user`, `status`) VALUES
 (1, 'I think; therefore I am. Rene Descartes', 'rene_descartes.jpg', 1, 'active'),
-(2, 'Call no man unhappy until he is married. Socrates', 'socrates', 1, 'active');
+(2, 'Call no man unhappy until he is married. Socrates', 'socrates.jpg', 1, 'active');
 
 -- --------------------------------------------------------
 
