@@ -89,7 +89,8 @@ function BTCFullExample ($args)
 		"OUTPUT"          => $_("inject: app/assets/example.html"),
 		"CONTENT"         => '<span id="result">'.$oldValues.'</span>',
 		"MAIN_SCRIPT"     => $_("inject: app/assets/example.js"),
-        "REFRESH"         => !isset($_SESSION['LANGUAGE_IN_USE']) || $_SESSION['LANGUAGE_IN_USE'] == "en" ? "Refresh" : "Refrescar"
+        "REFRESH"         => !isset($_SESSION['LANGUAGE_IN_USE']) || $_SESSION['LANGUAGE_IN_USE'] == "en"
+                                ? "Refresh" : "Refrescar"
 	];
 	return $results;
 }

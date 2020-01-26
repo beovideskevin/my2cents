@@ -8,10 +8,38 @@ namespace Quotes {
 	function showQuotes() {		
 		global $_;
 
+        if (isset($_POST['g-recaptcha-response'])) {
+            $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdgjdIUAAAAAPrA3yoyaZivGerl5a_0tA-59KvG&response=" . $_POST['g-recaptcha-response']), true);
+            //print_r($output);
+            if (isset($output['success']) && $output['success'] == true) {
+                error_log(yep);
+            }
+        }
+
+		$css = $_("inject: app/assets/quotes/quotes.css");
+        $navbar = $_("inject: app/assets/quotes/navbar.html");
+		$show = $_("inject: app/assets/quotes/show.html");
+		$github = $_("inject: app/assets/quotes/github.html");
+        $contact = $_("inject: app/assets/quotes/contact.html");
+		$javascript = $_("inject: app/assets/quotes/checks.js");
+
+		$quotes = $_("assoclist: SELECT * FROM quotes WHERE user = 1");
+
+		error_log(print_r($quotes, true));
+
+        $selected = array_rand ($quotes);
+
+        error_log($selected);
+
 		return [
-			"MAIN_CONTENT" => $_("inject: app/assets/quotes/show.html"),
-			"TEXT" => "Quote text",
-			"IMAGE" => "Quote image"
+            "MAIN_STYLE" => $css,
+			"MAIN_NAVBAR" => $navbar,
+            "MAIN_SHOW" => $show,
+            "MAIN_GITHUB" => $github,
+            "MAIN_CONTACT" => $contact,
+            "MAIN_SCRIPT" => $javascript,
+			"TEXT" => $quotes[$selected]['quote'],
+			"IMAGE" => 'uploaded/' . $quotes[$selected]['image']
 		];
 	}
 

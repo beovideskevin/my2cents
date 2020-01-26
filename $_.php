@@ -77,7 +77,7 @@ class PostgreSQLAdapter
 	 * Return the result of a query
 	 * @param $ret the type of result: insertid; single; obj; assoclist or assoc (this is the default)
  	 */ 
-	public function result ($ret = 'assoc') 
+	public function result ($ret = 'assoclist')
 	{
 		$ret = trimLower($ret);
 		
@@ -91,16 +91,16 @@ class PostgreSQLAdapter
 				
 			case 'obj':
 				return pg_fetch_object(self::$result);
-				
-			case 'assoclist':
+
+            case 'assoc':
+                return pg_fetch_assoc(self::$result);
+
+            case 'assoclist':
+            default:
 				$rows = [];
 				while($row = pg_fetch_assoc(self::$result))
 					$rows[] = $row;
 				return $rows;
-
-			case 'assoc':
-			default:
-				return pg_fetch_assoc(self::$result);
 		}
 	}
 }
@@ -163,10 +163,10 @@ class MySQLAdapter
 	 * Return the result of a query
 	 * @param $ret the type of result: insertid; single; obj; assoclist or assoc (this is the default)
  	 */ 
-	public function result ($ret = 'assoc') 
+	public function result ($ret = 'assoclist')
 	{
 		$ret = trimLower($ret);
-		
+
 		switch ($ret) {
 			case 'single':
 				$tmp = self::$result->fetch_row();
@@ -177,17 +177,18 @@ class MySQLAdapter
 
 			case 'obj':
 				return self::$result->fetch_object();
-				
-			case 'assoclist':
-				$rows = [];
-				while($row = self::$result->fetch_array(MYSQLI_ASSOC))
-					$rows[] = $row;
-				return $rows;
 
 			case 'assoc':
-			default:
-				return self::$result->fetch_assoc();
-		}
+                return self::$result->fetch_assoc();
+
+            case 'assoclist':
+            default:
+                $rows = [];
+                while($row = self::$result->fetch_array(MYSQLI_ASSOC))
+                    $rows[] = $row;
+                return $rows;
+
+        }
 	}
 }
 
