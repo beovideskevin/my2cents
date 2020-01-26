@@ -8,6 +8,8 @@ namespace Quotes {
 	function showQuotes($args) {
 		global $_;
 
+        error_log(print_r($args, true));
+
         if (isset($args['g-recaptcha-response'])) {
             $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdgjdIUAAAAAPrA3yoyaZivGerl5a_0tA-59KvG&response=" . $args['g-recaptcha-response']), true);
             error_log(print_r($output, true));
