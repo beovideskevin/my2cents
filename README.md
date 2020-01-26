@@ -157,5 +157,3 @@ my2cents.loc/btc?lan=en
 my2cents.loc/quotes
 my2cents.loc/quotes/contact
 ```
-
-For the lastone the username is "admin@my2cents.loc" and the password is "123456". 
