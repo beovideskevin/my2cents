@@ -1,6 +1,6 @@
 # My two cents
 
-My2Cents is a simple php framework. You can see a full working example here: <a href="https://my2cents.eldiletante.com/">my2cents</a>
+My2Cents is a simple php framework. You can see a full working example here: <a href="https://my2cents.eldiletante.com/">my2cents.eldiletante.com</a>
 
 I developed this framkework using using WAMP. All the examples should work in an Apache virtual host; create your own and name it "my2cents.loc". If you are using IIS or Nginx you will need to make some changes to "web.config" or the configuration files of your server (reproduce the logic in "/.htaccess" and "/public/.htaccess"). In order to make all the examples work you will need to import into the database the scripts located in the folder "migrartions". These were created for MySQL, if you are using PostgreSQL or somethng else, you may need to make some changes there too.
 
