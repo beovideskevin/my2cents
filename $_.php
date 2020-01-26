@@ -1,26 +1,24 @@
 <?php
 
-/******************************************************************************
+/****************************************************************************************
 
 	My2cents - https://github.com/beovideskevin/my2cents
 	Copyright (c) 2019 El Diletante Digital
 
 	This is the main file of the framework and probably the only one you really need.
 	
-    My2cents is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+	My2cents is free software: you can redistribute it and/or modify it under the terms 
+	of the GNU General Public License as published by the Free Software Foundation, 
+	either version 3 of the License, or	(at your option) any later version.
 
-    My2cents is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	My2cents is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 
+	without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR 
+	PURPOSE.  See the GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with My2cents. If not, see <http://www.gnu.org/licenses/>.
+	You should have received a copy of the GNU General Public License
+	along with My2cents. If not, see <http://www.gnu.org/licenses/>.
 
-******************************************************************************/
+*****************************************************************************************/
 
 /**
  * The "driver" to connect and query PostgreSQL
@@ -905,7 +903,7 @@ class Template
 			$this->setLang();
 				
 		$all = array_merge($this->fullLanguage, $results);
-		
+
 		return $this->apply($this->fullLayout, $all, true); 
 	}
 }

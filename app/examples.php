@@ -83,16 +83,13 @@ function BTCFullExample ($args)
 	}
 
 	$results = [
-		"SEO_AUTHOR"      => "",
-		"SEO_DESCRIPTION" => "",
-		"SEO_KEYWORDS"    => "",
-		"TITLE"           => "My2Cents",
-		"SEO_TITLE"       => "Full Example",
+		"SEO_TITLE"       => "BTC Example",
 		"MAIN_STYLE"      => $_("inject: app/assets/example.css"),
 		"HEADER"          => $_("getlang: HEADER_ALT"),
 		"OUTPUT"          => $_("inject: app/assets/example.html"),
 		"CONTENT"         => '<span id="result">'.$oldValues.'</span>',
-		"MAIN_SCRIPT"     => $_("inject: app/assets/example.js")
+		"MAIN_SCRIPT"     => $_("inject: app/assets/example.js"),
+        "REFRESH"         => !isset($_SESSION['LANGUAGE_IN_USE']) || $_SESSION['LANGUAGE_IN_USE'] == "en" ? "Refresh" : "Refrescar"
 	];
 	return $results;
 }
