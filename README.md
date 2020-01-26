@@ -2,9 +2,36 @@
 
 My2cents is a simple php framework. You can see a full working example here: <a href="https://my2cents.eldiletante.com/">my2cents.eldiletante.com</a>
 
-I developed this framkework using using WAMP. All the examples should work in an Apache virtual host; create your own and name it "my2cents.loc". If you don't want to use a virtual host, you could just clone the repository in the root of your web documents and change the second line of the "config.json" to "FILES_BASE_PATH": "/my2cents/", If you are using IIS or Nginx you will need to make some changes to "web.config" or the configuration files of your server (reproduce the logic in "/.htaccess" and "/public/.htaccess"). 
+I developed this framkework using using WAMP. All the examples should work in an Apache virtual host; create your own and name it "my2cents.loc". 
 
-After cloning the repository add a file named "config.json" to the root folder with the following code:
+After cloning the repository create two files. The first "/.htaccess" with the code: 
+```
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule   ^$ public/    [L]
+    RewriteRule   ((?s).*) public/$1 [L]
+</IfModule>
+
+<Files "config.json">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+Options -Indexes
+```
+
+And the second "/public/.htaccess" with these lines:
+```
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^((?s).*)$ index.php?_url=$1 [QSA,L]
+</IfModule>
+
+Options -Indexes
+```
+After doing this add a file named "/config.json" to the root folder with the following code:
 ```
 {
 	"FILES_BASE_PATH": "/",
@@ -123,6 +150,10 @@ After cloning the repository add a file named "config.json" to the root folder w
 	}
 }
 ```
+If you don't want to use a virtual host, you could just clone the repository in the root of your web documents and change the second line of the "config.json" to "FILES_BASE_PATH": "/my2cents/". Then go to /app/layouts/ and edit both "example.html" and "quotesLay.html". Every reference to an external resource should be prefixed with "/my2cents/".
+
+If you are using IIS or Nginx you will need to make some changes to "web.config" or the configuration files of your server (reproduce the logic in "/.htaccess" and "/public/.htaccess"). 
+
 In order to make all the examples work you will need to import into the database the scripts located in the folder "migrartions". These were created for MySQL, if you are using PostgreSQL or somethng else, you may need to make some changes there too.
 
 After this is done you can check the examples in the routes:
