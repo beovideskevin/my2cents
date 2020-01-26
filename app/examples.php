@@ -83,7 +83,7 @@ function BTCFullExample ($args)
 	}
 
 	$results = [
-		"SEO_TITLE"       => "BTC Example",
+		"SEO_TITLE"       => "| BTC Example",
 		"MAIN_STYLE"      => $_("inject: app/assets/example.css"),
 		"HEADER"          => $_("getlang: HEADER_ALT"),
 		"OUTPUT"          => $_("inject: app/assets/example.html"),
