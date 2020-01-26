@@ -144,6 +144,8 @@ my2cents.loc/example5
 my2cents.loc/example6
 my2cents.loc/example6/arguments
 my2cents.loc/btc
+my2cents.loc/btc?lan=es
+my2cents.loc/btc?lan=en
 my2cents.loc/quotes
 my2cents.loc/quotes/login
 ```
