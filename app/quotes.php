@@ -10,7 +10,7 @@ namespace Quotes {
 
         error_log(print_r($args, true));
 
-        if (isset($args['g-recaptcha-response'])) {
+        if (isset($args['g-recaptcha-response']) && $args['g-recaptcha-response']) {
             $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdgjdIUAAAAAPrA3yoyaZivGerl5a_0tA-59KvG&response=" . $args['g-recaptcha-response']), true);
             error_log(print_r($output, true));
             if (isset($output['success']) && $output['success'] == true) {
@@ -18,6 +18,7 @@ namespace Quotes {
             }
         }
 
+        // Get the external files
 		$css = $_("inject: app/assets/quotes/quotes.css");
         $navbar = $_("inject: app/assets/quotes/navbar.html");
 		$show = $_("inject: app/assets/quotes/show.html");
@@ -25,13 +26,9 @@ namespace Quotes {
         $contact = $_("inject: app/assets/quotes/contact.html");
 		$javascript = $_("inject: app/assets/quotes/checks.js");
 
+		// Get the quotes
 		$quotes = $_("assoclist: SELECT * FROM quotes WHERE user = 1");
-
-		error_log(print_r($quotes, true));
-
         $selected = array_rand ($quotes);
-
-        error_log($selected);
 
 		return [
             "MAIN_STYLE" => $css,

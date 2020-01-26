@@ -1,3 +1,5 @@
 /backup
 /.idea
 /config.json
+/.htaccess
+/public/.htaccess
