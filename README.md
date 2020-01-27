@@ -59,6 +59,11 @@ After doing this add a file named "/config.json" to the root folder with the fol
 		"LAYOUT": "email"
 	},
 	
+	"recaptcha": {
+		"secretKey": "6LdgjdIUAAAAAPrA3yoyaZivGerl5a_0tA-59KvG",
+		"siteKey": "6LdgjdIUAAAAADEbYEz86_p_klKzP8_uSXk3bu2S"
+	},
+	
 	"REGISTER": {
 		"EXCEPTIONS": "",
 		"FOLDERS": "app/"
