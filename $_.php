@@ -1021,24 +1021,19 @@ class Email
 		$boundary = uniqid('ch');
 
 		// set the headers
-		$headers = 'MIME-Version: 1.0' . '\n';
-		$headers .= 'From: ' . $from . '\n';
-		$headers .= 'Reply-To: ' . $from . '\n';
-		$headers .= 'Content-Type: multipart/alternative;boundary=' . $boundary . '\n';
+		$headers = 'MIME-Version: 1.0' . "\n";
+		$headers .= 'From: ' . $from . "\n";
+		$headers .= 'Reply-To: ' . $from . "\n";
+		$headers .= 'Content-Type: multipart/alternative;boundary=' . $boundary . "\n";
 		
 		// set the body and the txt version
-		$message = '\n\n--' . $boundary . '\n';
-		$message .= 'Content-type: text/plain;charset=utf-8' . '\n\n';
-		$message .= strip_tags(str_replace('<br>', '\n', $body));
-		$message .= '\n\n--' . $boundary . '\n';
-		$message .= 'Content-type: text/html;charset=utf-8' . '\n\n';
+		$message = "\n\n--" . $boundary . "\n";
+		$message .= 'Content-type: text/plain;charset=utf-8' . "\n\n";
+		$message .= strip_tags(str_replace('<br>', "\n", $body));
+		$message .= "\n\n--" . $boundary . "\n";
+		$message .= 'Content-type: text/html;charset=utf-8' . "\n\n";
 		$message .= $body;
-		$message .= '\n\n--' . $boundary . '--';
-
-		// error_log($emailto);
-		// error_log($subject);
-		// error_log($message);		
-		// error_log($headers);
+		$message .= "\n\n--" . $boundary . '--';
 
 		// send email
 		return mail($emailto, $subject, $message, $headers);	
