@@ -474,6 +474,15 @@ class App
 				     $routes = [], 
 				     $includes = [];
 
+    /**
+     * Returns the configuration
+     */
+    public function getConfig($index = "")
+    {
+        $result = $index && isset(self::$config[$index]) ? self::$config[$index] : self::$config;
+        return $result;
+    }
+
 	/** 
 	 * Loads the configuration and registers the classes
 	 * @param $filepath the config file, if empty gets the default config.json
@@ -1209,7 +1218,15 @@ $_ = function ($query = '', $options = [], $extras = '')
 		// set the config	
 		case 'config': 
 			return $app->config($options);
-				
+
+		// Get a specific index in the configuration
+        case 'getconfig:':
+            $options = $query;
+
+        // Get the configuration
+        case 'getconfig':
+            return $app->getConfig($options);
+
 		// route to some path
 		case 'route:':
 			$extras = $options;

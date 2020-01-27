@@ -38,7 +38,9 @@ namespace Quotes {
             isset($args['message']) && $args['message'] &&
             isset($args['email']) && $args['email'])
         {
-            $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdgjdIUAAAAAPrA3yoyaZivGerl5a_0tA-59KvG&response=" . $args['g-recaptcha-response']), true);
+            $secret = $_("getConfig: secretKey");
+            $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".
+                                                    $secret . "&response=" . $args['g-recaptcha-response']), true);
             if (isset($output['success']) && $output['success'] == true) {
                 $_("email: contact@eldiletante.com", $args['subject'], ["OUTPUT" => $args['message'] . "<br>" . $args['email']]);
             }
