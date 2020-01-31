@@ -2,8 +2,6 @@
 
 // This namespace groups all the method for the Quotes app
 namespace Quotes {
-    use Email;
-
     /**
 	 * This method show the quotes one by one
 	 */
