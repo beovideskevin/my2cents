@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `quotes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `quote` text NOT NULL,
   `image` text NOT NULL,
-  `user` int(11) NOT NULL,
   `status` enum('active','deleted') NOT NULL DEFAULT 'active',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
