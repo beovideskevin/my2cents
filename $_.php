@@ -764,10 +764,10 @@ class App
 
 		if (!empty(self::$includes['VENDORS']) && is_dir(FILES_BASE_PATH . self::$includes['VENDORS']) && 
 			file_exists(FILES_BASE_PATH . self::$includes['VENDORS'] . 'autoload.php')) {
-			error_log("loading stuff..." . FILES_BASE_PATH . self::$includes['VENDORS'] . 'autoload.php');
 			require_once(FILES_BASE_PATH . self::$includes['VENDORS'] . 'autoload.php'); 
-			if (class_exists("PHPMailer\\PHPMailer\\PHPMailer")) {error_log("PHPMailer");} else {error_log("NOOOO PHPMailer");}
 		}
+		
+		error_log(print_r($action, true));
 		
 		// call the function that enforces login
 		if (!empty($enforce) && is_callable($enforce)) 
@@ -988,12 +988,12 @@ class Email
 		$mail = new PHPMailer();
 
 		// for debug only
-		// $mail->SMTPDebug = 3;
+		$mail->SMTPDebug = 3;
 
 		$mail->isSMTP();
 		$mail->Host = self::$server;
 		$mail->Port = self::$port;
-		$mail->SMTPSecure = 'tls';
+		// $mail->SMTPSecure = 'tls';
 		$mail->SMTPAuth = true;
 		$mail->CharSet = 'UTF-8';
 
@@ -1015,7 +1015,6 @@ class Email
 			error_log('Mailer Error: ' . $mail->ErrorInfo);
 			return false;
 		}
-		else error_log('Message sent');
 		 
 		return true;
 	} 
@@ -1047,8 +1046,6 @@ class Email
 		$message .= 'Content-type: text/html;charset=utf-8' . "\n\n";
 		$message .= $body;
 		$message .= "\n\n--" . $boundary . '--';
-
- error_log('sending...');
  
 		// send email
 		return mail($emailto, $subject, $message, $headers);	
