@@ -988,12 +988,12 @@ class Email
 		$mail = new PHPMailer();
 
 		// for debug only
-		$mail->SMTPDebug = 3;
+		// $mail->SMTPDebug = 3;
 
 		$mail->isSMTP();
 		$mail->Host = self::$server;
 		$mail->Port = self::$port;
-		// $mail->SMTPSecure = 'tls';
+		$mail->SMTPSecure = 'tls';
 		$mail->SMTPAuth = true;
 		$mail->CharSet = 'UTF-8';
 
