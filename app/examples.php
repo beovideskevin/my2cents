@@ -95,6 +95,6 @@ function BTCFullExample ($args)
  * This method is usually commented. Just in case you want to use it, uncomment it, 
  * and add a route to the config.json 
  */
- function php_info() {
+ /*function php_info() {
 	 phpinfo();
- }
+ }*/
