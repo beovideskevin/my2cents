@@ -767,8 +767,6 @@ class App
 			require_once(FILES_BASE_PATH . self::$includes['VENDORS'] . 'autoload.php'); 
 		}
 		
-		error_log(print_r($action, true));
-		
 		// call the function that enforces login
 		if (!empty($enforce) && is_callable($enforce)) 
 			call_user_func($enforce, $args);
