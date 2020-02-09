@@ -20,6 +20,9 @@
 
 *****************************************************************************************/
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+	
 /**
  * The "driver" to connect and query PostgreSQL
  */
@@ -495,12 +498,12 @@ class App
 		
 		if (empty(self::$config))
 			die ('No configuration file or error while parsing it!');
-
+		
 		foreach (self::$config as $key => $value) {
 			switch (trimlower($key)) {
 				// the main path
 				case 'files_base_path': 
-					DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . $value);
+					DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . $value);
 					break;
 	
 				// the path for the classes to include
@@ -513,6 +516,10 @@ class App
 								
 							case 'folders':
 								self::$includes['FOLDERS'] = $regVal;
+								break;
+								
+							case 'vendors':
+								self::$includes['VENDORS'] = $regVal;
 								break;
 						}
 					}
@@ -644,7 +651,7 @@ class App
 			if ($f == '.' || $f == '..' || in_array($f, $exceptions))
 				continue;
 			// this is for the libraries installed with composer
-			elseif (is_dir($folder . $f) && $f == 'vendor' && file_exists($folder . 'vendor/autoload.php'))
+			elseif (is_dir($folder . $f) && $f == 'vendor' && file_exists($folder . 'vendor/autoload.php')) 
 				require_once($folder . 'vendor/autoload.php'); 
 			elseif (is_dir($folder . $f)) 
 				$otherFiles[] = $folder . $f;
@@ -755,8 +762,12 @@ class App
 			}
 		}
 
-		if (is_dir(FILES_BASE_PATH . 'vendor') && file_exists(FILES_BASE_PATH . 'vendor/autoload.php'))
-			require_once(FILES_BASE_PATH . 'vendor/autoload.php'); 
+		if (!empty(self::$includes['VENDORS']) && is_dir(FILES_BASE_PATH . self::$includes['VENDORS']) && 
+			file_exists(FILES_BASE_PATH . self::$includes['VENDORS'] . 'autoload.php')) {
+			error_log("loading stuff..." . FILES_BASE_PATH . self::$includes['VENDORS'] . 'autoload.php');
+			require_once(FILES_BASE_PATH . self::$includes['VENDORS'] . 'autoload.php'); 
+			if (class_exists("PHPMailer\\PHPMailer\\PHPMailer")) {error_log("PHPMailer");} else {error_log("NOOOO PHPMailer");}
+		}
 		
 		// call the function that enforces login
 		if (!empty($enforce) && is_callable($enforce)) 
@@ -955,7 +966,8 @@ class Email
 			$body = wordwrap($content);
 		}
 
-		if (class_exists('PHPMailer')) { 
+		if (class_exists('PHPMailer\PHPMailer\PHPMailer') && !empty(self::$server) && !empty(self::$port) &&
+			!empty(self::$user) && !empty(self::$password)) { 
 			// if smpt email sending is allowed use PHPMailer
 			return $this->sendPHPMailer($emailto, $subject, $body);
 		}
@@ -999,10 +1011,11 @@ class Email
 
 		// send email
 		if (!$mail->send()) { 
-			// error_log('Message could not be sent');
-			// error_log('Mailer Error: ' . $mail->ErrorInfo);
+			error_log('Message could not be sent');
+			error_log('Mailer Error: ' . $mail->ErrorInfo);
 			return false;
 		}
+		else error_log('Message sent');
 		 
 		return true;
 	} 
@@ -1035,6 +1048,8 @@ class Email
 		$message .= $body;
 		$message .= "\n\n--" . $boundary . '--';
 
+ error_log('sending...');
+ 
 		// send email
 		return mail($emailto, $subject, $message, $headers);	
 	}
