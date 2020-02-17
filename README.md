@@ -162,3 +162,8 @@ my2cents.loc/btc?lan=en
 my2cents.loc/quotes
 my2cents.loc/quotes/contact
 ```
+
+
+TO DO:
+Implementa relationship o orm o validations 
+Tests con codeception 
