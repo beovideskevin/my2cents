@@ -165,5 +165,5 @@ my2cents.loc/quotes/contact
 
 
 TO DO:
-Implementa relationship o orm o validations 
-Tests con codeception 
+Implement relationships and validations. 
+Tests with codeception 
