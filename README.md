@@ -165,5 +165,6 @@ my2cents.loc/quotes/contact
 
 
 TO DO:
-Implement relationships and validations in the example. 
-Create tests with codeception 
+- [ ] Implement relationships and validations in the example. 
+- [ ] Create tests with codeception. 
+- [ ] Maybe add GraphQL...
