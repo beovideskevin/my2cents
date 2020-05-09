@@ -500,7 +500,7 @@ class App
 			die ('No configuration file or error while parsing it!');
 		
 		foreach (self::$config as $key => $value) {
-			switch (trimlower($key)) {
+			switch (trimLower($key)) {
 				// the main path
 				case 'files_base_path': 
 					DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . $value);
@@ -509,7 +509,7 @@ class App
 				// the path for the classes to include
 				case 'register': 
 					foreach (self::$config[$key] as $regKey => $regVal) {
-						switch (trimlower($regKey)) {
+						switch (trimLower($regKey)) {
 							case 'exceptions':
 								self::$includes['EXCEPTIONS'] = $regVal;
 								break;
@@ -528,13 +528,13 @@ class App
 				// set the routes
 				case 'routes': 
 					foreach (self::$config[$key] as $rKey => $rVal) {
-						switch (trimlower($regKey)) {
+						switch (trimLower($rKey)) {
 							case 'default':
-								self::$routes['DEFAULT'] = $rVal;
+								self::$routes['DEFAULT'] = $this->lowerKeys($rVal);
 								break;
 								
 							default:
-								self::$routes[$rKey] = $rVal;
+								self::$routes[trimLower($rKey)] = $this->lowerKeys($rVal);
 								break;
 						}
 					}
@@ -543,7 +543,7 @@ class App
 				// set the dafault template and language 
 				case 'template':
 					foreach (self::$config[$key] as $tKey => $tVal) {
-						switch (trimlower($tKey)) {
+						switch (trimLower($tKey)) {
 							case 'layout_path': 
 								DEFINE ('LAYOUT_PATH', $tVal);
 								break;
@@ -572,7 +572,7 @@ class App
 				// MySQL conection data
 				case 'database': 
 					foreach (self::$config[$key] as $dbKey => $dbVal) {
-						switch (trimlower($dbKey)) {
+						switch (trimLower($dbKey)) {
 							case 'adapter': 
 								Database::$adapter = $dbVal;
 								break;
@@ -598,7 +598,7 @@ class App
 				// SMTP email configuration	
 				case 'email': 
 					foreach (self::$config[$key] as $eKey => $eVal) {
-						switch (trimlower($eKey)) {
+						switch (trimLower($eKey)) {
 							case 'system': 
 								Email::$system = $eVal;
 								break;
@@ -629,6 +629,20 @@ class App
 		// if the main path is not set, lets set the default
 		if (!defined('FILES_BASE_PATH')) 
 			DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/');
+	}
+	
+	/**
+	 * Takes an array and turn al his keys lowercase recursively
+	 * @param type $item the input array
+	 */
+	protected function lowerKeys ($item = '') {
+		if (is_array($item))
+			return array_map(function ($item){
+								return $this->lowerKeys($item);
+							},array_change_key_case($item)
+						);
+		else
+			return $item;
 	}
 	
 	/** 
@@ -675,7 +689,7 @@ class App
 			$urlpath = $_REQUEST['_url'];
 				
 		if ($urlpath) {
-			$all = explode('/', $urlpath);
+			$all = explode('/', trimLower($urlpath));
 			foreach ($all as $value) {
 				if ($value) 
 					self::$url[] = $value;
