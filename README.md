@@ -70,17 +70,30 @@ After doing this add a file named "/config.json" to the root folder with the fol
 	},
 	
 	"ROUTES": {
-		"DEFAULT": "hello",
-		"404": "notFound",
-		"example1": "hello",
-		"example2": {
-			"class": "ExampleClass",
-			"method": "exampleMethod"
+		"DEFAULT": {
+			"class": "BTC",
+			"method": "FullExample",
+			"layout": "example"
 		},
-		"example3": {
+
+		"404": "notFound",
+		
+		"example1": "hello",
+		
+		"example2": {
 			"redirect": "/example1",
 			"hello": "hello" 
 		},
+		
+		"example3" : {
+			"action": "arguments",
+			"args": "{\"test\": \"1\", \"outside\": {\"inside\": \"1\"}}"
+		},
+		
+		"login": "login",
+		
+		"logout": "logout",
+		
 		"example4": {
 			"action": "publicArea",
 			"private": {
@@ -88,45 +101,20 @@ After doing this add a file named "/config.json" to the root folder with the fol
 				"action": "privateArea"
 			}
 		},
-		"example5" : {
-			"action": "arguments",
-			"args": "{\"test\": \"1\", \"outside\": {\"inside\": \"1\"}}"
-		},
-		"example6": {
-			"action": "hello",
-			"arguments" : {
-				"action": "arguments",
-				"args": "{\"test\": \"1\", \"outside\": {\"inside\": \"1\"}}"
-			}
-		},
-		"login": {
-			"action": "login"
-		},
-		"logout": "logout",
+
 		"ajax": {
 			"action": "ajax",
-			"layout": "simple",
 			"admin": {
 				"action": "helloAjax",
 				"enforce": "enforce"
 			}
 		},
+		
 		"btc": {
-			"action": "BTCFullExample",
 			"refresh": {
-				"action": "refreshBTCPrice",
-				"layout": "simple"
-			},
-			"save": { 
-				"action": "saveBTCPrice",
-				"layout": "simple"
+				"class": "BTC",
+				"method": "refreshBTCPrice"
 			}
-		},
-		"quotes": {
-			"action": "Quotes\\showQuotes",
-			"layout": "quotes",
-			"language": "quotes",
-			"contact": "Quotes\\contactQuotes"
 		}
 	}
 }
@@ -142,8 +130,8 @@ After this is done you can check the examples in the routes:
 my2cents.loc/
 my2cents.loc/example1
 my2cents.loc/example2
+my2cents.loc/example2/hello
 my2cents.loc/example3
-my2cents.loc/example3/hello
 my2cents.loc/example4
 my2cents.loc/example4/private
 my2cents.loc/login
@@ -153,18 +141,12 @@ my2cents.loc/ajax/admin
 my2cents.loc/login
 my2cents.loc/ajax/admin
 my2cents.loc/logout
-my2cents.loc/example5
-my2cents.loc/example6
-my2cents.loc/example6/arguments
 my2cents.loc/btc
 my2cents.loc/btc?lan=es
 my2cents.loc/btc?lan=en
-my2cents.loc/quotes
-my2cents.loc/quotes/contact
 ```
 
 
 TO DO:
 - [ ] Implement relationships and validations in the example. 
-- [ ] Create tests with codeception. 
-- [ ] Maybe add GraphQL...
+- [ ] Create tests with codeception.
