@@ -37,16 +37,63 @@
 	<!-- Primary Page Layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="container">
-		<div class="row">
-			<div class="one-half column">
-				<h4 id="mainTitle"><:HEADER/></h4>
-				<:OUTPUT/>
+		<div class="navbar-spacer"></div>
+		<nav class="navbar">
+			<div class="container">
+				<ul class="navbar-list">
+					<li class="navbar-item"><a class="navbar-link" href="/btc" id="home">Home</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="/btc#contactSection" id="contact">Contact</a></li>
+				</ul>
 			</div>
-			
-			<div class="one-half column">
+		</nav>
+	</div>
+
+	<div class="section">
+		<div class="container">
+			<div class="">
+				<h4 id="mainTitle"><:HEADER/></h4>
+				<p><:SUB_HEADER/> <a href="https://github.com/beovideskevin/my2cents" target="_blank"">my2cents</a></p>
+			</div>
+			<div class="" id="result">
 				<:CONTENT/>
 			</div>
-			
+			<div class="">
+				<:BTN/>
+			</div>
+		</div>	
+	</div>
+
+	<div class="section github">
+		<div class="container">
+			<div class="row">
+				<div class="column category">
+					<img class="u-max-full-width" src="/images/my2cents.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section contact" id="contactSection">
+		<div class="container">
+			<form method="POST" action="/quotes/contact" id="contactForm">
+				<:EMAIL_MSG/>
+				<div class="row">
+					<div class="six columns">
+						<label for="exampleEmailInput">Your email</label>
+						<input class="u-full-width" type="email" placeholder="test@mailbox.com" name="email" id="exampleEmailInput">
+					</div>
+					<div class="six columns">
+						<label for="exampleSubjectInput">Reason for contacting</label>
+						<input class="u-full-width" type="text" placeholder="hello..." name="subject" id="exampleSubjectInput">
+					</div>
+				</div>
+				<label for="exampleMessage">Message</label>
+				<textarea class="u-full-width" placeholder="Hi Kevin …" name="message" id="exampleMessage"></textarea>
+				<div id="recaptcha"></div>
+				<input class="button-primary" type="submit" value="Submit">
+			</form>
+			<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+			</script>
 		</div>
 	</div>
 	

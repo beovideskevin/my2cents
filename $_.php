@@ -475,7 +475,8 @@ class App
 	protected static $config = [], 
 				     $url = [], 
 				     $routes = [], 
-				     $includes = [];
+					 $includes = [],
+					 $enforce = "";
 
     /**
      * Returns the configuration
@@ -637,7 +638,7 @@ class App
 	 */
 	protected function lowerKeys ($item = '') {
 		if (is_array($item))
-			return array_map(function ($item){
+			return array_map(function ($item) {
 								return $this->lowerKeys($item);
 							},array_change_key_case($item)
 						);
@@ -677,6 +678,28 @@ class App
 			foreach ($otherFiles as $of)
 				$this->register($of . '/', $exceptions);
 	}
+
+	/**
+	 * Gets some info like layout, language, etc. that cascades down  
+	 * @param $action 
+	 */
+	public function processaction($action) {
+		// private area of the website
+		if (isset($action['enforce']))  
+			self::$enforce = $action['enforce'];
+		
+		// set the layout
+		if (isset($action['layout'])) 
+			Template::$defaultLayout = $action['layout'];
+		
+		// set the language
+		if (isset($action['language']))	
+			Template::$defaultLanguage = $action['language'];
+		
+		// register any needed classes
+		if (isset($action['register']))	
+			self::$includes['FOLDERS'] = $action['register'];
+	}
 	
 	/** 
 	 * Routes the app, that is calls the function or method inside a class that is requested
@@ -700,8 +723,10 @@ class App
 			$args = $_REQUEST;
 					
 		// if there is no _url put the default
-		if (!self::$url) 
+		if (!self::$url) {
 			$action = self::$routes['DEFAULT'];
+			$this->processAction($action);
+		} 
 		else {
 			$action = self::$routes;
 			$index = 0;
@@ -710,27 +735,8 @@ class App
 				// check for the action
 				if (!empty($action[trimLower(self::$url[$index])])) { 
 					$action = $action[trimLower(self::$url[$index])];
+					$this->processAction($action);
 					$index++;
-					
-					// private area of the website
-					if (isset($action['enforce']))  
-						$enforce = $action['enforce'];
-					
-					// set the layout
-					if (isset($action['layout'])) 
-						Template::$defaultLayout = $action['layout'];
-					
-					// set the language
-					if (isset($action['language']))	
-						Template::$defaultLanguage = $action['language'];
-					
-					// register any needed classes
-					if (isset($action['register']))	
-						self::$includes['FOLDERS'] = $action['register'];
-					
-					// get the arguments if any 
-					if (!empty($action['args'])) 
-						$args = array_merge($args, json_decode($action['args'], true));
 				}
 				else {
 					$action = self::$routes['404'];
@@ -741,6 +747,9 @@ class App
 
         // if the result is still an array
         if (is_array($action)) {
+			// get the arguments if any 
+			if (!empty($action['args'])) 
+				$args = array_merge($args, json_decode($action['args'], true));
 
             // redirect to another url
             if (!empty($action['redirect'])) {
@@ -782,8 +791,8 @@ class App
 		}
 		
 		// call the function that enforces login
-		if (!empty($enforce) && is_callable($enforce)) 
-			call_user_func($enforce, $args);
+		if (!empty(self::$enforce) && is_callable(self::$enforce)) 
+			call_user_func(self::$enforce, $args);
 		
 		// lets call the main action inside a class
 		if (!empty($class) && is_callable([$c = new $class($args), $action])) 
@@ -804,10 +813,10 @@ class App
 class Template
 {
 	public static $defaultLayout = '',
-				  $defaultLanguage = '';
+				  $defaultLanguage = [];
 				  
-	protected $fullLanguage = '',
-		      $fullLayout = '';
+	protected $fullLayout = '',
+			  $fullLanguage = [];
 	
 	/**
 	 * Set the layout
@@ -935,9 +944,9 @@ class Template
 		if (!$this->fullLanguage) 
 			$this->setLang();
 				
-		$all = array_merge($this->fullLanguage, $results);
+		$tmpHtml = $this->apply($this->fullLayout, $results);
 
-		return $this->apply($this->fullLayout, $all, true); 
+		return $this->apply($tmpHtml, $this->fullLanguage, true); 
 	}
 }
 
