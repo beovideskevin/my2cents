@@ -75,19 +75,19 @@
 
 	<div class="section contact" id="contactSection">
 		<div class="container">
-			<form method="POST" action="/quotes/contact" id="contactForm">
+			<form method="POST" action="/" id="contactForm">
 				<:EMAIL_MSG/>
 				<div class="row">
 					<div class="six columns">
-						<label for="exampleEmailInput">Your email</label>
+						<label for="exampleEmailInput"><:FORM_EMAIL/></label>
 						<input class="u-full-width" type="email" placeholder="test@mailbox.com" name="email" id="exampleEmailInput">
 					</div>
 					<div class="six columns">
-						<label for="exampleSubjectInput">Reason for contacting</label>
+						<label for="exampleSubjectInput"><:FORM_SUBJECT/></label>
 						<input class="u-full-width" type="text" placeholder="hello..." name="subject" id="exampleSubjectInput">
 					</div>
 				</div>
-				<label for="exampleMessage">Message</label>
+				<label for="exampleMessage"><:FORM_MSG/></label>
 				<textarea class="u-full-width" placeholder="Hi Kevin …" name="message" id="exampleMessage"></textarea>
 				<div id="recaptcha"></div>
 				<input class="button-primary" type="submit" value="Submit">
