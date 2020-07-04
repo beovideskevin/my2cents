@@ -82,17 +82,17 @@ class BTC {
 			$values = $rate->getFormatedValue();
 		}
 
-		if (// isset($args['g-recaptcha-response']) && $args['g-recaptcha-response'] &&
+		if (isset($args['g-recaptcha-response']) && $args['g-recaptcha-response'] &&
             isset($args['subject']) && $args['subject'] &&
             isset($args['message']) && $args['message'] &&
 			isset($args['email']) && $args['email']) 
 		{
-            /*$output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".
+            $output = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".
 								  $recaptcha['secretKey'] . "&response=" . $args['g-recaptcha-response']), true);
-            if (isset($output['success']) && $output['success'] == true) { */
+            if (isset($output['success']) && $output['success'] == true) {
 				$emailResult = $_("email: contact@eldiletante.com", $args['subject'], ["OUTPUT" => $args['message'] . "<br>" . $args['email']]);
 				$emailMsg = $emailResult ? "EMAIL_MSG" : "EMAIL_ERROR";  
-            // }
+            }
         }
 
 		$results = [
