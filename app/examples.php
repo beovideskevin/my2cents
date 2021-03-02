@@ -28,20 +28,6 @@ function privateArea ()
 	return $results = ["OUTPUT" => "private"];
 }
 
-/**
- * These methods are usually commented. Just in case you want to use them, uncomment, 
- * and add the routes ("shaTest": "shaTest") to the config.json 
- */
- /*
-function php_info() {
-	phpinfo();
-}
-
-function shaTest() {
-	return $results = ["OUTPUT" => sha1("")]; 
-}
-*/
-
 /***********************
  * FULL EXAMPLE
  *
@@ -62,8 +48,6 @@ class BTC {
 	{
 		global $_;
 
-		$recaptcha = $_("getConfig: recaptcha");
-
 		if (isset($args['lan']) && $args['lan']) {
 			$_SESSION['LANGUAGE_IN_USE'] = $args['lan'];
 			$_("setlang: " . $args['lan']);
@@ -82,6 +66,8 @@ class BTC {
 			$values = $rate->getFormatedValue();
 		}
 
+		$recaptcha = $_("getConfig: recaptcha");
+
 		if (isset($args['g-recaptcha-response']) && $args['g-recaptcha-response'] &&
             isset($args['subject']) && $args['subject'] &&
             isset($args['message']) && $args['message'] &&
@@ -96,12 +82,12 @@ class BTC {
         }
 
 		$results = [
-			"MAIN_STYLE"  => $_("inject: app/assets/example.css"),
-			"BTN"         => $_("inject: app/assets/example.html"),
-			"CONTENT"     => $values,
-			"MAIN_SCRIPT" => $_("inject: app/assets/example.js"),
-			"SITE_KEY"    => $recaptcha['siteKey'],
-			"EMAIL_MSG"   => isset($emailMsg) ? $_("getlang: {$emailMsg}") : ""
+			"MAIN_STYLE"   => $_("inject: app/assets/example.css"),
+			"BTN"          => $_("inject: app/assets/example.html"),
+			"CONTENT"      => $values,
+			"MAIN_SCRIPT"  => $_("inject: app/assets/example.js"),
+			"SITE_KEY"     => $recaptcha['siteKey'],
+			"EMAIL_RESULT" => isset($emailMsg) ? $_("getlang: {$emailMsg}") : ""
 		];
 		return $results;
     }

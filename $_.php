@@ -272,13 +272,9 @@ class Database
 	{
 		if (!empty($args)) {
 			$args = $this->sanitize($args);
-			$i = 0;
-			while(($letterPos = strpos($query, '?')) !== false) {
-				$query = substr_replace($query, $args[$i], $letterPos, 1);
-				$i++;
-				if ($i >= count($args)) 
-					break;
-			}
+			$query = preg_replace_callback( '/\?/', function( $match) use( &$args) {
+				return "'" . array_shift($args) . "'";
+			}, $query);
 		}
 		
 		if (!self::$driver->query($query)) {

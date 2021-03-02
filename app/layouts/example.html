@@ -41,14 +41,26 @@
 		<nav class="navbar">
 			<div class="container">
 				<ul class="navbar-list">
-					<li class="navbar-item"><a class="navbar-link" href="/btc" id="home">Home</a></li>
-					<li class="navbar-item"><a class="navbar-link" href="/btc#contactSection" id="contact">Contact</a></li>
+					<li class="navbar-item"><a class="navbar-link" href="#btcSection" id="btc"><:MENU1/></a></li>
+					<li class="navbar-item"><a class="navbar-link" href="#contactSection" id="contact"><:MENU2/></a></li>
+					<li class="navbar-item"><a class="navbar-link" href="en" id="en"><:MENU3/></a></li>
+					<li class="navbar-item"><a class="navbar-link" href="es" id="es"><:MENU4/></a></li>
 				</ul>
 			</div>
 		</nav>
 	</div>
 
-	<div class="section">
+	<div class="section github">
+		<div class="container">
+			<div class="row">
+				<div class="column category">
+					<img class="u-max-full-width" src="/images/my2cents.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="btcSection"> 
 		<div class="container">
 			<div class="">
 				<h4 id="mainTitle"><:HEADER/></h4>
@@ -63,20 +75,13 @@
 		</div>	
 	</div>
 
-	<div class="section github">
-		<div class="container">
-			<div class="row">
-				<div class="column category">
-					<img class="u-max-full-width" src="/images/my2cents.png">
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="section contact" id="contactSection">
 		<div class="container">
+			<div class="">
+				<h4 id="mainTitle"><:CONTACT/></h4>
+				<:EMAIL_RESULT/>
+			</div>
 			<form method="POST" action="/" id="contactForm">
-				<:EMAIL_MSG/>
 				<div class="row">
 					<div class="six columns">
 						<label for="exampleEmailInput"><:FORM_EMAIL/></label>
