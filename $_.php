@@ -961,12 +961,12 @@ class Email
 
 	/**
 	 * The main method of the class, use this one to send emails
-	 * @param $emailtoFull the destinatary email
-	 * @param $subjectFull the subject of teh email
+	 * @param $emailto the destinatary email, it can be empty if passing emailto in the params array
+	 * @param $params this is an array with the index/values pair for emailto, subject, emailfrom and name from, or just a string with the subject of the email
 	 * @param $content the content of the email
 	 * @param $language if you want to use a specific language in the email
 	 */
-	function sendEmail ($emailto, $params, $content, $language = '') 
+	function sendEmail ($emailto, $params, $content, $language = '',  $emailfrom = '', $namefrom = '') 
 	{
 		$pattern = ['/\n/', '/\r/', '/content-type:/i', '/to:/i', '/from:/i', '/cc:/i'];
 
@@ -974,11 +974,15 @@ class Email
 			$emailto = preg_replace($pattern, '', $emailto);
 		}
 
-		$subject = "";
-		$body = "";
-		$emailfrom = "";
-		$namefrom = "";
+		if ($emailfrom) {
+			$emailfrom = preg_replace($pattern, '', $emailfrom);
+		}
 
+		if ($namefrom) {
+			$namefrom = preg_replace($pattern, '', $namefrom);
+		}
+
+		$subject = "";
 		if (is_array($params)) {
 			foreach ($params as $key => $value) {
 				switch ($key) {
@@ -1001,6 +1005,7 @@ class Email
 			$subject = preg_replace($pattern, '', $params);
 		}
 		
+		$body = "";
 		if (is_array($content)) {
 			$template = new Template();
 			if ($language)
@@ -1047,8 +1052,8 @@ class Email
 		$mail->Username = self::$user;
 		$mail->Password = self::$password;
 
-		$emailfrom = empty($emailfrom) ? self::$system : $emailfrom;
-		$namefrom = empty($namefrom) ? self::$from : $namefrom;
+		$emailfrom = $emailfrom ? $emailfrom : self::$system;
+		$namefrom = $namefrom ? $namefrom : self::$from;
 
 		// set the email the subject and the content
 		$mail->setFrom($emailfrom, $namefrom);
