@@ -1005,15 +1005,7 @@ class Email
 		$mail = new PHPMailer();
 
 		// for debug only
-		$mail->SMTPDebug = 3;
-
-		error_log(self::$system);
-		error_log(self::$from);
-		error_log(self::$server);
-		error_log(self::$port);
-		error_log(self::$user);
-		error_log(self::$password);
-		error_log(self::$layout);
+		// $mail->SMTPDebug = 3;
 
 		$mail->isSMTP();
 		$mail->Host = self::$server;
