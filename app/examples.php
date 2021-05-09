@@ -79,6 +79,9 @@ class BTC {
 				$emailResult = $_("email: contact@eldiletante.com", $args['subject'], ["OUTPUT" => $args['message'] . "<br>" . $args['email']]);
 				$emailMsg = $emailResult ? "EMAIL_MSG" : "EMAIL_ERROR";  
             }
+			else {
+				$emailMsg = "EMAIL_ERROR";
+			}
         }
 
 		$results = [
