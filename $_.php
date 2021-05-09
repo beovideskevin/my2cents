@@ -1005,7 +1005,7 @@ class Email
 		$mail = new PHPMailer();
 
 		// for debug only
-		// $mail->SMTPDebug = 3;
+		$mail->SMTPDebug = 3;
 
 		$mail->isSMTP();
 		$mail->Host = self::$server;
