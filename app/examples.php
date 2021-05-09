@@ -83,7 +83,7 @@ class BTC {
 						"namefrom" => $args['name']
 					], 
 					[
-						"OUTPUT" => $args['message'] . "<br>" . $args['email']
+						"OUTPUT" => $args['message'] . "<br>Origin: My2Cents" 
 					]
 				);
 				$emailMsg = $emailResult ? "EMAIL_MSG" : "EMAIL_ERROR";  
