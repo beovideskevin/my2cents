@@ -966,12 +966,41 @@ class Email
 	 * @param $content the content of the email
 	 * @param $language if you want to use a specific language in the email
 	 */
-	function sendEmail ($emailtoFull, $subjectFull, $content, $language = '') 
+	function sendEmail ($emailto, $params, $content, $language = '') 
 	{
 		$pattern = ['/\n/', '/\r/', '/content-type:/i', '/to:/i', '/from:/i', '/cc:/i'];
-		$emailto = preg_replace($pattern, '', $emailtoFull);
-		$subject = preg_replace($pattern, '', $subjectFull);
 
+		if ($emailto) {
+			$emailto = preg_replace($pattern, '', $emailto);
+		}
+
+		$subject = "";
+		$body = "";
+		$emailfrom = "";
+		$namefrom = "";
+
+		if (is_array($params)) {
+			foreach ($params as $key => $value) {
+				switch ($key) {
+					case 'emailto': 
+						$emailto = preg_replace($pattern, '', $value);
+						break;
+					case 'subject': 
+						$subject = preg_replace($pattern, '', $value);
+						break;
+					case 'emailfrom': 
+						$emailfrom = preg_replace($pattern, '', $value);
+						break;
+					case 'namefrom': 
+						$namefrom = preg_replace($pattern, '', $value);
+						break;
+				}
+			}
+		}
+		else {
+			$subject = preg_replace($pattern, '', $params);
+		}
+		
 		if (is_array($content)) {
 			$template = new Template();
 			if ($language)
@@ -986,7 +1015,7 @@ class Email
 		if (class_exists('PHPMailer\PHPMailer\PHPMailer') && !empty(self::$server) && !empty(self::$port) &&
 			!empty(self::$user) && !empty(self::$password)) { 
 			// if smpt email sending is allowed use PHPMailer
-			return $this->sendPHPMailer($emailto, $subject, $body);
+			return $this->sendPHPMailer($emailto, $subject, $body, $emailfrom, $namefrom);
 		}
 		else { 
 			// sent the email with php mail
@@ -1000,7 +1029,7 @@ class Email
 	 * @param $subject the subject of the email
 	 * @param $body the full body of the email
 	 */
-	protected function sendPHPMailer ($emailto, $subject, $body) 
+	protected function sendPHPMailer ($emailto, $subject, $body, $emailfrom = '', $namefrom = '') 
 	{
 		$mail = new PHPMailer();
 
@@ -1018,8 +1047,11 @@ class Email
 		$mail->Username = self::$user;
 		$mail->Password = self::$password;
 
+		$emailfrom = empty($emailfrom) ? self::$system : $emailfrom;
+		$namefrom = empty($namefrom) ? self::$from : $namefrom;
+
 		// set the email the subject and the content
-		$mail->setFrom(self::$system, self::$from);
+		$mail->setFrom($emailfrom, $namefrom);
 		$mail->addAddress($emailto);
 		$mail->Subject = $subject;
 		$mail->IsHTML(true);
