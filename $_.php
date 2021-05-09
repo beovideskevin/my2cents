@@ -679,7 +679,7 @@ class App
 	 * Gets some info like layout, language, etc. that cascades down  
 	 * @param $action 
 	 */
-	public function processaction($action) {
+	public function processAction($action) {
 		// private area of the website
 		if (isset($action['enforce']))  
 			self::$enforce = $action['enforce'];
