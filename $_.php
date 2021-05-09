@@ -1007,6 +1007,14 @@ class Email
 		// for debug only
 		$mail->SMTPDebug = 3;
 
+		error_log($system);
+		error_log($from);
+		error_log($server);
+		error_log($port);
+		error_log($user);
+		error_log($password);
+		error_log($layout);
+
 		$mail->isSMTP();
 		$mail->Host = self::$server;
 		$mail->Port = self::$port;
