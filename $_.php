@@ -75,7 +75,7 @@ Class Utils {
 	 * Takes an array and turn al his keys lowercase recursively
 	 * @param array $item the input array
 	 */
-	static public function trimLowerKeys (&$item = '') {
+	static public function trimLowerKeys ($item = '') {
 		if (is_array($item)) {
 			foreach ($item as $key => $value) {
 				unset($item[$key]);
