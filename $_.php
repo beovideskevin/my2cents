@@ -24,6 +24,71 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 	
 /**
+ * This class encapsulates a few useful methods 
+ */
+Class Utils {
+	/**
+	 * Gets the query and extracts the action, the first part of the query, then
+	 * extracts the real query, everything after the action
+	 * @param string $fullQuery the full query
+	 */
+	static public function extractQuery($fullQuery) 
+	{
+		$parts = explode (' ', trim($fullQuery));
+		
+		$action = self::trimLower($parts[0]);
+
+		if ($action == ':') 
+			$query = substr($fullQuery, 1);
+		else {
+			// Clean every accidental space between the action and the :
+			for ($i = 1, $c = count($parts); $i < $c; $i++) {
+				if ($parts[$i]) 
+					break;
+				unset($parts[$i]);
+			}
+			
+			if ($i < $c && $parts[$i] == ':') {
+				$action .= ':';
+				unset($parts[$i]); 
+			}
+
+			// dont forget to unset the action
+			unset($parts[0]);
+
+			$query = implode(' ', $parts);
+		}
+			
+		return [$action, $query];
+	}
+
+	/**
+	 * Trim and "lowercase" a string, useful to compare usernames in the database 
+	 * @param string $str the string to be process
+	 */
+	static public function trimLower ($str) 
+	{
+		return strtolower(trim($str));
+	}
+
+	/**
+	 * Takes an array and turn al his keys lowercase recursively
+	 * @param array $item the input array
+	 */
+	static public function trimLowerKeys (&$item = '') {
+		if (is_array($item)) {
+			foreach ($item as $key => $value) {
+				unset($item[$key]);
+				$item[self::trimLower($key)] = self::trimLowerKeys($value);
+			}
+			return $item;
+		}	
+		else
+			return $item;
+	}
+}
+
+/**
  * The "driver" to connect and query PostgreSQL
  */
 class PostgreSQLAdapter 
@@ -82,7 +147,7 @@ class PostgreSQLAdapter
  	 */ 
 	public function result ($ret = 'assoclist')
 	{
-		$ret = trimLower($ret);
+		$ret = Utils::trimLower($ret);
 		
 		switch ($ret) {
 			case 'insertid':
@@ -168,7 +233,7 @@ class MySQLAdapter
  	 */ 
 	public function result ($ret = 'assoclist')
 	{
-		$ret = trimLower($ret);
+		$ret = Utils::trimLower($ret);
 
 		switch ($ret) {
 			case 'single':
@@ -225,9 +290,9 @@ class Database
 		$pass = self::$password;
 		$database = self::$database;
 		
-		if (trimLower(self::$adapter) == 'mysql')
+		if (Utils::trimLower(self::$adapter) == 'mysql')
 			self::$driver = new MySQLAdapter();
-		elseif (trimLower(self::$adapter) == 'postgresql')
+		elseif (Utils::trimLower(self::$adapter) == 'postgresql')
 			self::$driver = new PostgreSQLAdapter();
 		else
 			die ('No adapter for the database!');
@@ -408,7 +473,7 @@ class Table extends Database
 			}
 			$query = "insertid: INSERT INTO {$tableName} ({$insertKey}) VALUES ({$insertValue})";
 			
-			if (trimLower(Database::$adapter) == "postgresql") 
+			if (Utils::trimLower(Database::$adapter) == "postgresql") 
 				$query .= " RETURNING {$idName}";
 			
 			$result = $_($query);
@@ -497,7 +562,7 @@ class App
 			die ('No configuration file or error while parsing it!');
 		
 		foreach (self::$config as $key => $value) {
-			switch (trimLower($key)) {
+			switch (Utils::trimLower($key)) {
 				// the main path
 				case 'files_base_path': 
 					DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . $value);
@@ -506,7 +571,7 @@ class App
 				// the path for the classes to include
 				case 'register': 
 					foreach (self::$config[$key] as $regKey => $regVal) {
-						switch (trimLower($regKey)) {
+						switch (Utils::trimLower($regKey)) {
 							case 'exceptions':
 								self::$includes['EXCEPTIONS'] = $regVal;
 								break;
@@ -525,13 +590,13 @@ class App
 				// set the routes
 				case 'routes': 
 					foreach (self::$config[$key] as $rKey => $rVal) {
-						switch (trimLower($rKey)) {
+						switch (Utils::trimLower($rKey)) {
 							case 'default':
-								self::$routes['DEFAULT'] = $this->lowerKeys($rVal);
+								self::$routes['DEFAULT'] = Utils::trimLowerKeys($rVal);
 								break;
 								
 							default:
-								self::$routes[trimLower($rKey)] = $this->lowerKeys($rVal);
+								self::$routes[Utils::trimLower($rKey)] = Utils::trimLowerKeys($rVal);
 								break;
 						}
 					}
@@ -540,7 +605,7 @@ class App
 				// set the dafault template and language 
 				case 'template':
 					foreach (self::$config[$key] as $tKey => $tVal) {
-						switch (trimLower($tKey)) {
+						switch (Utils::trimLower($tKey)) {
 							case 'layout_path': 
 								DEFINE ('LAYOUT_PATH', $tVal);
 								break;
@@ -569,7 +634,7 @@ class App
 				// MySQL conection data
 				case 'database': 
 					foreach (self::$config[$key] as $dbKey => $dbVal) {
-						switch (trimLower($dbKey)) {
+						switch (Utils::trimLower($dbKey)) {
 							case 'adapter': 
 								Database::$adapter = $dbVal;
 								break;
@@ -595,7 +660,7 @@ class App
 				// SMTP email configuration	
 				case 'email': 
 					foreach (self::$config[$key] as $eKey => $eVal) {
-						switch (trimLower($eKey)) {
+						switch (Utils::trimLower($eKey)) {
 							case 'system': 
 								Email::$system = $eVal;
 								break;
@@ -626,20 +691,6 @@ class App
 		// if the main path is not set, lets set the default
 		if (!defined('FILES_BASE_PATH')) 
 			DEFINE ('FILES_BASE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/');
-	}
-	
-	/**
-	 * Takes an array and turn al his keys lowercase recursively
-	 * @param type $item the input array
-	 */
-	protected function lowerKeys ($item = '') {
-		if (is_array($item))
-			return array_map(function ($item) {
-								return $this->lowerKeys($item);
-							},array_change_key_case($item)
-						);
-		else
-			return $item;
 	}
 	
 	/** 
@@ -708,7 +759,7 @@ class App
 			$urlpath = $_REQUEST['_url'];
 				
 		if ($urlpath) {
-			$all = explode('/', trimLower($urlpath));
+			$all = explode('/', Utils::trimLower($urlpath));
 			foreach ($all as $value) {
 				if ($value) 
 					self::$url[] = $value;
@@ -729,8 +780,8 @@ class App
 			
 			while($index < count(self::$url) && is_array($action)) {
 				// check for the action
-				if (!empty($action[trimLower(self::$url[$index])])) { 
-					$action = $action[trimLower(self::$url[$index])];
+				if (!empty($action[Utils::trimLower(self::$url[$index])])) { 
+					$action = $action[Utils::trimLower(self::$url[$index])];
 					$this->processAction($action);
 					$index++;
 				}
@@ -939,10 +990,44 @@ class Template
 		
 		if (!$this->fullLanguage) 
 			$this->setLang();
-				
+		
+		// Apply the language in results first 
 		$tmpHtml = $this->apply($this->fullLayout, $results);
 
+		// Now apply the default language. This second call is necessary because inside de definitions of $results 
+		// we can put other language tags <:/>, exmaple: "BTN" => "<input type='submit' value='<:SUBMIT_BTN/>'>"
 		return $this->apply($tmpHtml, $this->fullLanguage, true); 
+	}
+
+	/**
+	 * Just return the string as html output, with especial symbols (< to &lt;) and new lines (\n to <br>) converted
+	 */
+	static public function htmlOut ($str = '') 
+	{
+		return nl2br(htmlspecialchars($str, ENT_QUOTES)); 
+	}
+
+	/**
+	 * Return a link properly formatted
+	 */
+	static public function linkOut ($urlpage = '', $getArgs = []) 
+	{
+		$url = rawurlencode($urlpage);
+		if (!empty($getArgs)) {
+			$url .= '?';
+			foreach ($getArgs as $key => $value)
+				$url .= $key . '=' . urlencode($value);
+		}
+
+		return $url;
+	}
+
+	/**
+	 * Return the javascript code for output
+	 */
+	static public function jsOut($str = '') 
+	{
+		return addslashes(preg_replace('/(\r\n|\n|\r)/', '<br>', $str));
 	}
 }
 
@@ -1249,8 +1334,7 @@ $_ = function ($query = '', $options = [], $extras = '')
 	$email = $email ?? new Email();
 	
 	// first get the parts of the query into an array
-	$action = getAction($query);
-	$query = getQuery($query);
+	list($action, $query) = Utils::extractQuery($query);
 	
 	// check if the action is defined
 	switch ($action) 
@@ -1381,85 +1465,3 @@ $_ = function ($query = '', $options = [], $extras = '')
 			return false;
 	}
 };
-
-/**
- * Gets the query and extracts the action, the first part of the query
- */
-function getAction ($fullQuery) 
-{
-	$query = explode (' ', trim($fullQuery));
-
-	if (strrpos($query[0], ':') === 0)
-		$action = ':';
-	elseif (!empty($query[1]) && $query[1] == ':') 
-		$action = $query[0] . $query[1];
-	else 
-		$action = $query[0];
-
-	return trimLower($action);
-}
-
-/**
- * Gets the string and extracts the real query, everything after the action
- */	
-function getQuery($query) 
-{
-	$query = trim($query);
-
-	if (strrpos($query, ':') === 0) 
-		return substr($query, 1);
-
-	$parts = explode (' ', $query);
-	
-	unset($parts[0]);
-	
-	for ($i = 1, $c = count($parts); $i <= $c; $i++) {
-		if (!empty($parts[$i])) 
-			break;
-		unset($parts[$i]);
-	}
-
-	if ($i <= $c && $parts[$i] == ':') 
-		unset($parts[$i]); 
-
-	return implode(' ', $parts);
-}
-
-/**
- * Trim and "lowercase" a string, useful to compare usernames in the database 
- */
-function trimLower ($str) 
-{
-	return strtolower(trim($str));
-}
-
-/**
- * Just return the string as html output, with especial symbols (< to &lt;) and new lines (\n to <br>) converted
- */
-function htmlOut ($str = '') 
-{
-	return nl2br(htmlspecialchars($str, ENT_QUOTES)); 
-}
-
-/**
- * Return a link properly formatted
- */
-function linkOut ($urlpage = '', $getArgs = []) 
-{
-	$url = rawurlencode($urlpage);
-	if (!empty($getArgs)) {
-		$url .= '?';
-		foreach ($getArgs as $key => $value)
-			$url .= $key . '=' . urlencode($value);
-	}
-
-	return $url;
-}
-
-/**
- * Return the javascript code for output
- */
-function jsOut($str = '') 
-{
-	return addslashes(preg_replace('/(\r\n|\n|\r)/', '<br>', $str));
-}
